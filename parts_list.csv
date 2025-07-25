@@ -1,0 +1,15 @@
+search_query,category_id,min_price
+engine,33615,50
+transmission,171115,100
+alternator,177697,15
+starter,177699,15
+engine computer,33596,15
+headlight,33710,25
+taillight,33716,10
+door mirror,262160,25
+wheel,179679,25
+steering wheel,33704,15
+brake caliper,33563,10
+fuel pump,33555,15
+power steering pump,33588,20
+compressor,33543,25
