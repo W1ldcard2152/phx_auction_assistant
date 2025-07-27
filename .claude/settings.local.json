@@ -3,7 +3,14 @@
     "allow": [
       "Bash(python:*)",
       "Bash(pip install:*)",
-      "WebFetch(domain:vpic.nhtsa.dot.gov)"
+      "WebFetch(domain:vpic.nhtsa.dot.gov)",
+      "Bash(rm:*)",
+      "Bash(del test_history_save.py)",
+      "Bash(del \"vin_history\\2020_Toyota_Camry_20250727_141208.json\")",
+      "Bash(del \"vin_history\\2020_Toyota_Camry_20250727_141225.json\")",
+      "Bash(del \"vin_history\\index.json\")",
+      "Bash(cmd:*)",
+      "Bash(timeout:*)"
     ],
     "deny": []
   }

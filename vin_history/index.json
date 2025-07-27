@@ -1,0 +1,36 @@
+[
+  {
+    "timestamp": "2025-07-27T14:45:06.675392",
+    "vin": "WAUGGAFC0DN038125",
+    "vehicle_string": "2013 AUDI A6 quattro Premium Plus",
+    "filename": "2013_AUDI_A6_20250727_144506.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 1896.157881595843,
+      "average": 2295.2317721913196,
+      "high": 2634.72464880241
+    },
+    "totals": {
+      "low": 4899.0,
+      "average": 5794.0,
+      "high": 6549.0
+    }
+  },
+  {
+    "timestamp": "2025-07-27T14:39:47.364139",
+    "vin": "WA1DGAFPXFA044012",
+    "vehicle_string": "2015 AUDI Q5 S Line Premium Plus",
+    "filename": "2015_AUDI_Q5_20250727_143947.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 1912.1285027119234,
+      "average": 2228.967172624273,
+      "high": 2448.726231784359
+    },
+    "totals": {
+      "low": 4935.0,
+      "average": 5646.0,
+      "high": 6136.0
+    }
+  }
+]

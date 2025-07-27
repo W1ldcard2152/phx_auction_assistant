@@ -7,6 +7,7 @@ import csv
 import json
 import os
 import re
+import datetime
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
 import google.generativeai as genai
@@ -138,10 +139,16 @@ class PhoenixAuctionAssistant:
         
         # Initialize VIN scan history (max 50 entries)
         self.vin_history = []
-        self.vin_history_dir = 'vin_history'
+        # Use absolute paths to ensure we're working with the right directory
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        self.vin_history_dir = os.path.join(script_dir, 'vin_history')
         self.vin_history_index_file = os.path.join(self.vin_history_dir, 'index.json')
         self.init_vin_history_directory()
         self.load_vin_history_from_files()
+        
+        # Ensure history display is updated after loading
+        if hasattr(self, 'vin_history_tree') and self.vin_history:
+            self.update_vin_history_display()
     
     def setup_vin_history_tab(self):
         """Set up the VIN History tab with table display"""
@@ -281,9 +288,9 @@ class PhoenixAuctionAssistant:
             vin = entry['vin']
             vehicle = entry['vehicle_string']
             
-            # Calculate parts total (use average tier as representative total)
+            # Calculate parts total (use budget tier as representative total)
             totals = entry['bid_analysis']['totals']
-            parts_total = f"${totals['average']:.2f}"
+            parts_total = f"${totals['low']:.2f}"
             
             bids = entry['bid_analysis']['bids']
             budget_bid = f"${bids['low']:.2f}"
@@ -337,7 +344,7 @@ class PhoenixAuctionAssistant:
                             entry['timestamp'].strftime("%m/%d/%Y %H:%M:%S"),
                             entry['vin'],
                             entry['vehicle_string'],
-                            f"${entry['bid_analysis']['totals']['average']:.2f}",
+                            f"${entry['bid_analysis']['totals']['low']:.2f}",
                             f"${entry['bid_analysis']['bids']['low']:.2f}",
                             f"${entry['bid_analysis']['bids']['average']:.2f}",
                             f"${entry['bid_analysis']['bids']['high']:.2f}",
@@ -368,10 +375,9 @@ class PhoenixAuctionAssistant:
     
     def show_history_details(self, entry):
         """Show detailed view of a history entry in a popup window"""
-        import tkinter.toplevel as toplevel
         
         # Create popup window
-        detail_window = toplevel.Toplevel(self.root)
+        detail_window = tk.Toplevel(self.root)
         detail_window.title(f"VIN Details - {entry['vin']}")
         detail_window.geometry("800x600")
         detail_window.resizable(True, True)
@@ -537,10 +543,22 @@ class PhoenixAuctionAssistant:
             filename = self.generate_vehicle_filename(history_entry['vehicle_info'])
             filepath = os.path.join(self.vin_history_dir, filename)
             
-            # Convert datetime to ISO format for JSON serialization
-            entry_copy = history_entry.copy()
-            entry_copy['timestamp'] = history_entry['timestamp'].isoformat()
+            # Create a deep copy and prepare for JSON serialization
+            entry_copy = {}
+            for key, value in history_entry.items():
+                if key == 'timestamp':
+                    entry_copy[key] = value.isoformat()
+                elif isinstance(value, dict):
+                    entry_copy[key] = dict(value)  # Deep copy dictionaries
+                elif isinstance(value, list):
+                    entry_copy[key] = list(value)  # Deep copy lists
+                else:
+                    entry_copy[key] = value
+            
             entry_copy['filename'] = filename  # Store filename reference
+            
+            # Ensure directory exists
+            os.makedirs(self.vin_history_dir, exist_ok=True)
             
             # Save individual analysis file
             with open(filepath, 'w', encoding='utf-8') as f:
@@ -553,29 +571,40 @@ class PhoenixAuctionAssistant:
             self.save_history_index()
                 
         except Exception as e:
-            print(f"Failed to save VIN analysis: {e}")
+            print(f"Failed to save VIN analysis to {filepath}: {e}")
+            import traceback
+            traceback.print_exc()
     
     def save_history_index(self):
         """Save the history index (lightweight file with just basic info)"""
         try:
             index_data = []
             for entry in self.vin_history:
+                # Create safe copies of nested data
+                bids_copy = dict(entry['bid_analysis']['bids']) if 'bid_analysis' in entry and 'bids' in entry['bid_analysis'] else {}
+                totals_copy = dict(entry['bid_analysis']['totals']) if 'bid_analysis' in entry and 'totals' in entry['bid_analysis'] else {}
+                
                 index_entry = {
                     'timestamp': entry['timestamp'].isoformat(),
                     'vin': entry['vin'],
                     'vehicle_string': entry['vehicle_string'],
-                    'filename': getattr(entry, 'filename', None),
+                    'filename': entry.get('filename', None),
                     'status': entry['status'],
-                    'bids': entry['bid_analysis']['bids'],
-                    'totals': entry['bid_analysis']['totals']
+                    'bids': bids_copy,
+                    'totals': totals_copy
                 }
                 index_data.append(index_entry)
+            
+            # Ensure directory exists
+            os.makedirs(os.path.dirname(self.vin_history_index_file), exist_ok=True)
             
             with open(self.vin_history_index_file, 'w', encoding='utf-8') as f:
                 json.dump(index_data, f, indent=2, ensure_ascii=False)
                 
         except Exception as e:
             print(f"Failed to save history index: {e}")
+            import traceback
+            traceback.print_exc()
     
     def load_vin_history_from_files(self):
         """Load VIN history from organized JSON files"""
