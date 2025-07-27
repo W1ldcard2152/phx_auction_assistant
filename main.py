@@ -27,6 +27,7 @@ class PhoenixAuctionAssistant:
         self.ebay_client_secret = os.getenv('EBAY_CLIENT_SECRET')
         self.ebay_environment = os.getenv('EBAY_ENVIRONMENT', 'SANDBOX')
         self.ebay_access_token = None
+        self.ebay_token_expiry = None  # Track token expiration
         
         # Load Gemini API credentials and configure
         self.gemini_api_key = os.getenv('GEMINI_API_KEY')
@@ -137,6 +138,10 @@ class PhoenixAuctionAssistant:
         
         # Initialize VIN scan history (max 50 entries)
         self.vin_history = []
+        self.vin_history_dir = 'vin_history'
+        self.vin_history_index_file = os.path.join(self.vin_history_dir, 'index.json')
+        self.init_vin_history_directory()
+        self.load_vin_history_from_files()
     
     def setup_vin_history_tab(self):
         """Set up the VIN History tab with table display"""
@@ -247,7 +252,8 @@ class PhoenixAuctionAssistant:
             'bid_analysis': bid_analysis.copy(),
             'status': status,
             'failed_parts': failed_parts,
-            'low_confidence_parts': low_confidence_parts
+            'low_confidence_parts': low_confidence_parts,
+            'filename': None  # Will be set during save
         }
         
         # Add to beginning of history list
@@ -259,6 +265,9 @@ class PhoenixAuctionAssistant:
         
         # Update the history table display
         self.update_vin_history_display()
+        
+        # Save to file
+        self.save_vin_analysis_to_file(history_entry)
     
     def update_vin_history_display(self):
         """Update the VIN history table display"""
@@ -292,6 +301,7 @@ class PhoenixAuctionAssistant:
         if messagebox.askyesno("Confirm Clear", "Clear all VIN history? This cannot be undone."):
             self.vin_history.clear()
             self.update_vin_history_display()
+            self.save_history_index()  # Update index after clearing
     
     def export_vin_history(self):
         """Export VIN history to CSV file"""
@@ -352,7 +362,9 @@ class PhoenixAuctionAssistant:
         
         if index < len(self.vin_history):
             entry = self.vin_history[index]
-            self.show_history_details(entry)
+            # Load full analysis data if needed
+            full_entry = self.load_full_analysis(entry)
+            self.show_history_details(full_entry)
     
     def show_history_details(self, entry):
         """Show detailed view of a history entry in a popup window"""
@@ -487,6 +499,179 @@ class PhoenixAuctionAssistant:
         # Close button
         close_btn = ttk.Button(detail_window, text="Close", command=detail_window.destroy)
         close_btn.grid(row=1, column=0, pady=(10, 0))
+    
+    def init_vin_history_directory(self):
+        """Initialize the VIN history directory structure"""
+        try:
+            if not os.path.exists(self.vin_history_dir):
+                os.makedirs(self.vin_history_dir)
+        except Exception as e:
+            print(f"Failed to create VIN history directory: {e}")
+    
+    def generate_vehicle_filename(self, vehicle_info):
+        """Generate a filename based on vehicle information"""
+        try:
+            year = vehicle_info.get('year', 'Unknown')
+            make = vehicle_info.get('make', 'Unknown')
+            model = vehicle_info.get('model', 'Unknown')
+            
+            # Clean up the strings for filename use
+            import re
+            year = re.sub(r'[^\w]', '', str(year))
+            make = re.sub(r'[^\w]', '', str(make))
+            model = re.sub(r'[^\w]', '', str(model))
+            
+            # Create timestamp for uniqueness
+            timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+            
+            return f"{year}_{make}_{model}_{timestamp}.json"
+        except Exception:
+            # Fallback to timestamp-only filename
+            timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+            return f"vin_analysis_{timestamp}.json"
+    
+    def save_vin_analysis_to_file(self, history_entry):
+        """Save individual VIN analysis to organized JSON file"""
+        try:
+            # Generate filename based on vehicle info
+            filename = self.generate_vehicle_filename(history_entry['vehicle_info'])
+            filepath = os.path.join(self.vin_history_dir, filename)
+            
+            # Convert datetime to ISO format for JSON serialization
+            entry_copy = history_entry.copy()
+            entry_copy['timestamp'] = history_entry['timestamp'].isoformat()
+            entry_copy['filename'] = filename  # Store filename reference
+            
+            # Save individual analysis file
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(entry_copy, f, indent=2, ensure_ascii=False)
+            
+            # Update the original entry with filename
+            history_entry['filename'] = filename
+            
+            # Update the history index
+            self.save_history_index()
+                
+        except Exception as e:
+            print(f"Failed to save VIN analysis: {e}")
+    
+    def save_history_index(self):
+        """Save the history index (lightweight file with just basic info)"""
+        try:
+            index_data = []
+            for entry in self.vin_history:
+                index_entry = {
+                    'timestamp': entry['timestamp'].isoformat(),
+                    'vin': entry['vin'],
+                    'vehicle_string': entry['vehicle_string'],
+                    'filename': getattr(entry, 'filename', None),
+                    'status': entry['status'],
+                    'bids': entry['bid_analysis']['bids'],
+                    'totals': entry['bid_analysis']['totals']
+                }
+                index_data.append(index_entry)
+            
+            with open(self.vin_history_index_file, 'w', encoding='utf-8') as f:
+                json.dump(index_data, f, indent=2, ensure_ascii=False)
+                
+        except Exception as e:
+            print(f"Failed to save history index: {e}")
+    
+    def load_vin_history_from_files(self):
+        """Load VIN history from organized JSON files"""
+        try:
+            if os.path.exists(self.vin_history_index_file):
+                # Load from index file
+                with open(self.vin_history_index_file, 'r', encoding='utf-8') as f:
+                    index_data = json.load(f)
+                
+                self.vin_history = []
+                for index_entry in index_data:
+                    # Create lightweight entry for display
+                    entry = {
+                        'timestamp': datetime.datetime.fromisoformat(index_entry['timestamp']),
+                        'vin': index_entry['vin'],
+                        'vehicle_string': index_entry['vehicle_string'],
+                        'filename': index_entry.get('filename'),
+                        'status': index_entry['status'],
+                        'bid_analysis': {
+                            'bids': index_entry['bids'],
+                            'totals': index_entry['totals']
+                        },
+                        # Mark as lightweight entry
+                        'is_lightweight': True
+                    }
+                    self.vin_history.append(entry)
+                
+                # Ensure we don't exceed 50 entries
+                if len(self.vin_history) > 50:
+                    self.vin_history = self.vin_history[:50]
+                    self.save_history_index()
+                
+                # Update the display if the tab is set up
+                if hasattr(self, 'vin_history_tree'):
+                    self.update_vin_history_display()
+            else:
+                # No index file exists, scan directory for existing files
+                self.scan_existing_files()
+                    
+        except Exception as e:
+            print(f"Failed to load VIN history: {e}")
+            self.vin_history = []
+    
+    def scan_existing_files(self):
+        """Scan existing JSON files and rebuild index (for migration)"""
+        try:
+            if not os.path.exists(self.vin_history_dir):
+                return
+            
+            self.vin_history = []
+            files = [f for f in os.listdir(self.vin_history_dir) if f.endswith('.json') and f != 'index.json']
+            
+            # Sort by modification time (newest first)
+            files.sort(key=lambda x: os.path.getmtime(os.path.join(self.vin_history_dir, x)), reverse=True)
+            
+            for filename in files[:50]:  # Load max 50 most recent
+                filepath = os.path.join(self.vin_history_dir, filename)
+                try:
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        entry_data = json.load(f)
+                    
+                    # Convert back to runtime format
+                    entry_data['timestamp'] = datetime.datetime.fromisoformat(entry_data['timestamp'])
+                    entry_data['filename'] = filename
+                    self.vin_history.append(entry_data)
+                    
+                except Exception as e:
+                    print(f"Failed to load file {filename}: {e}")
+            
+            # Save the rebuilt index
+            if self.vin_history:
+                self.save_history_index()
+                
+        except Exception as e:
+            print(f"Failed to scan existing files: {e}")
+            self.vin_history = []
+    
+    def load_full_analysis(self, entry):
+        """Load full analysis data from file when needed (for detail view)"""
+        try:
+            if entry.get('is_lightweight') and entry.get('filename'):
+                filepath = os.path.join(self.vin_history_dir, entry['filename'])
+                if os.path.exists(filepath):
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        full_data = json.load(f)
+                    
+                    # Convert timestamp back
+                    full_data['timestamp'] = datetime.datetime.fromisoformat(full_data['timestamp'])
+                    return full_data
+            
+            # Return the entry as-is if it's already full or no file available
+            return entry
+            
+        except Exception as e:
+            print(f"Failed to load full analysis: {e}")
+            return entry
     
     def setup_ai_instructions_tab(self):
         """Set up the AI Instructions tab with enhanced save/edit functionality"""
@@ -977,6 +1162,12 @@ Save multiple instruction sets for different vehicle types or scenarios."""
                     return None
     
     def get_ebay_access_token(self) -> bool:
+        # OPTIMIZATION 5: Check if existing token is still valid
+        import datetime
+        if (self.ebay_access_token and self.ebay_token_expiry and 
+            datetime.datetime.now() < self.ebay_token_expiry):
+            return True
+        
         self.results_text.insert(tk.END, "Authenticating with eBay...\n")
         self.root.update()
         
@@ -1029,8 +1220,12 @@ Save multiple instruction sets for different vehicle types or scenarios."""
             self.root.update()
             
             self.ebay_access_token = token_data.get('access_token')
+            expires_in = token_data.get('expires_in', 7200)  # Default 2 hours
             
             if self.ebay_access_token:
+                # Set token expiry time (subtract 5 minutes for safety margin)
+                import datetime
+                self.ebay_token_expiry = datetime.datetime.now() + datetime.timedelta(seconds=expires_in - 300)
                 self.results_text.insert(tk.END, "eBay authentication successful!\n")
                 return True
             else:
@@ -1076,15 +1271,16 @@ Save multiple instruction sets for different vehicle types or scenarios."""
             self.results_text.insert(tk.END, f"Analyzing {part_name} with AI ({len(raw_items)} items)...\n")
             self.root.update()
             
-            # Send to Gemini for analysis with retry logic
-            max_retries = 3
+            # OPTIMIZATION 3: Improved Gemini API settings
+            max_retries = 2  # Reduced from 3 to 2
             for attempt in range(max_retries):
                 try:
                     response = self.gemini_model.generate_content(
                         prompt,
                         generation_config=genai.types.GenerationConfig(
                             temperature=0.1,  # Low temperature for consistent analysis
-                            max_output_tokens=1000
+                            max_output_tokens=800,  # Reduced from 1000 to 800
+                            candidate_count=1  # Ensure single response
                         )
                     )
                     break
@@ -1094,7 +1290,7 @@ Save multiple instruction sets for different vehicle types or scenarios."""
                     self.results_text.insert(tk.END, f"AI attempt {attempt + 1} failed, retrying...\n")
                     self.root.update()
                     import time
-                    time.sleep(1)  # Brief delay before retry
+                    time.sleep(0.5)  # Reduced delay from 1s to 0.5s
             
             # Parse JSON response
             response_text = response.text.strip()
@@ -1332,197 +1528,214 @@ Save multiple instruction sets for different vehicle types or scenarios."""
             'Content-Type': 'application/json'
         }
         
-        for part in self.parts_list:
+        # DISABLED: Concurrent processing causing freezes, using sequential by default
+        use_concurrent = os.getenv('USE_CONCURRENT_SEARCH', 'false').lower() == 'true'
+        
+        if use_concurrent:
             try:
-                # Single targeted search: full year only for speed
-                year = vehicle_info['year']
+                import concurrent.futures
                 
-                # Include engine size for engine searches to improve specificity
-                engine_size = ""
-                if part['search_query'].lower() == 'engine' and vehicle_info.get('engine_displacement'):
+                def search_single_part_safe(part):
                     try:
-                        displacement = float(vehicle_info['engine_displacement'])
-                        engine_size = f" {round(displacement, 1)}L"
-                    except (ValueError, TypeError):
-                        engine_size = f" {vehicle_info['engine_displacement']}"
+                        return self._search_single_part_optimized(part, vehicle_info, search_url, headers)
+                    except Exception as e:
+                        # Return error result instead of raising
+                        return part['search_query'], {
+                            'low': 0.0, 'average': 0.0, 'high': 0.0,
+                            'error': str(e), 'raw_items': []
+                        }
                 
-                search_queries = [
-                    f"{year} {vehicle_info['make']} {vehicle_info['model']}{engine_size} {part['search_query']}"
-                ]
+                # Execute searches concurrently (reduced to 3 threads for stability)
+                self.results_text.insert(tk.END, f"Searching {len(self.parts_list)} parts (3 concurrent)...\n")
+                self.root.update()
                 
-                # Match your manual search - just Used condition (3000)
-                condition_filter = "conditionIds:{3000}"  # Used only
-                buying_filter = "buyingOptions:{FIXED_PRICE}"
+                completed_count = 0
                 
-                # Add price filter if minimum price is specified for this part
-                price_filter = ""
-                min_price = part.get('min_price', 0)
-                if min_price > 0:
-                    price_filter = f"price:[{min_price}..],priceCurrency:USD"
+                with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+                    # Submit all jobs
+                    future_to_part = {executor.submit(search_single_part_safe, part): part for part in self.parts_list}
+                    
+                    # Process results as they complete
+                    for future in concurrent.futures.as_completed(future_to_part):
+                        part = future_to_part[future]
+                        try:
+                            part_name, part_result = future.result(timeout=45)  # 45 second timeout per part
+                            parts_prices[part_name] = part_result
+                            completed_count += 1
+                            
+                            # Check for errors in result
+                            if 'error' in part_result:
+                                self.results_text.insert(tk.END, f"✗ {part_name} failed: {part_result['error']}\n")
+                            else:
+                                self.results_text.insert(tk.END, f"✓ {part_name} completed ({completed_count}/{len(self.parts_list)})\n")
+                            self.root.update()
+                            
+                        except concurrent.futures.TimeoutError:
+                            self.results_text.insert(tk.END, f"✗ {part['search_query']} timed out\n")
+                            parts_prices[part['search_query']] = {'low': 0.0, 'average': 0.0, 'high': 0.0, 'raw_items': []}
+                            self.root.update()
+                        except Exception as exc:
+                            self.results_text.insert(tk.END, f"✗ {part['search_query']} failed: {str(exc)}\n")
+                            parts_prices[part['search_query']] = {'low': 0.0, 'average': 0.0, 'high': 0.0, 'raw_items': []}
+                            self.root.update()
+                            
+            except Exception as concurrent_error:
+                self.results_text.insert(tk.END, f"Concurrent processing failed, switching to sequential: {str(concurrent_error)}\n")
+                use_concurrent = False
+        
+        # Sequential processing (default and safer)
+        if not use_concurrent:
+            self.results_text.insert(tk.END, f"Searching {len(self.parts_list)} parts sequentially (optimized)...\n")
+            self.root.update()
+            
+            for i, part in enumerate(self.parts_list):
+                try:
+                    self.results_text.insert(tk.END, f"Searching {part['search_query']} ({i+1}/{len(self.parts_list)})...\n")
+                    self.root.update()
+                    
+                    # Call the optimized search function
+                    part_name, part_result = self._search_single_part_optimized(part, vehicle_info, search_url, headers)
+                    parts_prices[part_name] = part_result
+                    
+                    # Show completion with confidence if available
+                    confidence = part_result.get('confidence_rating', '')
+                    confidence_text = f" ({confidence.upper()})" if confidence else ""
+                    self.results_text.insert(tk.END, f"✓ {part_name} completed{confidence_text}\n")
+                    self.root.update()
+                    
+                except Exception as e:
+                    self.results_text.insert(tk.END, f"✗ {part['search_query']} failed: {str(e)[:100]}\n")
+                    parts_prices[part['search_query']] = {'low': 0.0, 'average': 0.0, 'high': 0.0, 'raw_items': []}
+                    self.root.update()
+        
+        return parts_prices
+    
+    def _search_single_part_optimized(self, part, vehicle_info, search_url, headers):
+        """Optimized single part search with better error handling and timeout"""
+        try:
+            # Single targeted search: full year only for speed
+            year = vehicle_info['year']
+            
+            # Include engine size for engine searches to improve specificity
+            engine_size = ""
+            if part['search_query'].lower() == 'engine' and vehicle_info.get('engine_displacement'):
+                try:
+                    displacement = float(vehicle_info['engine_displacement'])
+                    engine_size = f" {round(displacement, 1)}L"
+                except (ValueError, TypeError):
+                    engine_size = f" {vehicle_info['engine_displacement']}"
+            
+            search_query = f"{year} {vehicle_info['make']} {vehicle_info['model']}{engine_size} {part['search_query']}"
+            
+            # Match your manual search - just Used condition (3000)
+            condition_filter = "conditionIds:{3000}"  # Used only
+            buying_filter = "buyingOptions:{FIXED_PRICE}"
+            
+            # Add price filter if minimum price is specified for this part
+            price_filter = ""
+            min_price = part.get('min_price', 0)
+            if min_price > 0:
+                price_filter = f"price:[{min_price}..],priceCurrency:USD"
+            
+            # Build filter string - combine all filters
+            filters = [condition_filter, buying_filter]
+            if price_filter:
+                filters.append(price_filter)
+            
+            params = {
+                'q': search_query,
+                'category_ids': part['category_id'],
+                'filter': ','.join(filters),
+                'sort': 'price',
+                'limit': '200'  # Keep 200 items as requested
+            }
+            
+            # OPTIMIZATION 2: Reduced timeout and better connection settings
+            response = requests.get(search_url, headers=headers, params=params, 
+                                  timeout=8, stream=False)  # Reduced from 10s to 8s
+            
+            if response.status_code != 200:
+                return part['search_query'], {'low': 0.0, 'average': 0.0, 'high': 0.0}
+            
+            data = response.json()
+            items = data.get('itemSummaries', [])
+            
+            prices = []
+            titles = []
+            raw_items = []  # Store raw items for table display
+            
+            if items:
+                for item in items:
+                    if 'price' in item and 'value' in item['price']:
+                        try:
+                            price = float(item['price']['value'])
+                            
+                            # Add shipping cost if present
+                            shipping_cost = 0.0
+                            if 'shippingOptions' in item and item['shippingOptions']:
+                                shipping_option = item['shippingOptions'][0]  # Take first shipping option
+                                if 'shippingCost' in shipping_option and 'value' in shipping_option['shippingCost']:
+                                    shipping_cost = float(shipping_option['shippingCost']['value'])
+                            
+                            total_price = price + shipping_cost
+                            
+                            # No price filtering - accept all valid prices
+                            prices.append(total_price)
+                            titles.append(item.get('title', ''))
+                            
+                            # Store raw item data for table display
+                            raw_items.append({
+                                'price': price,
+                                'shipping': shipping_cost,
+                                'total_price': total_price,
+                                'title': item.get('title', 'No title'),
+                                'item_id': item.get('itemId', ''),
+                                'condition': item.get('condition', ''),
+                                'location': item.get('itemLocation', {}).get('country', '')
+                            })
+                                
+                        except (ValueError, TypeError):
+                            continue
+            
+            if prices:
+                # AI-Powered Junkyard Parts Pricing Analysis System
+                price_analysis = self._analyze_prices_with_ai(raw_items, part['search_query'], part.get('min_price', 0))
                 
-                # Single search with 200 results
-                search_query = search_queries[0]  # Only one search now
-                
-                # Build filter string - combine all filters
-                filters = [condition_filter, buying_filter]
-                if price_filter:
-                    filters.append(price_filter)
-                
-                params = {
-                    'q': search_query,
-                    'category_ids': part['category_id'],
-                    'filter': ','.join(filters),
-                    'sort': 'price',
-                    'limit': '200'
+                # Store all price points and AI analysis metadata
+                part_result = {
+                    'low': price_analysis["low"],
+                    'average': price_analysis["average"], 
+                    'high': price_analysis["high"],
+                    'reasoning': price_analysis.get("reasoning", ""),
+                    'items_analyzed': price_analysis.get("items_analyzed", 0),
+                    'items_filtered_out': price_analysis.get("items_filtered_out", 0),
+                    'cleaned_count': price_analysis.get("cleaned_count", 0),
+                    'confidence_rating': price_analysis.get("confidence_rating", "yellow"),
+                    'confidence_explanation': price_analysis.get("confidence_explanation", "No confidence data available"),
+                    'raw_items': raw_items  # Store raw items in result for main thread processing
                 }
                 
-                # Debug: Show actual API call for headlight issues
-                if part['search_query'] == 'headlight':
-                    self.results_text.insert(tk.END, f"API params: {params}\n")
-                    self.root.update()
+                return part['search_query'], part_result
+            else:
+                return part['search_query'], {
+                    'low': 0.0, 'average': 0.0, 'high': 0.0,
+                    'raw_items': []  # Empty raw items
+                }
                 
-                price_info = f" (min: ${min_price})" if min_price > 0 else ""
-                self.results_text.insert(tk.END, f"Searching: '{search_query}'{price_info}...\n")
-                self.root.update()
-                
-                try:
-                    response = requests.get(search_url, headers=headers, params=params, timeout=10)
-                    if response.status_code == 200:
-                        data = response.json()
-                        items = data.get('itemSummaries', [])
-                        self.results_text.insert(tk.END, f"Found {len(items)} items\n")
-                    else:
-                        self.results_text.insert(tk.END, f"HTTP {response.status_code}\n")
-                        data = None
-                except Exception as e:
-                    self.results_text.insert(tk.END, f"Error: {str(e)[:100]}\n")
-                    data = None
-                
-                self.root.update()
-                
-                prices = []
-                titles = []
-                raw_items = []  # Store raw items for table display
-                
-                if data and 'itemSummaries' in data:
-                    price_debug_count = 0
-                    for item in data['itemSummaries']:
-                        if 'price' in item and 'value' in item['price']:
-                            try:
-                                price = float(item['price']['value'])
-                                
-                                # Add shipping cost if present
-                                shipping_cost = 0.0
-                                if 'shippingOptions' in item and item['shippingOptions']:
-                                    shipping_option = item['shippingOptions'][0]  # Take first shipping option
-                                    if 'shippingCost' in shipping_option and 'value' in shipping_option['shippingCost']:
-                                        shipping_cost = float(shipping_option['shippingCost']['value'])
-                                
-                                total_price = price + shipping_cost
-                                
-                                # Debug: Show first few prices for headlight and engine issues
-                                if part['search_query'] in ['headlight', 'engine'] and price_debug_count < 5:
-                                    condition = item.get('condition', 'Unknown')
-                                    condition_id = item.get('conditionId', 'Unknown')
-                                    self.results_text.insert(tk.END, f"  Item {price_debug_count + 1}: ${price:.2f} + ${shipping_cost:.2f} = ${total_price:.2f} - Condition: {condition} ({condition_id}) - {item.get('title', '')[:40]}...\n")
-                                    price_debug_count += 1
-                                    self.root.update()
-                                
-                                # No price filtering - accept all valid prices
-                                prices.append(total_price)
-                                titles.append(item.get('title', ''))
-                                
-                                # Store raw item data for table display
-                                raw_items.append({
-                                    'price': price,
-                                    'shipping': shipping_cost,
-                                    'total_price': total_price,
-                                    'title': item.get('title', 'No title'),
-                                    'item_id': item.get('itemId', ''),
-                                    'condition': item.get('condition', ''),
-                                    'location': item.get('itemLocation', {}).get('country', '')
-                                })
-                                    
-                            except (ValueError, TypeError) as e:
-                                if part['search_query'] in ['headlight', 'engine'] and price_debug_count < 3:
-                                    self.results_text.insert(tk.END, f"  Price parsing error: {str(e)} - {item.get('title', '')[:30]}...\n")
-                                    self.root.update()
-                                continue
-                        elif part['search_query'] in ['headlight', 'engine'] and price_debug_count < 3:
-                            self.results_text.insert(tk.END, f"  No price data in item: {item.get('title', '')[:30]}...\n")
-                            price_debug_count += 1
-                            self.root.update()
-                
-                if prices:
-                    # Store raw search results for table display
-                    self.raw_search_results[part['search_query']] = raw_items
-                    self.update_part_table(part['search_query'], raw_items)
-                    
-                    # AI-Powered Junkyard Parts Pricing Analysis System
-                    price_analysis = self._analyze_prices_with_ai(raw_items, part['search_query'], part.get('min_price', 0))
-                    
-                    # Store all price points and AI analysis metadata
-                    parts_prices[part['search_query']] = {
-                        'low': price_analysis["low"],
-                        'average': price_analysis["average"], 
-                        'high': price_analysis["high"],
-                        'reasoning': price_analysis.get("reasoning", ""),
-                        'items_analyzed': price_analysis.get("items_analyzed", 0),
-                        'items_filtered_out': price_analysis.get("items_filtered_out", 0),
-                        'cleaned_count': price_analysis.get("cleaned_count", 0),
-                        'confidence_rating': price_analysis.get("confidence_rating", "yellow"),
-                        'confidence_explanation': price_analysis.get("confidence_explanation", "No confidence data available")
-                    }
-                    
-                    # Debug info with AI analysis details
-                    if self.gemini_model and self.use_ai_analysis:
-                        # Show AI analysis results
-                        items_analyzed = price_analysis.get('items_analyzed', len(raw_items))
-                        items_filtered = price_analysis.get('items_filtered_out', 0)
-                        reasoning = price_analysis.get('reasoning', 'No reasoning provided')
-                        
-                        self.results_text.insert(tk.END, f"{part['search_query']}: AI analyzed {items_analyzed} items, filtered {items_filtered}\n")
-                        self.results_text.insert(tk.END, f"  Full AI reasoning: {reasoning}\n")
-                        self.results_text.insert(tk.END, f"  AI tiers: Budget=${price_analysis['low']:.2f}, "
-                                                        f"Standard=${price_analysis['average']:.2f}, "
-                                                        f"Premium=${price_analysis['high']:.2f}\n")
-                    else:
-                        # Fallback to traditional analysis debug info
-                        cleaned_count = price_analysis.get('cleaned_count', len(prices))
-                        removed_count = price_analysis.get('items_removed', 0)
-                        
-                        minimum_used = price_analysis.get('minimum_price', 0)
-                        min_text = f" (min: ${minimum_used})" if minimum_used > 0 else ""
-                        self.results_text.insert(tk.END, f"{part['search_query']}: {len(prices)} raw → {cleaned_count} cleaned "
-                                                        f"({removed_count} removed{min_text})\n")
-                        
-                        self.results_text.insert(tk.END, f"  Traditional tiers: Budget=${price_analysis['low']:.2f}, "
-                                                        f"Standard=${price_analysis['average']:.2f}, "
-                                                        f"Premium=${price_analysis['high']:.2f}\n")
-                    self.root.update()
-                else:
-                    # Even with no prices, create empty table for consistency
-                    self.raw_search_results[part['search_query']] = []
-                    self.update_part_table(part['search_query'], [])
-                    
-                    parts_prices[part['search_query']] = {'low': 0.0, 'average': 0.0, 'high': 0.0}
-                    self.results_text.insert(tk.END, f"{part['search_query']}: No valid prices found\n")
-                    self.root.update()
-                
-            except Exception as e:
-                error_msg = f"eBay search error for {part['search_query']}: {str(e)}"
-                if hasattr(e, 'response') and e.response is not None:
-                    error_msg += f" (HTTP {e.response.status_code})"
-                    self.results_text.insert(tk.END, f"Response text for {part['search_query']}: {e.response.text[:200]}...\n")
-                    self.root.update()
-                    try:
-                        error_data = e.response.json()
-                        if 'errors' in error_data:
-                            error_msg += f" - {error_data['errors'][0].get('message', 'Unknown error')}"
-                    except:
-                        pass
-                self.display_error(error_msg)
-                parts_prices[part['search_query']] = {'low': 0.0, 'average': 0.0, 'high': 0.0}
+        except Exception as e:
+            error_msg = f"eBay search error for {part['search_query']}: {str(e)}"
+            return part['search_query'], {'low': 0.0, 'average': 0.0, 'high': 0.0}
+        
+        # After all concurrent searches complete, update the part tables in main thread
+        self.results_text.insert(tk.END, "Updating search result tables...\n")
+        self.root.update()
+        
+        for part_name, part_data in parts_prices.items():
+            if isinstance(part_data, dict) and 'raw_items' in part_data:
+                # Extract raw_items from the result and store in raw_search_results
+                raw_items = part_data.pop('raw_items')  # Remove from parts_prices
+                self.raw_search_results[part_name] = raw_items
+                self.update_part_table(part_name, raw_items)
         
         return parts_prices
     
@@ -1646,70 +1859,39 @@ The user has provided these specific instructions for analyzing this vehicle's p
 Please incorporate these instructions into your analysis and filtering decisions.
 """
         
-        return f"""You are an expert automotive parts pricing analyst for a junkyard business. You need to analyze eBay search results for "{part_name}" parts and provide pricing recommendations.{vehicle_context}{custom_section}
+        # OPTIMIZATION 4: Streamlined AI prompt for faster processing
+        return f"""Analyze eBay "{part_name}" prices for junkyard business.{vehicle_context}{custom_section}
 
-**DATA TO ANALYZE:**
-The following CSV contains eBay search results with columns: Price,Shipping,Total,Title
-
+**DATA:** CSV with Price,Shipping,Total,Title columns:
 {csv_data}
 
-**YOUR TASK:**
-Analyze this data and intelligently filter out inappropriate listings, then calculate three pricing tiers. You must be smart about identifying:
+**FILTER OUT:**
+1. Accessories/small parts (filters, gaskets, bulbs, connectors, etc.)
+2. New/aftermarket/premium items
+3. Wrong specifications for this vehicle
+4. Obvious outliers (damaged cores or overpriced items)
+{"5. Items under $" + str(min_price) if min_price > 0 else ""}
 
-1. **Miscategorized Items**: Look for titles that contain accessories, small components, or items that aren't the actual part (e.g., for "engine" - filters, gaskets, mounts, belts; for "alternator" - brushes, pulleys, wires; for "headlight" - bulbs, ballasts, connectors)
+**CONFIDENCE RULES:**
+- RED if majority of data is wrong engine size/transmission/drivetrain type
+- RED if mostly inappropriate listings  
+- ORANGE if poor data quality or small sample
+- YELLOW if mixed quality
+- GREEN if good appropriate data
 
-2. **Obvious Outliers**: Items with suspiciously low prices (likely damaged/core parts) or extremely high prices (likely new/premium parts not suitable for junkyard comparison)
-
-3. **Duplicate/Similar Listings**: If you see very similar titles and prices, they might be the same seller with multiple listings
-
-4. **Non-Junkyard Appropriate**: New parts, aftermarket upgrades, or specialty items that don't represent typical junkyard inventory
-
-**MINIMUM PRICE FILTER**: 
-{"Apply a minimum price filter of $" + str(min_price) + ". Remove any items below this threshold." if min_price > 0 else "No minimum price filter specified."}
-
-**REQUIRED OUTPUT FORMAT:**
-Return your response as valid JSON with this exact structure:
+**OUTPUT JSON:**
 {{
-    "low_price": [budget tier price as number],
-    "average_price": [standard tier price as number], 
-    "high_price": [premium tier price as number],
-    "items_analyzed": [total items in the dataset],
-    "items_filtered_out": [number of items you removed],
-    "reasoning": "[brief explanation of your filtering logic and price calculation method]",
-    "confidence_rating": "[one of: dark_green, light_green, yellow, orange, red]",
-    "confidence_explanation": "[brief explanation of why you assigned this confidence level]"
+    "low_price": [10-20th percentile, rounded],
+    "average_price": [25-40th percentile, rounded], 
+    "high_price": [45-60th percentile, rounded],
+    "items_analyzed": [total count],
+    "items_filtered_out": [removed count],
+    "reasoning": "[brief filter logic]",
+    "confidence_rating": "[dark_green/light_green/yellow/orange/red]",
+    "confidence_explanation": "[brief confidence reason]"
 }}
 
-**PRICING GUIDANCE:**
-- Low price: Should represent bottom 10-20% of valid listings (budget junkyard tier)
-- Average price: Should represent 25-40% range of valid listings (standard junkyard tier)  
-- High price: Should represent 45-60% range of valid listings (premium junkyard tier)
-- Round prices to sensible increments ($5 for under $100, $10 for $100-500, $25 for over $500)
-- Ensure the three tiers are meaningfully different from each other
-
-**CONFIDENCE RATING SCALE:**
-Rate your confidence in the pricing analysis using this 5-point scale:
-- **dark_green**: "I'm absolutely sure this is a good price" - High quality data, appropriate parts, good sample size
-- **light_green**: "Very confident" - Good data quality with minor concerns
-- **yellow**: "Moderate confidence" - Mixed data quality or some filtering challenges
-- **orange**: "Low confidence" - Poor data quality, many inappropriate listings, or small sample size
-- **red**: "This is likely wrong but I had to provide something" - Severely compromised data, mostly inappropriate listings, OR when the data is for the wrong variant/specification entirely
-
-**CRITICAL**: If the majority of your data is for a different engine size, transmission type, or major component variant than what the vehicle actually uses, you MUST rate it as RED regardless of data quality. For example:
-- If analyzing engine prices for a 3.7L V6 but only finding 2.0L 4-cylinder data = RED
-- If analyzing manual transmission prices but only finding automatic transmission data = RED  
-- If analyzing turbo engine prices but only finding non-turbo engine data = RED
-- If analyzing AWD drivetrain parts but only finding FWD parts = RED
-
-Consider factors like:
-- Data quality and relevance of listings
-- Sample size after filtering
-- Appropriateness of parts found (MOST IMPORTANT: correct specifications)
-- Level of contamination with wrong parts/accessories
-- Price consistency within appropriate listings
-- Whether the parts match the actual vehicle specifications
-
-Analyze the data carefully and return only the JSON response."""
+Return only valid JSON."""
     
     def clear_all_tabs(self):
         """Clear all tabs and reset for new calculation"""
