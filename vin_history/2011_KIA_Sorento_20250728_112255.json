@@ -1,0 +1,247 @@
+{
+  "timestamp": "2025-07-28T11:22:55.349113",
+  "vin": "5XYKWDA27BG161215",
+  "vehicle_info": {
+    "make": "KIA",
+    "model": "Sorento",
+    "year": "2011",
+    "trim": "HGS(Top)",
+    "vehicle_type": "MULTIPURPOSE PASSENGER VEHICLE (MPV)",
+    "body_class": "Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)",
+    "doors": "4",
+    "drive_type": "4WD/4-Wheel Drive/4x4",
+    "engine_cylinders": "6",
+    "engine_displacement": "3.5",
+    "fuel_type": "Gasoline",
+    "engine_configuration": "V-Shaped",
+    "engine_designation": "2"
+  },
+  "vehicle_string": "2011 KIA Sorento HGS(Top)",
+  "parts_prices": {
+    "engine": {
+      "low": 2300.0,
+      "average": 2573.0,
+      "high": 2676.0,
+      "reasoning": "Filtered out 2.4L engines, listings without engine assembly, and listings not explicitly for Sorento or Santa Fe. Also removed listings under $1500. Prices calculated based on remaining 3.5L engine assemblies.",
+      "items_analyzed": 99,
+      "items_filtered_out": 30,
+      "cleaned_count": 69,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality with a good sample size of relevant engine listings after filtering."
+    },
+    "transmission": {
+      "low": 550.0,
+      "average": 620.0,
+      "high": 700.0,
+      "reasoning": "Filtered out manual transmissions, FWD transmissions, transmissions for 2.4L engines, and transmissions for Hyundai Santa Fe.  Only included automatic transmissions for 3.5L 4WD Kia Sorento. Also filtered out items under $300.",
+      "items_analyzed": 150,
+      "items_filtered_out": 78,
+      "cleaned_count": 72,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed quality data. Many listings were for incorrect engine sizes or drivetrains, requiring significant filtering.  Remaining sample size is adequate, but not ideal."
+    },
+    "rear carrier": {
+      "low": 253.0,
+      "average": 299.0,
+      "high": 326.0,
+      "reasoning": "No items were filtered out as all listings appear to be for the correct part (rear differential carrier assembly) for the 2011-2013 Kia Sorento AWD and above the minimum price threshold. No accessories or obviously incorrect parts were present in the data.",
+      "items_analyzed": 52,
+      "items_filtered_out": 0,
+      "cleaned_count": 52,
+      "confidence_rating": "dark_green",
+      "confidence_explanation": "Excellent, high-quality data. All listings appear relevant and consistent, providing a reliable price range for the specified part."
+    },
+    "steering rack": {
+      "low": 148.0,
+      "average": 160.0,
+      "high": 180.0,
+      "reasoning": "Filtered out items under $50 and listings not directly related to a 2011-2013 Kia Sorento or Hyundai Santa Fe steering rack. Included Santa Fe listings due to shared platform.  Focused on OEM used parts.",
+      "items_analyzed": 100,
+      "items_filtered_out": 10,
+      "cleaned_count": 90,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering.  Most listings appear to be appropriate used OEM parts."
+    },
+    "headlight": {
+      "low": 85.0,
+      "average": 95.0,
+      "high": 110.0,
+      "reasoning": "Filtered out items under $60, non-headlights (taillights, mirrors), and parts for incorrect years (2014-2015, 2009-2011).  Also removed listings that appeared to be for bulb replacements or other small parts, and listings that mentioned damage like 'cloudy' lenses unless the price was significantly lower.",
+      "items_analyzed": 160,
+      "items_filtered_out": 35,
+      "cleaned_count": 125,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part and year range."
+    },
+    "front door panel": {
+      "low": 125.0,
+      "average": 148.0,
+      "high": 161.0,
+      "reasoning": "Filtered out items under $50 and listings that were not front door panels (e.g., door switches). Focused on listings explicitly mentioning 'front door panel' or 'front door trim panel' for a 2011 Kia Sorento.",
+      "items_analyzed": 67,
+      "items_filtered_out": 7,
+      "cleaned_count": 60,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with consistent descriptions and pricing for the specified part and vehicle."
+    },
+    "rear door panel": {
+      "low": 125.0,
+      "average": 148.0,
+      "high": 161.0,
+      "reasoning": "Filtered out items under $50. All listings appear to be for the correct part (rear door panel) for a 2011 Kia Sorento. No obvious outliers were removed.",
+      "items_analyzed": 45,
+      "items_filtered_out": 1,
+      "cleaned_count": 44,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good quality data with consistent pricing for the specified part and vehicle."
+    },
+    "abs pump": {
+      "low": 64.0,
+      "average": 77.0,
+      "high": 95.0,
+      "reasoning": "Filtered out diesel engines and items under $30. Focused on 2011-2013 Kia Sorento ABS pumps.",
+      "items_analyzed": 18,
+      "items_filtered_out": 8,
+      "cleaned_count": 10,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, but some diesel listings still slipped through initially."
+    },
+    "alternator": {
+      "low": 67.0,
+      "average": 75.0,
+      "high": 79.0,
+      "reasoning": "Filtered out alternators not explicitly listing 'Sorento' or 'Santa Fe 3.5L' or 'Sedona' or 'Azera' in the title, or those clearly for other engine types (e.g., 'turbo', '2.4L'). Also removed listings below $30 and those that appeared to be for other parts or were miscategorized.",
+      "items_analyzed": 189,
+      "items_filtered_out": 101,
+      "cleaned_count": 88,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. The remaining listings appear to be appropriate alternators for similar vehicles, providing a reasonable price range for a 2011 Kia Sorento 3.5L 4WD."
+    },
+    "body control module": {
+      "low": 95.0,
+      "average": 115.0,
+      "high": 156.0,
+      "reasoning": "Filtered out one listing that was for a Ford F250, and one listing for a 2006 Sorento (MK1).  All other listings appeared to be for the correct part and year range.",
+      "items_analyzed": 17,
+      "items_filtered_out": 1,
+      "cleaned_count": 16,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering.  Listings appear relevant to the specified vehicle."
+    },
+    "brake caliper": {
+      "low": 45.0,
+      "average": 54.0,
+      "high": 65.0,
+      "reasoning": "Filtered out items under $30. All items appear to be correct fitment.",
+      "items_analyzed": 174,
+      "items_filtered_out": 1,
+      "cleaned_count": 173,
+      "confidence_rating": "dark_green",
+      "confidence_explanation": "Excellent high-quality data. All listings are for the correct part and within a reasonable price range."
+    },
+    "cluster": {
+      "low": 50,
+      "average": 75,
+      "high": 90,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 118,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "heater control": {
+      "low": 45,
+      "average": 60,
+      "high": 75,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 135,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "compressor": {
+      "low": 70,
+      "average": 85,
+      "high": 95,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "door mirror": {
+      "low": 55,
+      "average": 60,
+      "high": 65,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 187,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "engine computer": {
+      "low": 35,
+      "average": 40,
+      "high": 45,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 199,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "front strut": {
+      "low": 85,
+      "average": 100,
+      "high": 130,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 165,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "steering wheel": {
+      "low": 40,
+      "average": 60,
+      "high": 90,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 42,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "wheel": {
+      "low": 85,
+      "average": 100,
+      "high": 100,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 195,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 4322.0,
+      "average": 4944.0,
+      "high": 5399.0
+    },
+    "bids": {
+      "low": 787.4862243807822,
+      "average": 1065.9360000000001,
+      "high": 1283.5100250017363
+    }
+  },
+  "status": "✅ Complete",
+  "failed_parts": [],
+  "low_confidence_parts": [],
+  "filename": "2011_KIA_Sorento_20250728_112255.json"
+}

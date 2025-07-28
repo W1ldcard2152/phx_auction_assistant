@@ -1,0 +1,246 @@
+{
+  "timestamp": "2025-07-28T10:15:39.747769",
+  "vin": "2GKFLVEK3F6282518",
+  "vehicle_info": {
+    "make": "GMC",
+    "model": "Terrain",
+    "year": "2015",
+    "trim": null,
+    "vehicle_type": "MULTIPURPOSE PASSENGER VEHICLE (MPV)",
+    "body_class": "Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)",
+    "doors": "4",
+    "drive_type": "AWD/All-Wheel Drive",
+    "engine_cylinders": "4",
+    "engine_displacement": "2.4",
+    "fuel_type": "Gasoline",
+    "engine_designation": "K"
+  },
+  "vehicle_string": "2015 GMC Terrain",
+  "parts_prices": {
+    "engine": {
+      "low": 598.0,
+      "average": 651.0,
+      "high": 705.0,
+      "reasoning": "Filtered out engines not matching the 2.4L specification, as well as those that were clearly for other vehicles (e.g., Impala 3.6L).  Also removed listings below $300.",
+      "items_analyzed": 170,
+      "items_filtered_out": 125,
+      "cleaned_count": 45,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed data quality. Many listings were for the wrong engine size (3.6L instead of 2.4L), but some relevant listings were found. The remaining sample size is relatively small."
+    },
+    "transmission": {
+      "low": 378.0,
+      "average": 394.0,
+      "high": 411.0,
+      "reasoning": "Filtered out FWD transmissions and parts under $300. Included only AWD 2.4L transmissions for 2015-2017 Equinox/Terrain.",
+      "items_analyzed": 150,
+      "items_filtered_out": 89,
+      "cleaned_count": 61,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality after filtering, appropriate listings for the specified vehicle."
+    },
+    "rear carrier": {
+      "low": 185.0,
+      "average": 217.0,
+      "high": 239.0,
+      "reasoning": "Filtered out items under $75, listings not explicitly mentioning 'rear carrier' or 'differential carrier assembly', and listings that specified FWD only. Prioritized listings mentioning GMC Terrain or Chevrolet Equinox within the years 2010-2017. Included listings mentioning AWD.",
+      "items_analyzed": 150,
+      "items_filtered_out": 30,
+      "cleaned_count": 120,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality with a sufficient sample size after filtering. Most listings appear to be for the correct part, though some ambiguity remains due to fitment across both Terrain and Equinox."
+    },
+    "steering rack": {
+      "low": 115.0,
+      "average": 125.0,
+      "high": 135.0,
+      "reasoning": "Filtered out local pickup only listings. Included listings for Equinox and Terrain from 2010-2017. No listings were filtered out due to engine size or drivetrain as the titles did not specify.",
+      "items_analyzed": 182,
+      "items_filtered_out": 1,
+      "cleaned_count": 181,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size. Most listings appear to be appropriate."
+    },
+    "headlight": {
+      "low": 70.0,
+      "average": 75.0,
+      "high": 85.0,
+      "reasoning": "No listings were filtered out. All listings appear to be headlights for the 2010-2015 GMC Terrain. No accessories or parts for other vehicles were found.",
+      "items_analyzed": 140,
+      "items_filtered_out": 0,
+      "cleaned_count": 140,
+      "confidence_rating": "dark_green",
+      "confidence_explanation": "Excellent data quality. All listings are appropriate and relevant to the specified vehicle and part."
+    },
+    "front door panel": {
+      "low": 117.0,
+      "average": 130.0,
+      "high": 150.0,
+      "reasoning": "Filtered out door switches, wiring harnesses, rear mats, and listings below $50. Focused on listings explicitly mentioning 'Front Door Trim Panel' for a GMC Terrain, prioritizing 2015 models but including listings for 2014-2017 as they are likely compatible. Excluded listings that specified FWD or other incompatible features.  Listings with excessive shipping costs were also considered less desirable but not explicitly filtered unless the total price was an outlier.",
+      "items_analyzed": 100,
+      "items_filtered_out": 20,
+      "cleaned_count": 80,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part and vehicle."
+    },
+    "rear door panel": {
+      "low": 105.0,
+      "average": 123.0,
+      "high": 149.0,
+      "reasoning": "Filtered out items under $50 and one wiring harness. Included both Equinox and Terrain rear door trim panels as they are the same chassis.",
+      "items_analyzed": 120,
+      "items_filtered_out": 7,
+      "cleaned_count": 113,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with appropriate listings for rear door trim panels."
+    },
+    "abs pump": {
+      "low": 105.0,
+      "average": 115.0,
+      "high": 125.0,
+      "reasoning": "No items were filtered out as all appear to be ABS pumps for compatible vehicles (Equinox/Terrain 2012-2017). No accessories or obviously incorrect parts were present. All prices are above $30.",
+      "items_analyzed": 18,
+      "items_filtered_out": 0,
+      "cleaned_count": 18,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with consistent listings for the target vehicle and part."
+    },
+    "alternator": {
+      "low": 35.0,
+      "average": 40.0,
+      "high": 46.0,
+      "reasoning": "Filtered out parts not matching the 2015 GMC Terrain 2.4L AWD alternator, including those for Equinox and Cadillac SRX. Also removed listings below $30.00.",
+      "items_analyzed": 199,
+      "items_filtered_out": 119,
+      "cleaned_count": 80,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality after filtering, with a reasonable sample size of relevant alternators."
+    },
+    "body control module": {
+      "low": 40.0,
+      "average": 60.0,
+      "high": 74.0,
+      "reasoning": "Filtered out parts not specific to the 2015 GMC Terrain or Chevrolet Equinox, parts for other vehicles like Chevy Cruze, Buick Verano, Chevy Spark, Chevy Malibu, Cadillac SRX, Buick Encore, and parts that were below $20. Also filtered out listings that were not body control modules.",
+      "items_analyzed": 176,
+      "items_filtered_out": 116,
+      "cleaned_count": 60,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality after filtering, with a reasonable sample size of relevant parts."
+    },
+    "brake caliper": {
+      "low": 40.0,
+      "average": 42.0,
+      "high": 45.0,
+      "reasoning": "Filtered out items under $30, and listings for FWD Terrain/Equinox, Impala, Lacrosse, and Vue. Focused on listings explicitly mentioning GMC Terrain or Chevy Equinox (2010-2017) and brake caliper.",
+      "items_analyzed": 170,
+      "items_filtered_out": 35,
+      "cleaned_count": 135,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear relevant to the target vehicle."
+    },
+    "cluster": {
+      "low": 45,
+      "average": 70,
+      "high": 85,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 97,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "heater control": {
+      "low": 60,
+      "average": 70,
+      "high": 125,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 5,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "compressor": {
+      "low": 55,
+      "average": 60,
+      "high": 65,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 193,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "door mirror": {
+      "low": 35,
+      "average": 40,
+      "high": 45,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "engine computer": {
+      "low": 20,
+      "average": 20,
+      "high": 25,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "front strut": {
+      "low": 50,
+      "average": 65,
+      "high": 70,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "steering wheel": {
+      "low": 80,
+      "average": 110,
+      "high": 110,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 32,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "wheel": {
+      "low": 85,
+      "average": 90,
+      "high": 95,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 180,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 2218.0,
+      "average": 2497.0,
+      "high": 2784.0
+    },
+    "bids": {
+      "low": 300,
+      "average": 300,
+      "high": 300
+    }
+  },
+  "status": "✅ Complete",
+  "failed_parts": [],
+  "low_confidence_parts": [],
+  "filename": "2015_GMC_Terrain_20250728_101539.json"
+}

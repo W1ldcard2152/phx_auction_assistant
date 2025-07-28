@@ -1,0 +1,248 @@
+{
+  "timestamp": "2025-07-28T10:18:39.165944",
+  "vin": "SALGS2EF1EA134804",
+  "vehicle_info": {
+    "make": "LAND ROVER",
+    "model": "Range Rover",
+    "year": "2014",
+    "trim": "SuperCharged",
+    "vehicle_type": "MULTIPURPOSE PASSENGER VEHICLE (MPV)",
+    "body_class": "Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)",
+    "doors": "4",
+    "transmission_style": "Automatic",
+    "transmission_speeds": "8",
+    "engine_cylinders": "8",
+    "engine_displacement": "5.0",
+    "fuel_type": "Gasoline",
+    "engine_configuration": "V-Shaped",
+    "engine_designation": "F"
+  },
+  "vehicle_string": "2014 LAND ROVER Range Rover SuperCharged",
+  "parts_prices": {
+    "engine": {
+      "low": 7826.0,
+      "average": 8000.0,
+      "high": 8242.0,
+      "reasoning": "Filtered out parts that were not complete engines, were for the wrong engine size (3.0L), or were under $300. Also removed listings that were clearly not engines, such as fuel tanks, drive shafts, and door mirrors.",
+      "items_analyzed": 67,
+      "items_filtered_out": 18,
+      "cleaned_count": 49,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. The prices seem consistent with the used engine market."
+    },
+    "transmission": {
+      "low": 594.0,
+      "average": 660.0,
+      "high": 702.0,
+      "reasoning": "Filtered out valve bodies, transfer cases, and transmissions for incorrect models/engines.  Focused on 5.0L Range Rover transmissions.  Kept listings that explicitly stated 'transmission' and matched the vehicle specs. Removed items under $300.",
+      "items_analyzed": 150,
+      "items_filtered_out": 25,
+      "cleaned_count": 125,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering.  Majority of listings appear to be appropriate transmissions for the specified vehicle."
+    },
+    "rear carrier": {
+      "low": 485.0,
+      "average": 520.0,
+      "high": 619.0,
+      "reasoning": "Filtered out parts not matching the 2014 Land Rover Range Rover 5.0L gasoline engine, including Evoque and Discovery Sport parts. Focused on rear differential carrier assemblies. Excluded listings with incorrect fitment or those that appeared to be for related but different parts.",
+      "items_analyzed": 100,
+      "items_filtered_out": 40,
+      "cleaned_count": 60,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a good number of relevant listings for the specified vehicle."
+    },
+    "steering rack": {
+      "low": 446.0,
+      "average": 477.0,
+      "high": 535.0,
+      "reasoning": "Filtered out parts under $50, and parts that were not steering racks (wiring, columns, etc). Also filtered out parts for the Evoque, as well as diesel racks. Kept listings for Range Rover and Range Rover Sport 2014-2015.",
+      "items_analyzed": 120,
+      "items_filtered_out": 20,
+      "cleaned_count": 100,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with clear descriptions and consistent pricing for the specified vehicle and part."
+    },
+    "headlight": {
+      "low": 178.0,
+      "average": 228.0,
+      "high": 273.0,
+      "reasoning": "Filtered out headlight ballasts, bulbs, sensors, and other non-headlight parts.  Also removed parts not specific to the 2014 Range Rover or Evoque, and items under $60.  Tail lights were also removed.",
+      "items_analyzed": 179,
+      "items_filtered_out": 89,
+      "cleaned_count": 90,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a decent sample size of relevant headlight assemblies."
+    },
+    "front door panel": {
+      "low": 115.0,
+      "average": 148.0,
+      "high": 175.0,
+      "reasoning": "Filtered out items under $50, and listings that were not complete front door panels (e.g., switches, speakers, trim pieces, wiring harnesses, vents, pedals, etc.). Included both Range Rover and Range Rover Sport/Evoque panels, as indicated by the data.",
+      "items_analyzed": 179,
+      "items_filtered_out": 87,
+      "cleaned_count": 92,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality after filtering, with a reasonable sample size of relevant door panels."
+    },
+    "rear door panel": {
+      "low": 80.0,
+      "average": 90.0,
+      "high": 120.0,
+      "reasoning": "Filtered out items under $50, and parts not directly related to the rear door panel like seatbelts, speakers, and trim pieces. Also filtered out listings for Evoque when looking for Range Rover/Sport panels.",
+      "items_analyzed": 171,
+      "items_filtered_out": 78,
+      "cleaned_count": 93,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant door panels."
+    },
+    "abs pump": {
+      "low": 114.0,
+      "average": 134.0,
+      "high": 203.0,
+      "reasoning": "Filtered out diesel specific parts and one listing for a Cadillac. Kept listings explicitly mentioning 'ABS Pump' and 'Range Rover' or 'Evoque' and part numbers matching the vehicle.",
+      "items_analyzed": 25,
+      "items_filtered_out": 2,
+      "cleaned_count": 23,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed quality due to some listings being for Evoque models which may have slightly different ABS pumps, and some listings including diesel models."
+    },
+    "alternator": {
+      "low": 79.0,
+      "average": 89.0,
+      "high": 95.0,
+      "reasoning": "Filtered out diesel parts, Evoque/LR2/Discovery alternators (wrong model), and items under $30. Included only alternators explicitly stating Range Rover or Range Rover Sport, or those with 'Classic Style VIN G 4th Digit Fits 13-22 RANGE ROVER'.",
+      "items_analyzed": 179,
+      "items_filtered_out": 93,
+      "cleaned_count": 86,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonably good data quality after filtering, with a decent sample size of relevant alternators. Some ambiguity remains in fitment, but the majority appear appropriate."
+    },
+    "body control module": {
+      "low": 42.0,
+      "average": 55.0,
+      "high": 70.0,
+      "reasoning": "Filtered out diesel parts, fuel pump modules, keyless entry modules, park assist modules, telematics modules, suspension modules, engine control modules, fuse boxes, seat climate modules, and items under $20. Focused on listings explicitly mentioning 'Body Control Module' or 'BCM' for a 2014 Range Rover or Range Rover Sport with no mention of diesel.",
+      "items_analyzed": 58,
+      "items_filtered_out": 22,
+      "cleaned_count": 36,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a decent sample size of relevant body control modules. Some ambiguity remains in titles, but the core data appears valid."
+    },
+    "brake caliper": {
+      "low": 45.0,
+      "average": 50.0,
+      "high": 60.0,
+      "reasoning": "Filtered out parts not matching the 2014 Land Rover Range Rover 5.0L gasoline engine, including Evoque and LR2 parts, brackets, and items under $30. Also removed listings that appeared to be for caliper brackets or other related parts but not the caliper itself. Focused on listings explicitly mentioning 'brake caliper' and the correct vehicle or compatible years.",
+      "items_analyzed": 137,
+      "items_filtered_out": 41,
+      "cleaned_count": 96,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part and vehicle."
+    },
+    "cluster": {
+      "low": 100.0,
+      "average": 125.0,
+      "high": 176.0,
+      "reasoning": "Filtered out parts that were not instrument clusters, diesel models, accessories, or outside the 2014 Range Rover/Range Rover Sport/Evoque range. Also removed items under $30.",
+      "items_analyzed": 108,
+      "items_filtered_out": 47,
+      "cleaned_count": 61,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality after filtering, with a reasonable sample size of relevant instrument clusters."
+    },
+    "heater control": {
+      "low": 65.0,
+      "average": 78.0,
+      "high": 95.0,
+      "reasoning": "Filtered out parts under $30, Evoque parts, and listings not directly related to the main heater control unit for a 2014 Range Rover 5.0L. Focused on listings explicitly mentioning 'Heater Climate Control' or similar terms for the specified vehicle.",
+      "items_analyzed": 150,
+      "items_filtered_out": 30,
+      "cleaned_count": 120,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality with a sufficient sample size after filtering. Some ambiguity remains due to variations in part condition and included components, but the core data appears relevant."
+    },
+    "compressor": {
+      "low": 65,
+      "average": 70,
+      "high": 75,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 188,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "door mirror": {
+      "low": 120,
+      "average": 160,
+      "high": 180,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 198,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "engine computer": {
+      "low": 20,
+      "average": 25,
+      "high": 25,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 197,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "front strut": {
+      "low": 90,
+      "average": 130,
+      "high": 160,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "steering wheel": {
+      "low": 95,
+      "average": 150,
+      "high": 170,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "wheel": {
+      "low": 75,
+      "average": 110,
+      "high": 140,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 10634.0,
+      "average": 11299.0,
+      "high": 12115.0
+    },
+    "bids": {
+      "low": 4386.924913810281,
+      "average": 4843.931467394137,
+      "high": 5420.915551593832
+    }
+  },
+  "status": "✅ Complete",
+  "failed_parts": [],
+  "low_confidence_parts": [],
+  "filename": "2014_LANDROVER_RangeRover_20250728_101839.json"
+}

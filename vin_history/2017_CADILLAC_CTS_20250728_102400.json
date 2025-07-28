@@ -1,0 +1,249 @@
+{
+  "timestamp": "2025-07-28T10:24:00.762025",
+  "vin": "1G6AW5SX5H0208285",
+  "vehicle_info": {
+    "make": "CADILLAC",
+    "model": "CTS",
+    "year": "2017",
+    "trim": null,
+    "vehicle_type": "PASSENGER CAR",
+    "body_class": "Sedan/Saloon",
+    "doors": "4",
+    "transmission_style": "Automatic",
+    "transmission_speeds": "8",
+    "drive_type": "AWD/All-Wheel Drive",
+    "engine_cylinders": "4",
+    "engine_displacement": "2.0",
+    "fuel_type": "Gasoline",
+    "engine_configuration": "In-Line",
+    "engine_designation": "X"
+  },
+  "vehicle_string": "2017 CADILLAC CTS",
+  "parts_prices": {
+    "engine": {
+      "low": 1218.0,
+      "average": 1333.0,
+      "high": 1530.0,
+      "reasoning": "Filtered out non-engine parts, incorrect engine sizes (3.6L), RWD models, and Camaro engines. Included only 2.0L AWD engines for Cadillac CTS/ATS/CT6 from 2016-2019.",
+      "items_analyzed": 130,
+      "items_filtered_out": 58,
+      "cleaned_count": 72,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant engine listings."
+    },
+    "transmission": {
+      "low": 726.0,
+      "average": 859.0,
+      "high": 1007.0,
+      "reasoning": "Filtered out items under $300. Included only automatic transmissions that fit a 2017 Cadillac CTS with a 2.0L engine and AWD.",
+      "items_analyzed": 89,
+      "items_filtered_out": 2,
+      "cleaned_count": 87,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with mostly appropriate listings after filtering."
+    },
+    "rear carrier": {
+      "low": 720.0,
+      "average": 827.0,
+      "high": 1415.0,
+      "reasoning": "Filtered out parts not specific to 2017 Cadillac CTS AWD with 2.0L engine, RWD parts, and those that were not complete rear carrier assemblies. Also removed listings for other vehicles like Camaro and ATS unless they specifically stated compatibility with the CTS. Removed actuator modules and anything below $75.",
+      "items_analyzed": 60,
+      "items_filtered_out": 30,
+      "cleaned_count": 30,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed data quality due to variations in listing accuracy and part condition. Some listings lacked sufficient detail to confirm exact fitment, and prices varied widely based on mileage and condition."
+    },
+    "steering rack": {
+      "low": 233.0,
+      "average": 307.0,
+      "high": 403.0,
+      "reasoning": "Filtered out parts not matching 2017 Cadillac CTS AWD 2.0L specifications, including RWD/FWD racks, CT6 racks (unless explicitly stated as compatible), and items under $50. Also removed listings that appeared to be for components *of* the steering rack, rather than the complete rack itself, and CTS-V racks.",
+      "items_analyzed": 85,
+      "items_filtered_out": 47,
+      "cleaned_count": 38,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant parts."
+    },
+    "headlight": {
+      "low": 356.0,
+      "average": 471.0,
+      "high": 615.0,
+      "reasoning": "Filtered out listings under $60, and those clearly for headlight ballasts, DRLs, or other non-headlight parts. Included listings explicitly mentioning 'headlight' and 'CTS' or 'CT6' within the years 2015-2019.  CT6 listings were included as they are often miscategorized.",
+      "items_analyzed": 89,
+      "items_filtered_out": 3,
+      "cleaned_count": 86,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality with a good sample size after filtering. Some CT6 listings may skew the data slightly, but the majority appear to be relevant CTS headlights."
+    },
+    "front door panel": {
+      "low": 180.0,
+      "average": 209.0,
+      "high": 234.0,
+      "reasoning": "Filtered out items under $50, CT6 parts, speakers, switches, trim pieces, and listings not explicitly for door panels. Focused on listings for complete front door panels for a 2017 Cadillac CTS.",
+      "items_analyzed": 51,
+      "items_filtered_out": 15,
+      "cleaned_count": 36,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant door panels."
+    },
+    "rear door panel": {
+      "low": 100.0,
+      "average": 140.0,
+      "high": 175.0,
+      "reasoning": "Filtered out items under $50, parts not matching 'rear door panel', and Cadillac CT6 parts. Included only parts for 2014-2019 Cadillac CTS.",
+      "items_analyzed": 67,
+      "items_filtered_out": 21,
+      "cleaned_count": 46,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality and sample size after filtering. Most listings appear to be for the correct part."
+    },
+    "abs pump": {
+      "low": 75.0,
+      "average": 95.0,
+      "high": 118.0,
+      "reasoning": "No items were filtered out as all appear to be ABS pumps for Cadillac vehicles. CT6 listings were included as they are similar vehicles and can provide a broader price range. All listings are above $30.",
+      "items_analyzed": 14,
+      "items_filtered_out": 0,
+      "cleaned_count": 14,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed quality due to inclusion of CT6 listings and small sample size. While relevant, CT6 parts may not be directly comparable in price to CTS parts."
+    },
+    "alternator": {
+      "low": 59.0,
+      "average": 61.0,
+      "high": 65.0,
+      "reasoning": "Filtered out parts not matching the 2017 Cadillac CTS 2.0L AWD, including those for other models like Impala, Malibu, Camaro, Colorado, and ATS (unless specifically noted as compatible). Also removed listings for brackets, and those with incorrect engine sizes or drivetrain configurations. Listings under $30 were also removed.",
+      "items_analyzed": 177,
+      "items_filtered_out": 97,
+      "cleaned_count": 80,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a good number of relevant listings remaining. Some ambiguity remains in fitment, but the majority of listings appear appropriate."
+    },
+    "body control module": {
+      "low": 50.0,
+      "average": 60.0,
+      "high": 74.0,
+      "reasoning": "Filtered out parts not specific to the 2017 Cadillac CTS BCM. Included parts with 'Cadillac CTS' or 'ATS' and 'Body Control Module' in the title. Excluded listings for other vehicles like Silverado, Tahoe, Yukon, CT6, and Escalade. Excluded listings that were not BCMs. Excluded prices under $20.",
+      "items_analyzed": 161,
+      "items_filtered_out": 89,
+      "cleaned_count": 72,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant parts."
+    },
+    "brake caliper": {
+      "low": 65.0,
+      "average": 74.0,
+      "high": 83.0,
+      "reasoning": "Filtered out parts not matching 2017 Cadillac CTS AWD 2.0L, including ATS/CT6 parts, RWD/FWD parts, and those below $30.  Also excluded listings that were not brake calipers (e.g., master cylinders).",
+      "items_analyzed": 150,
+      "items_filtered_out": 65,
+      "cleaned_count": 85,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed data quality due to some listings being for incorrect models (ATS, CT6) despite containing 'CTS' in the title, and some listings lacking sufficient detail to confirm AWD compatibility.  Small sample size after filtering also contributes to lower confidence."
+    },
+    "cluster": {
+      "low": 85,
+      "average": 100,
+      "high": 110,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 32,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "heater control": {
+      "low": 60,
+      "average": 100,
+      "high": 120,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 15,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "compressor": {
+      "low": 70,
+      "average": 80,
+      "high": 85,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 191,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "door mirror": {
+      "low": 95,
+      "average": 110,
+      "high": 130,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "engine computer": {
+      "low": 20,
+      "average": 20,
+      "high": 20,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 173,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "front strut": {
+      "low": 85,
+      "average": 120,
+      "high": 140,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 67,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "steering wheel": {
+      "low": 35,
+      "average": 70,
+      "high": 130,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 53,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "wheel": {
+      "low": 130,
+      "average": 160,
+      "high": 200,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 184,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 4362.0,
+      "average": 5196.0,
+      "high": 6654.0
+    },
+    "bids": {
+      "low": 804.6647929124879,
+      "average": 1185.0956298198475,
+      "high": 1934.8851140798513
+    }
+  },
+  "status": "✅ Complete",
+  "failed_parts": [],
+  "low_confidence_parts": [],
+  "filename": "2017_CADILLAC_CTS_20250728_102400.json"
+}

@@ -1,0 +1,247 @@
+{
+  "timestamp": "2025-07-28T11:05:02.094212",
+  "vin": "WAUGGAFC4DN096402",
+  "vehicle_info": {
+    "make": "AUDI",
+    "model": "A6",
+    "year": "2013",
+    "trim": "quattro Premium Plus",
+    "vehicle_type": "PASSENGER CAR",
+    "body_class": "Sedan/Saloon",
+    "doors": "4",
+    "transmission_style": "Automatic",
+    "drive_type": "AWD/All-Wheel Drive",
+    "engine_cylinders": "6",
+    "engine_displacement": "3.0",
+    "fuel_type": "Gasoline",
+    "engine_designation": "C"
+  },
+  "vehicle_string": "2013 AUDI A6 quattro Premium Plus",
+  "parts_prices": {
+    "engine": {
+      "low": 2576.0,
+      "average": 2868.0,
+      "high": 3005.0,
+      "reasoning": "Filtered out parts/accessories, diesel engines, 2.0L engines, and items under $300. Focused on 3.0L gasoline engines for AWD Audi A6/A7 2012-2015.",
+      "items_analyzed": 86,
+      "items_filtered_out": 20,
+      "cleaned_count": 66,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be appropriate engines."
+    },
+    "transmission": {
+      "low": 399.0,
+      "average": 416.0,
+      "high": 460.0,
+      "reasoning": "Filtered out valve bodies, incorrect engine sizes (2.0L), and parts for other Audi models.  Focused on complete automatic transmissions for 3.0L AWD Audi A6 models from 2012-2015, and removed listings under $300.",
+      "items_analyzed": 180,
+      "items_filtered_out": 100,
+      "cleaned_count": 80,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable sample size of relevant transmissions after filtering.  Prices appear consistent with used OEM parts."
+    },
+    "rear carrier": {
+      "low": 140.0,
+      "average": 189.0,
+      "high": 260.0,
+      "reasoning": "Filtered out parts not matching the 2013 Audi A6 3.0L AWD rear carrier differential, including those with incorrect engine sizes (2.0L turbo), incorrect vehicle models (Q5, A8), and listings that were not the complete carrier assembly. Also removed listings under $75.",
+      "items_analyzed": 159,
+      "items_filtered_out": 68,
+      "cleaned_count": 91,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed data quality due to many listings fitting other Audi models and engine sizes, even after filtering. The remaining sample size is adequate, but the initial data pollution lowers confidence."
+    },
+    "steering rack": {
+      "low": 630.0,
+      "average": 709.0,
+      "high": 784.0,
+      "reasoning": "Filtered out non-steering rack items (trim panel, steering column), items under $50, and listings not explicitly mentioning A6/A7. Focused on listings compatible with 2012-2017 Audi A6/A7 models.",
+      "items_analyzed": 68,
+      "items_filtered_out": 5,
+      "cleaned_count": 63,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part."
+    },
+    "headlight": {
+      "low": 208.0,
+      "average": 275.0,
+      "high": 367.0,
+      "reasoning": "Filtered out listings that were not complete headlights for a 2013 Audi A6, including ballasts, bulbs, brackets, and irrelevant models. Also removed listings with incorrect years or those clearly for other Audi models like A4 or Q5. Listings with 'used' in the title were prioritized. Listings that were clearly not headlights were removed.",
+      "items_analyzed": 175,
+      "items_filtered_out": 100,
+      "cleaned_count": 75,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed data quality due to many listings being for headlight components rather than complete headlight assemblies. Many listings also fit other Audi models, requiring careful filtering."
+    },
+    "front door panel": {
+      "low": 100.0,
+      "average": 130.0,
+      "high": 150.0,
+      "reasoning": "Filtered out items under $50, accessories like speakers/wiring harnesses/switches, and listings not explicitly for door panels. Focused on listings specifying 'door panel', 'interior trim panel', or 'door cover panel' for a 2012-2018 Audi A6/S6.",
+      "items_analyzed": 175,
+      "items_filtered_out": 75,
+      "cleaned_count": 100,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part."
+    },
+    "rear door panel": {
+      "low": 75.0,
+      "average": 90.0,
+      "high": 130.0,
+      "reasoning": "Filtered out items under $50, accessories like speakers and armrests, and listings not explicitly for door panels. Focused on listings specifying 'door panel' or 'door trim panel' for a 2012-2018 Audi A6.",
+      "items_analyzed": 148,
+      "items_filtered_out": 40,
+      "cleaned_count": 108,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part."
+    },
+    "abs pump": {
+      "low": 74.0,
+      "average": 94.0,
+      "high": 115.0,
+      "reasoning": "All listings appear to be ABS pumps for Audi A6/A7 models within the specified year range (2012-2015) and no listings were filtered out. Listings with 'TDI' in the title were kept as the ABS pump is not engine specific. No listings were below $30.",
+      "items_analyzed": 40,
+      "items_filtered_out": 0,
+      "cleaned_count": 40,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with relevant listings for the specified vehicle and part."
+    },
+    "alternator": {
+      "low": 61.0,
+      "average": 73.0,
+      "high": 84.0,
+      "reasoning": "Filtered out accessories, parts not specific to 2013 Audi A6 3.0L AWD, and items under $30. Also removed listings for brackets/tensioners/wiring harnesses, focusing on complete alternator units. Listings clearly for 2.0L engines were also removed.",
+      "items_analyzed": 60,
+      "items_filtered_out": 145,
+      "cleaned_count": -85,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant alternators."
+    },
+    "body control module": {
+      "low": 37.0,
+      "average": 50.0,
+      "high": 74.0,
+      "reasoning": "Filtered out items under $20, listings not specific to a body control module, listings for incorrect Audi models (A4, A5, A8), and listings that explicitly stated diesel engines. Also removed listings that appeared to be for brackets or holders, not the module itself. Listings with 'door module' were also removed as they are not the main BCM. FWD listings were removed.",
+      "items_analyzed": 175,
+      "items_filtered_out": 64,
+      "cleaned_count": 111,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality after filtering, with a reasonable sample size focused on the correct part for the specified vehicle."
+    },
+    "brake caliper": {
+      "low": 47.0,
+      "average": 55.0,
+      "high": 65.0,
+      "reasoning": "Filtered out items under $30, and listings that were not brake calipers (e.g., caliper motors, carriers, brackets, or parts for other Audi models). Included only listings explicitly mentioning Audi A6 or A7 and appearing to be complete brake calipers.",
+      "items_analyzed": 150,
+      "items_filtered_out": 20,
+      "cleaned_count": 130,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be appropriate for the specified vehicle."
+    },
+    "cluster": {
+      "low": 50,
+      "average": 70,
+      "high": 95,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 192,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "heater control": {
+      "low": 45,
+      "average": 60,
+      "high": 75,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 196,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "compressor": {
+      "low": 85,
+      "average": 100,
+      "high": 110,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 198,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "door mirror": {
+      "low": 65,
+      "average": 110,
+      "high": 150,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "engine computer": {
+      "low": 15,
+      "average": 20,
+      "high": 20,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "front strut": {
+      "low": 70,
+      "average": 95,
+      "high": 100,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 195,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "steering wheel": {
+      "low": 50,
+      "average": 85,
+      "high": 130,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "wheel": {
+      "low": 110,
+      "average": 120,
+      "high": 140,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 4837.0,
+      "average": 5609.0,
+      "high": 6314.0
+    },
+    "bids": {
+      "low": 1016.3950071431811,
+      "average": 1387.4866716044653,
+      "high": 1751.5790053190153
+    }
+  },
+  "status": "✅ Complete",
+  "failed_parts": [],
+  "low_confidence_parts": [],
+  "filename": "2013_AUDI_A6_20250728_110502.json"
+}

@@ -1,0 +1,246 @@
+{
+  "timestamp": "2025-07-28T10:53:58.410320",
+  "vin": "WBAFU7C55DDU76013",
+  "vehicle_info": {
+    "make": "BMW",
+    "model": "535i",
+    "year": "2013",
+    "trim": "xDrive",
+    "vehicle_type": "PASSENGER CAR",
+    "body_class": "Sedan/Saloon",
+    "doors": "4",
+    "drive_type": "AWD/All-Wheel Drive",
+    "engine_cylinders": "6",
+    "engine_displacement": "3.0",
+    "fuel_type": "Gasoline",
+    "engine_designation": "5"
+  },
+  "vehicle_string": "2013 BMW 535i xDrive",
+  "parts_prices": {
+    "engine": {
+      "low": 2870.0,
+      "average": 3099.0,
+      "high": 3219.0,
+      "reasoning": "Filtered out parts that were not complete engines, incorrect drivetrain (RWD), or outside the specified year range. Also removed listings below $300.",
+      "items_analyzed": 74,
+      "items_filtered_out": 20,
+      "cleaned_count": 54,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant engine listings."
+    },
+    "transmission": {
+      "low": 514.0,
+      "average": 540.0,
+      "high": 572.0,
+      "reasoning": "Filtered out valve bodies, RWD transmissions, and items not explicitly for a 2013 BMW 535i AWD. Also removed items under $300.",
+      "items_analyzed": 146,
+      "items_filtered_out": 79,
+      "cleaned_count": 67,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering."
+    },
+    "rear carrier": {
+      "low": 270.0,
+      "average": 335.0,
+      "high": 385.0,
+      "reasoning": "Filtered out parts not matching the 2013 BMW 535i AWD gasoline sedan, including incorrect models, RWD/FWD, and parts that were not complete rear carrier assemblies. Also removed listings below $75.",
+      "items_analyzed": 99,
+      "items_filtered_out": 59,
+      "cleaned_count": 40,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of relevant listings."
+    },
+    "steering rack": {
+      "low": 149.0,
+      "average": 167.0,
+      "high": 177.0,
+      "reasoning": "Filtered out RWD, parts that were not steering racks, and parts under $50. Included only AWD steering racks for BMW 535i and compatible models like 550i, 6 series, and 7 series from similar years.",
+      "items_analyzed": 148,
+      "items_filtered_out": 48,
+      "cleaned_count": 100,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. The remaining listings appear to be relevant steering racks for compatible BMW models with AWD."
+    },
+    "headlight": {
+      "low": 140.0,
+      "average": 224.0,
+      "high": 279.0,
+      "reasoning": "Filtered out accessories, parts not matching the 2011-2013 BMW 535i AWD gasoline sedan, and items under $60. Focused on complete headlight assemblies.",
+      "items_analyzed": 185,
+      "items_filtered_out": 85,
+      "cleaned_count": 100,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, with a sufficient sample size of headlight assemblies for the specified vehicle."
+    },
+    "front door panel": {
+      "low": 113.0,
+      "average": 135.0,
+      "high": 155.0,
+      "reasoning": "Filtered out items under $50, accessories, and parts not explicitly listed as 'front door panel' or 'interior door panel'. Included listings explicitly mentioning 'F10', '535i', and 'front door panel'. Also filtered out GT models.",
+      "items_analyzed": 177,
+      "items_filtered_out": 92,
+      "cleaned_count": 85,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part and vehicle."
+    },
+    "rear door panel": {
+      "low": 85.0,
+      "average": 114.0,
+      "high": 134.0,
+      "reasoning": "Filtered out parts that were not rear door panels, or were accessories/small parts, or did not fit the 2013 BMW 535i sedan. Also filtered out parts under $50.",
+      "items_analyzed": 167,
+      "items_filtered_out": 72,
+      "cleaned_count": 95,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality after filtering, with a reasonable sample size of relevant rear door panels."
+    },
+    "abs pump": {
+      "low": 117.0,
+      "average": 139.0,
+      "high": 165.0,
+      "reasoning": "All listings appear to be relevant ABS pumps for BMW 5 series, with several specifically mentioning 535i or compatible models and AWD. No listings were filtered out as they all seemed potentially relevant.",
+      "items_analyzed": 17,
+      "items_filtered_out": 0,
+      "cleaned_count": 17,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Data quality is good, with several listings directly mentioning compatible models. More data would improve confidence."
+    },
+    "alternator": {
+      "low": 72.0,
+      "average": 79.0,
+      "high": 90.0,
+      "reasoning": "Filtered out non-alternator parts, parts for incorrect BMW models (excluding X5, X3, 335i, 740i, 640i, and other models that share the same alternator), and listings that appeared to be for cables or other accessories. Focused on listings explicitly stating 'alternator' and mentioning compatible models and years (2013 BMW 535i).  Also filtered out listings below $30.",
+      "items_analyzed": 169,
+      "items_filtered_out": 89,
+      "cleaned_count": 80,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering.  Most listings appear to be for the correct part, though some ambiguity remains due to shared parts across multiple BMW models."
+    },
+    "body control module": {
+      "low": 35.0,
+      "average": 40.0,
+      "high": 45.0,
+      "reasoning": "Filtered out parts not matching the 2013 BMW 535i (3.0L, AWD, Gasoline, Sedan) and those that were not BCMs. Also removed listings under $20 and those that appeared to be for other modules like light control or trunk modules.",
+      "items_analyzed": 140,
+      "items_filtered_out": 45,
+      "cleaned_count": 95,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with a reasonable sample size after filtering. Most listings appear to be for the correct part."
+    },
+    "brake caliper": {
+      "low": 39.0,
+      "average": 43.0,
+      "high": 49.0,
+      "reasoning": "Filtered out items under $30, incorrect fitment (RWD, other models), caliper brackets, and e-brake actuators. Included only listings explicitly mentioning 2011-2016 BMW 535i or F10 chassis, AWD/XDrive, and brake caliper.",
+      "items_analyzed": 150,
+      "items_filtered_out": 58,
+      "cleaned_count": 92,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with mostly appropriate listings after filtering. Some listings include other models, but the majority are relevant to the 2013 BMW 535i XDrive."
+    },
+    "cluster": {
+      "low": 45,
+      "average": 55,
+      "high": 60,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "heater control": {
+      "low": 35,
+      "average": 55,
+      "high": 65,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "compressor": {
+      "low": 65,
+      "average": 80,
+      "high": 95,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 197,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "door mirror": {
+      "low": 45,
+      "average": 60,
+      "high": 70,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "engine computer": {
+      "low": 15,
+      "average": 20,
+      "high": 20,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "front strut": {
+      "low": 85,
+      "average": 100,
+      "high": 110,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 197,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "steering wheel": {
+      "low": 40,
+      "average": 60,
+      "high": 75,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "wheel": {
+      "low": 130,
+      "average": 150,
+      "high": 170,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 199,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 4864.0,
+      "average": 5495.0,
+      "high": 5935.0
+    },
+    "bids": {
+      "low": 1028.8350163175878,
+      "average": 1330.7741581691846,
+      "high": 1553.059802205453
+    }
+  },
+  "status": "✅ Complete",
+  "failed_parts": [],
+  "low_confidence_parts": [],
+  "filename": "2013_BMW_535i_20250728_105358.json"
+}

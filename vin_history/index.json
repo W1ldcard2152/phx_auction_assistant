@@ -1,5 +1,107 @@
 [
   {
+    "timestamp": "2025-07-28T11:22:55.349113",
+    "vin": "5XYKWDA27BG161215",
+    "vehicle_string": "2011 KIA Sorento HGS(Top)",
+    "filename": "2011_KIA_Sorento_20250728_112255.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 787.4862243807822,
+      "average": 1065.9360000000001,
+      "high": 1283.5100250017363
+    },
+    "totals": {
+      "low": 4322.0,
+      "average": 4944.0,
+      "high": 5399.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T11:05:02.094212",
+    "vin": "WAUGGAFC4DN096402",
+    "vehicle_string": "2013 AUDI A6 quattro Premium Plus",
+    "filename": "2013_AUDI_A6_20250728_110502.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 1016.3950071431811,
+      "average": 1387.4866716044653,
+      "high": 1751.5790053190153
+    },
+    "totals": {
+      "low": 4837.0,
+      "average": 5609.0,
+      "high": 6314.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T10:53:58.410320",
+    "vin": "WBAFU7C55DDU76013",
+    "vehicle_string": "2013 BMW 535i xDrive",
+    "filename": "2013_BMW_535i_20250728_105358.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 1028.8350163175878,
+      "average": 1330.7741581691846,
+      "high": 1553.059802205453
+    },
+    "totals": {
+      "low": 4864.0,
+      "average": 5495.0,
+      "high": 5935.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T10:24:00.762025",
+    "vin": "1G6AW5SX5H0208285",
+    "vehicle_string": "2017 CADILLAC CTS",
+    "filename": "2017_CADILLAC_CTS_20250728_102400.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 804.6647929124879,
+      "average": 1185.0956298198475,
+      "high": 1934.8851140798513
+    },
+    "totals": {
+      "low": 4362.0,
+      "average": 5196.0,
+      "high": 6654.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T10:18:39.165944",
+    "vin": "SALGS2EF1EA134804",
+    "vehicle_string": "2014 LAND ROVER Range Rover SuperCharged",
+    "filename": "2014_LANDROVER_RangeRover_20250728_101839.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 4386.924913810281,
+      "average": 4843.931467394137,
+      "high": 5420.915551593832
+    },
+    "totals": {
+      "low": 10634.0,
+      "average": 11299.0,
+      "high": 12115.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T10:15:39.747769",
+    "vin": "2GKFLVEK3F6282518",
+    "vehicle_string": "2015 GMC Terrain",
+    "filename": "2015_GMC_Terrain_20250728_101539.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 300,
+      "average": 300,
+      "high": 300
+    },
+    "totals": {
+      "low": 2218.0,
+      "average": 2497.0,
+      "high": 2784.0
+    }
+  },
+  {
     "timestamp": "2025-07-28T09:01:57.593126",
     "vin": "2V4RW3DG7BR717718",
     "vehicle_string": "2011 VOLKSWAGEN Routan",
