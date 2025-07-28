@@ -1,0 +1,152 @@
+{
+  "timestamp": "2025-07-27T22:41:05.984529",
+  "vin": "1FATP8UHXJ5165104",
+  "vehicle_info": {
+    "make": "FORD",
+    "model": "Mustang",
+    "year": "2018",
+    "trim": null,
+    "vehicle_type": "PASSENGER CAR",
+    "body_class": "Convertible/Cabriolet",
+    "doors": "2",
+    "engine_cylinders": "4",
+    "engine_displacement": "2.3",
+    "fuel_type": "Gasoline",
+    "engine_configuration": "In-Line",
+    "engine_designation": "H"
+  },
+  "vehicle_string": "2018 FORD Mustang",
+  "parts_prices": {
+    "engine": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "transmission": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "rear carrier": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "steering rack": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "headlight": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "front door panel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "rear door panel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "abs pump": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "alternator": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "body control module": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "brake caliper": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "cluster": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "heater control": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "compressor": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "door mirror": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "engine computer": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "front strut": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "steering wheel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "wheel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "bids": {
+      "low": 0,
+      "average": 0,
+      "high": 0
+    }
+  },
+  "status": "❌ 19 Failed",
+  "failed_parts": [
+    "engine",
+    "transmission",
+    "rear carrier",
+    "steering rack",
+    "headlight",
+    "front door panel",
+    "rear door panel",
+    "abs pump",
+    "alternator",
+    "body control module",
+    "brake caliper",
+    "cluster",
+    "heater control",
+    "compressor",
+    "door mirror",
+    "engine computer",
+    "front strut",
+    "steering wheel",
+    "wheel"
+  ],
+  "low_confidence_parts": [],
+  "filename": "2018_FORD_Mustang_20250727_224105.json"
+}

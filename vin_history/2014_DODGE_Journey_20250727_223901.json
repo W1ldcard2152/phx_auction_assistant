@@ -1,0 +1,152 @@
+{
+  "timestamp": "2025-07-27T22:39:01.232077",
+  "vin": "3C4PDCEG7ET112539",
+  "vehicle_info": {
+    "make": "DODGE",
+    "model": "Journey",
+    "year": "2014",
+    "trim": "R/T Rallye / R/T",
+    "vehicle_type": "MULTIPURPOSE PASSENGER VEHICLE (MPV)",
+    "body_class": "Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)",
+    "doors": "4",
+    "drive_type": "FWD/Front-Wheel Drive",
+    "engine_cylinders": "6",
+    "engine_displacement": "3.6",
+    "fuel_type": "Gasoline",
+    "engine_designation": "G"
+  },
+  "vehicle_string": "2014 DODGE Journey R/T Rallye / R/T",
+  "parts_prices": {
+    "engine": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "transmission": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "rear carrier": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "steering rack": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "headlight": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "front door panel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "rear door panel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "abs pump": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "alternator": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "body control module": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "brake caliper": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "cluster": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "heater control": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "compressor": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "door mirror": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "engine computer": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "front strut": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "steering wheel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "wheel": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "bids": {
+      "low": 0,
+      "average": 0,
+      "high": 0
+    }
+  },
+  "status": "❌ 19 Failed",
+  "failed_parts": [
+    "engine",
+    "transmission",
+    "rear carrier",
+    "steering rack",
+    "headlight",
+    "front door panel",
+    "rear door panel",
+    "abs pump",
+    "alternator",
+    "body control module",
+    "brake caliper",
+    "cluster",
+    "heater control",
+    "compressor",
+    "door mirror",
+    "engine computer",
+    "front strut",
+    "steering wheel",
+    "wheel"
+  ],
+  "low_confidence_parts": [],
+  "filename": "2014_DODGE_Journey_20250727_223901.json"
+}

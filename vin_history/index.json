@@ -1,36 +1,257 @@
 [
   {
-    "timestamp": "2025-07-27T14:45:06.675392",
-    "vin": "WAUGGAFC0DN038125",
-    "vehicle_string": "2013 AUDI A6 quattro Premium Plus",
-    "filename": "2013_AUDI_A6_20250727_144506.json",
-    "status": "✅ Complete",
+    "timestamp": "2025-07-28T09:01:57.593126",
+    "vin": "2V4RW3DG7BR717718",
+    "vehicle_string": "2011 VOLKSWAGEN Routan",
+    "filename": "2011_VOLKSWAGEN_Routan_20250728_090157.json",
+    "status": "❌ 2 Failed",
     "bids": {
-      "low": 1896.157881595843,
-      "average": 2295.2317721913196,
-      "high": 2634.72464880241
+      "low": 349.11177952414164,
+      "average": 564.6003645694082,
+      "high": 886.3592738238646
     },
     "totals": {
-      "low": 4899.0,
-      "average": 5794.0,
-      "high": 6549.0
+      "low": 3168.0,
+      "average": 3776.0,
+      "high": 4549.0
     }
   },
   {
-    "timestamp": "2025-07-27T14:39:47.364139",
-    "vin": "WA1DGAFPXFA044012",
-    "vehicle_string": "2015 AUDI Q5 S Line Premium Plus",
-    "filename": "2015_AUDI_Q5_20250727_143947.json",
-    "status": "✅ Complete",
+    "timestamp": "2025-07-28T08:39:49.261651",
+    "vin": "4JGCB65E88A064044",
+    "vehicle_string": "2008 MERCEDES-BENZ R-Class 4 MATIC",
+    "filename": "2008_MERCEDESBENZ_RClass_20250728_083949.json",
+    "status": "⚠️ 2 Low Conf",
     "bids": {
-      "low": 1912.1285027119234,
-      "average": 2228.967172624273,
-      "high": 2448.726231784359
+      "low": 628.7250899760145,
+      "average": 823.2501589146552,
+      "high": 1293.3190131272263
     },
     "totals": {
-      "low": 4935.0,
-      "average": 5646.0,
-      "high": 6136.0
+      "low": 3939.0,
+      "average": 4405.0,
+      "high": 5419.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T08:37:35.986301",
+    "vin": "JTHKD5BH9D2163025",
+    "vehicle_string": "2013 LEXUS CT 200h",
+    "filename": "2013_LEXUS_CT_20250728_083735.json",
+    "status": "❌ 2 Failed",
+    "bids": {
+      "low": 383.9753846027406,
+      "average": 583.2511902130532,
+      "high": 714.0361121151515
+    },
+    "totals": {
+      "low": 3276.0,
+      "average": 3824.0,
+      "high": 4148.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T08:35:59.083454",
+    "vin": "SALGS2EF1EA134804",
+    "vehicle_string": "2014 LAND ROVER Range Rover SuperCharged",
+    "filename": "2014_LANDROVER_RangeRover_20250728_083559.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 4164.710260176598,
+      "average": 4735.6382200791495,
+      "high": 5264.35308116503
+    },
+    "totals": {
+      "low": 10304.0,
+      "average": 11143.0,
+      "high": 11896.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T08:26:52.911734",
+    "vin": "1HGCP2F39BA081942",
+    "vehicle_string": "2011 HONDA Accord LX",
+    "filename": "2011_HONDA_Accord_20250728_082652.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 300,
+      "average": 339.4871524069224,
+      "high": 508.39890032546094
+    },
+    "totals": {
+      "low": 2728.0,
+      "average": 3137.0,
+      "high": 3628.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T08:23:44.034315",
+    "vin": "3FA6P0H76FR237372",
+    "vehicle_string": "2015 FORD Fusion",
+    "filename": "2015_FORD_Fusion_20250728_082344.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 305.8370143419302,
+      "average": 399.0333006684129,
+      "high": 503.9327436725308
+    },
+    "totals": {
+      "low": 3022.0,
+      "average": 3321.0,
+      "high": 3616.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T08:06:18.198113",
+    "vin": "1FATP8UHXJ5165104",
+    "vehicle_string": "2018 FORD Mustang",
+    "filename": "2018_FORD_Mustang_20250728_080618.json",
+    "status": "⚠️ 1 Low Conf",
+    "bids": {
+      "low": 1520.1667970758938,
+      "average": 1956.2151455615062,
+      "high": 2374.5193245058604
+    },
+    "totals": {
+      "low": 5871.0,
+      "average": 6693.0,
+      "high": 7437.0
+    }
+  },
+  {
+    "timestamp": "2025-07-28T08:04:51.251160",
+    "vin": "3C4PDCEG7ET112539",
+    "vehicle_string": "2014 DODGE Journey R/T Rallye / R/T",
+    "filename": "2014_DODGE_Journey_20250728_080451.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 375.4099444873581,
+      "average": 470.8997057180211,
+      "high": 578.9594655112555
+    },
+    "totals": {
+      "low": 3250.0,
+      "average": 3526.0,
+      "high": 3813.0
+    }
+  },
+  {
+    "timestamp": "2025-07-27T22:41:05.984529",
+    "vin": "1FATP8UHXJ5165104",
+    "vehicle_string": "2018 FORD Mustang",
+    "filename": "2018_FORD_Mustang_20250727_224105.json",
+    "status": "❌ 19 Failed",
+    "bids": {
+      "low": 0,
+      "average": 0,
+      "high": 0
+    },
+    "totals": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-07-27T22:39:01.232077",
+    "vin": "3C4PDCEG7ET112539",
+    "vehicle_string": "2014 DODGE Journey R/T Rallye / R/T",
+    "filename": "2014_DODGE_Journey_20250727_223901.json",
+    "status": "❌ 19 Failed",
+    "bids": {
+      "low": 0,
+      "average": 0,
+      "high": 0
+    },
+    "totals": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    }
+  },
+  {
+    "timestamp": "2025-07-27T19:35:18.253468",
+    "vin": "2C3CK6CTXBH523965",
+    "vehicle_string": "2011 CHRYSLER 300C",
+    "filename": "2011_CHRYSLER_300C_20250727_193518.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 781.0719644941488,
+      "average": 1006.7482330119574,
+      "high": 1253.2296634395993
+    },
+    "totals": {
+      "low": 4307.0,
+      "average": 4816.0,
+      "high": 5337.0
+    }
+  },
+  {
+    "timestamp": "2025-07-27T19:32:33.725485",
+    "vin": "1G6AG5RX4H0132397",
+    "vehicle_string": "2017 CADILLAC ATS Standard",
+    "filename": "2017_CADILLAC_ATS_20250727_193233.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 765.7358616379358,
+      "average": 1135.9742934481324,
+      "high": 1499.6985192965071
+    },
+    "totals": {
+      "low": 4270.99,
+      "average": 5092.99,
+      "high": 5830.99
+    }
+  },
+  {
+    "timestamp": "2025-07-27T19:21:19.123499",
+    "vin": "WAUGGAFC0DN038125",
+    "vehicle_string": "2013 AUDI A6 quattro Premium Plus",
+    "filename": "2013_AUDI_A6_20250727_192119.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 1065.4700277801599,
+      "average": 1407.0320952261009,
+      "high": 1699.1184651821368
+    },
+    "totals": {
+      "low": 4943.0,
+      "average": 5648.0,
+      "high": 6215.0
+    }
+  },
+  {
+    "timestamp": "2025-07-27T19:08:34.711574",
+    "vin": "WA1DGAFPXFA044012",
+    "vehicle_string": "2015 AUDI Q5 S Line Premium Plus",
+    "filename": "2015_AUDI_Q5_20250727_190834.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 903.2308369607214,
+      "average": 1350.6014411633957,
+      "high": 1608.4654498889506
+    },
+    "totals": {
+      "low": 4587.0,
+      "average": 5535.0,
+      "high": 6042.0
+    }
+  },
+  {
+    "timestamp": "2025-07-27T16:54:21.674902",
+    "vin": "2C3CK6CTXBH523965",
+    "vehicle_string": "2011 CHRYSLER 300C",
+    "filename": "2011_CHRYSLER_300C_20250727_165421.json",
+    "status": "✅ Complete",
+    "bids": {
+      "low": 1615.7636200343877,
+      "average": 1859.365331026192,
+      "high": 2098.5321962286926
+    },
+    "totals": {
+      "low": 4264.0,
+      "average": 4816.0,
+      "high": 5354.0
     }
   }
 ]

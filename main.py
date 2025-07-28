@@ -211,13 +211,17 @@ class PhoenixAuctionAssistant:
         button_frame = ttk.Frame(main_frame)
         button_frame.grid(row=4, column=0, columnspan=2, pady=(10, 0), sticky=tk.W)
         
-        clear_history_btn = ttk.Button(button_frame, text="Clear History", 
+        remove_selected_btn = ttk.Button(button_frame, text="Remove Selected", 
+                                        command=self.remove_selected_history)
+        remove_selected_btn.grid(row=0, column=0, padx=(0, 10))
+        
+        clear_history_btn = ttk.Button(button_frame, text="Clear All", 
                                      command=self.clear_vin_history)
-        clear_history_btn.grid(row=0, column=0, padx=(0, 10))
+        clear_history_btn.grid(row=0, column=1, padx=(0, 10))
         
         export_history_btn = ttk.Button(button_frame, text="Export to CSV", 
                                       command=self.export_vin_history)
-        export_history_btn.grid(row=0, column=1)
+        export_history_btn.grid(row=0, column=2)
     
     def add_to_vin_history(self, vin, vehicle_info, parts_prices, bid_analysis):
         """Add a completed VIN scan to the history"""
@@ -283,7 +287,7 @@ class PhoenixAuctionAssistant:
             self.vin_history_tree.delete(item)
         
         # Add items to table
-        for entry in self.vin_history:
+        for index, entry in enumerate(self.vin_history):
             timestamp_str = entry['timestamp'].strftime("%m/%d/%y %H:%M")
             vin = entry['vin']
             vehicle = entry['vehicle_string']
@@ -299,10 +303,58 @@ class PhoenixAuctionAssistant:
             
             status = entry['status']
             
-            self.vin_history_tree.insert('', 'end', values=(
+            # Store the entry index as a tag for easy removal
+            item_id = self.vin_history_tree.insert('', 'end', values=(
                 timestamp_str, vin, vehicle, parts_total, budget_bid, standard_bid, premium_bid, status
-            ))
+            ), tags=(str(index),))
     
+    def remove_selected_history(self):
+        """Remove selected entries from VIN history"""
+        selected_items = self.vin_history_tree.selection()
+        if not selected_items:
+            messagebox.showinfo("No Selection", "Please select one or more entries to remove.")
+            return
+        
+        # Confirm removal
+        num_selected = len(selected_items)
+        if num_selected == 1:
+            message = "Remove the selected entry? This cannot be undone."
+        else:
+            message = f"Remove {num_selected} selected entries? This cannot be undone."
+        
+        if messagebox.askyesno("Confirm Removal", message):
+            # Get indices of selected items using tags
+            indices_to_remove = []
+            for item in selected_items:
+                # Get the index from the item's tag
+                tags = self.vin_history_tree.item(item, 'tags')
+                if tags:
+                    index = int(tags[0])
+                    indices_to_remove.append(index)
+            
+            # Sort indices in reverse order to remove from the end first
+            indices_to_remove.sort(reverse=True)
+            
+            # Remove entries from history list and delete associated files
+            for index in indices_to_remove:
+                if 0 <= index < len(self.vin_history):
+                    entry = self.vin_history[index]
+                    # Delete the associated JSON file if it exists
+                    if 'filename' in entry:
+                        filepath = os.path.join(self.vin_history_dir, entry['filename'])
+                        try:
+                            if os.path.exists(filepath):
+                                os.remove(filepath)
+                        except Exception as e:
+                            print(f"Warning: Could not delete file {filepath}: {e}")
+                    
+                    # Remove from history list
+                    del self.vin_history[index]
+            
+            # Update display and save
+            self.update_vin_history_display()
+            self.save_history_index()
+
     def clear_vin_history(self):
         """Clear the VIN history"""
         if messagebox.askyesno("Confirm Clear", "Clear all VIN history? This cannot be undone."):
@@ -1637,6 +1689,17 @@ Save multiple instruction sets for different vehicle types or scenarios."""
                     parts_prices[part['search_query']] = {'low': 0.0, 'average': 0.0, 'high': 0.0, 'raw_items': []}
                     self.root.update()
         
+        # After all searches complete, update the part tables
+        self.results_text.insert(tk.END, "Updating search result tables...\n")
+        self.root.update()
+        
+        for part_name, part_data in parts_prices.items():
+            if isinstance(part_data, dict) and 'raw_items' in part_data:
+                # Extract raw_items from the result and store in raw_search_results
+                raw_items = part_data.pop('raw_items')  # Remove from parts_prices
+                self.raw_search_results[part_name] = raw_items
+                self.update_part_table(part_name, raw_items)
+        
         return parts_prices
     
     def _search_single_part_optimized(self, part, vehicle_info, search_url, headers):
@@ -1654,7 +1717,12 @@ Save multiple instruction sets for different vehicle types or scenarios."""
                 except (ValueError, TypeError):
                     engine_size = f" {vehicle_info['engine_displacement']}"
             
-            search_query = f"{year} {vehicle_info['make']} {vehicle_info['model']}{engine_size} {part['search_query']}"
+            # Handle Chrysler 300C and 300S by dropping the suffix letter
+            model = vehicle_info['model']
+            if vehicle_info['make'].upper() == 'CHRYSLER' and model.upper() in ['300C', '300S']:
+                model = '300'
+            
+            search_query = f"{year} {vehicle_info['make']} {model}{engine_size} {part['search_query']}"
             
             # Match your manual search - just Used condition (3000)
             condition_filter = "conditionIds:{3000}"  # Used only
@@ -1754,19 +1822,6 @@ Save multiple instruction sets for different vehicle types or scenarios."""
         except Exception as e:
             error_msg = f"eBay search error for {part['search_query']}: {str(e)}"
             return part['search_query'], {'low': 0.0, 'average': 0.0, 'high': 0.0}
-        
-        # After all concurrent searches complete, update the part tables in main thread
-        self.results_text.insert(tk.END, "Updating search result tables...\n")
-        self.root.update()
-        
-        for part_name, part_data in parts_prices.items():
-            if isinstance(part_data, dict) and 'raw_items' in part_data:
-                # Extract raw_items from the result and store in raw_search_results
-                raw_items = part_data.pop('raw_items')  # Remove from parts_prices
-                self.raw_search_results[part_name] = raw_items
-                self.update_part_table(part_name, raw_items)
-        
-        return parts_prices
     
     def calculate_recommended_bid(self, parts_prices: Dict[str, dict]) -> Dict[str, float]:
         # Calculate totals for low, average, and high scenarios
@@ -1783,18 +1838,25 @@ Save multiple instruction sets for different vehicle types or scenarios."""
                 totals['average'] += part_prices
                 totals['high'] += part_prices
         
-        # Calculate bids using dynamic formula: Bid = Parts_Value × (0.50 - 0.25 × sqrt(1,000 / Parts_Value))
+        # Calculate bids using new formula:
+        # if Parts_Value <= 3000: Bid = 300
+        # else: Excess = Parts_Value - 3000; Percentage = 0.25 + 0.40 × sqrt((Parts_Value - 3000) / 15000); Bid = 300 + Excess × Percentage
         import math
         
-        def calculate_bid_multiplier(parts_value):
+        def calculate_bid(parts_value):
             if parts_value <= 0:
                 return 0
-            return 0.50 - 0.25 * math.sqrt(1000 / parts_value)
+            elif parts_value <= 3000:
+                return 300
+            else:
+                excess = parts_value - 3000
+                percentage = 0.25 + 0.40 * math.sqrt((parts_value - 3000) / 15000)
+                return 300 + excess * percentage
         
         bids = {
-            'low': totals['low'] * calculate_bid_multiplier(totals['low']),
-            'average': totals['average'] * calculate_bid_multiplier(totals['average']),
-            'high': totals['high'] * calculate_bid_multiplier(totals['high'])
+            'low': calculate_bid(totals['low']),
+            'average': calculate_bid(totals['average']),
+            'high': calculate_bid(totals['high'])
         }
         
         return {'totals': totals, 'bids': bids}
@@ -1906,7 +1968,8 @@ Please incorporate these instructions into your analysis and filtering decisions
 - RED if mostly inappropriate listings  
 - ORANGE if poor data quality or small sample
 - YELLOW if mixed quality
-- GREEN if good appropriate data
+- LIGHT_GREEN if good appropriate data
+- DARK_GREEN if excellent high-quality data
 
 **OUTPUT JSON:**
 {{

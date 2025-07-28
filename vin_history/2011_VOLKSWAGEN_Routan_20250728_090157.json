@@ -1,0 +1,237 @@
+{
+  "timestamp": "2025-07-28T09:01:57.593126",
+  "vin": "2V4RW3DG7BR717718",
+  "vehicle_info": {
+    "make": "VOLKSWAGEN",
+    "model": "Routan",
+    "year": "2011",
+    "trim": null,
+    "vehicle_type": "MULTIPURPOSE PASSENGER VEHICLE (MPV)",
+    "body_class": "Minivan",
+    "engine_cylinders": "6",
+    "engine_displacement": "3.6",
+    "fuel_type": "Gasoline",
+    "engine_designation": "G"
+  },
+  "vehicle_string": "2011 VOLKSWAGEN Routan",
+  "parts_prices": {
+    "engine": {
+      "low": 1079.0,
+      "average": 1144.0,
+      "high": 1449.0,
+      "reasoning": "Filtered out engines with incorrect displacement (4.0L and 3.8L). Included only 3.6L engines for the 2011 VW Routan. No items were removed for being under $300.",
+      "items_analyzed": 26,
+      "items_filtered_out": 7,
+      "cleaned_count": 19,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonably good data quality with a clear concentration of prices for the correct engine."
+    },
+    "transmission": {
+      "low": 950.0,
+      "average": 1231.0,
+      "high": 1441.0,
+      "reasoning": "Filtered out one listing that was for an engine, not a transmission.  Kept listings explicitly stating 'transmission' or 'transmission assembly' for 2011-2014 Routan with 6-speed automatic.",
+      "items_analyzed": 23,
+      "items_filtered_out": 1,
+      "cleaned_count": 22,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with clear transmission listings for the specified vehicle. Sample size is adequate."
+    },
+    "rear carrier": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "steering rack": {
+      "low": 142.0,
+      "average": 148.0,
+      "high": 153.0,
+      "reasoning": "Filtered out items under $50. All listings appear to be for the correct part and within the specified year range (2009-2014 Routan). No obvious outliers were removed.",
+      "items_analyzed": 51,
+      "items_filtered_out": 2,
+      "cleaned_count": 49,
+      "confidence_rating": "dark_green",
+      "confidence_explanation": "Excellent, high-quality data with consistent listings for the specified vehicle and part."
+    },
+    "headlight": {
+      "low": 98.0,
+      "average": 105.0,
+      "high": 125.0,
+      "reasoning": "Filtered out items under $60. Included only headlight assemblies for 2009-2014 VW Routan, excluding ballasts and other non-headlight parts. Included both Halogen and Xenon/HID headlights.",
+      "items_analyzed": 125,
+      "items_filtered_out": 1,
+      "cleaned_count": 124,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with clear titles and consistent pricing for headlights."
+    },
+    "front door panel": {
+      "low": 75.0,
+      "average": 137.0,
+      "high": 140.0,
+      "reasoning": "Filtered out wiring harness. Analyzed front door panels and trim panels for a 2011 VW Routan.",
+      "items_analyzed": 8,
+      "items_filtered_out": 1,
+      "cleaned_count": 7,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with relevant listings for front door panels."
+    },
+    "rear door panel": {
+      "low": 80.0,
+      "average": 114.0,
+      "high": 135.0,
+      "reasoning": "No items were filtered out as all listings appear to be for the correct part and vehicle.",
+      "items_analyzed": 14,
+      "items_filtered_out": 0,
+      "cleaned_count": 14,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good, appropriate data for rear door panels on a 2011 Volkswagen Routan."
+    },
+    "abs pump": {
+      "low": 159.0,
+      "average": 159.0,
+      "high": 159.0,
+      "reasoning": "Only one listing found, no filtering needed.",
+      "items_analyzed": 1,
+      "items_filtered_out": 0,
+      "cleaned_count": 1,
+      "confidence_rating": "orange",
+      "confidence_explanation": "Very small sample size."
+    },
+    "alternator": {
+      "low": 69.0,
+      "average": 75.0,
+      "high": 90.0,
+      "reasoning": "Filtered out alternators not fitting the 2011-2014 VW Routan with a 3.6L engine. No items were filtered out as all listings appeared to be relevant.",
+      "items_analyzed": 55,
+      "items_filtered_out": 0,
+      "cleaned_count": 55,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good quality data with consistent pricing for used alternators."
+    },
+    "body control module": {
+      "low": 0.0,
+      "average": 0.0,
+      "high": 0.0
+    },
+    "brake caliper": {
+      "low": 49.0,
+      "average": 52.0,
+      "high": 61.0,
+      "reasoning": "Filtered out items under $30, Jeep Liberty and Dodge Grand Caravan calipers, and caliper supports.  Focused on listings explicitly mentioning Volkswagen Routan and 'caliper'.",
+      "items_analyzed": 88,
+      "items_filtered_out": 11,
+      "cleaned_count": 77,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with consistent pricing for Routan brake calipers."
+    },
+    "cluster": {
+      "low": 52.0,
+      "average": 64.0,
+      "high": 75.0,
+      "reasoning": "All listings appear to be for the correct part (instrument cluster) for a 2011 Volkswagen Routan. No listings were filtered out as they all seem relevant and within a reasonable price range.",
+      "items_analyzed": 16,
+      "items_filtered_out": 0,
+      "cleaned_count": 16,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good quality data with consistent descriptions and pricing for the specified part and vehicle."
+    },
+    "heater control": {
+      "low": 35.0,
+      "average": 47.0,
+      "high": 61.0,
+      "reasoning": "Filtered out items under $30. Analyzed prices for 'heater control' for a 2011 Volkswagen Routan, considering only gasoline engine parts.",
+      "items_analyzed": 77,
+      "items_filtered_out": 4,
+      "cleaned_count": 73,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality with consistent listings for the specified vehicle and part."
+    },
+    "compressor": {
+      "low": 70,
+      "average": 85,
+      "high": 100,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 133,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "door mirror": {
+      "low": 55,
+      "average": 70,
+      "high": 85,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 115,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "engine computer": {
+      "low": 40,
+      "average": 100,
+      "high": 170,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 200,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "front strut": {
+      "low": 65,
+      "average": 85,
+      "high": 95,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 73,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "steering wheel": {
+      "low": 55,
+      "average": 60,
+      "high": 90,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 11,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    },
+    "wheel": {
+      "low": 95,
+      "average": 100,
+      "high": 120,
+      "reasoning": "",
+      "items_analyzed": 0,
+      "items_filtered_out": 0,
+      "cleaned_count": 97,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "No confidence data available"
+    }
+  },
+  "bid_analysis": {
+    "totals": {
+      "low": 3168.0,
+      "average": 3776.0,
+      "high": 4549.0
+    },
+    "bids": {
+      "low": 349.11177952414164,
+      "average": 564.6003645694082,
+      "high": 886.3592738238646
+    }
+  },
+  "status": "❌ 2 Failed",
+  "failed_parts": [
+    "rear carrier",
+    "body control module"
+  ],
+  "low_confidence_parts": [
+    "abs pump"
+  ],
+  "filename": "2011_VOLKSWAGEN_Routan_20250728_090157.json"
+}

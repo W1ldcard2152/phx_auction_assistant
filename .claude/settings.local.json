@@ -10,7 +10,8 @@
       "Bash(del \"vin_history\\2020_Toyota_Camry_20250727_141225.json\")",
       "Bash(del \"vin_history\\index.json\")",
       "Bash(cmd:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(del test_bid_formula.py)"
     ],
     "deny": []
   }

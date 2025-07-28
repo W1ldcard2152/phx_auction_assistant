@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-27T14:45:06.675392",
+  "timestamp": "2025-07-27T19:21:19.123499",
   "vin": "WAUGGAFC0DN038125",
   "vehicle_info": {
     "make": "AUDI",
@@ -19,15 +19,15 @@
   "vehicle_string": "2013 AUDI A6 quattro Premium Plus",
   "parts_prices": {
     "engine": {
-      "low": 2593.0,
-      "average": 2882.0,
-      "high": 3074.0,
-      "reasoning": "Filtered out parts/blocks, diesel engines, and items under $300. Included only complete engine assemblies for the 3.0L gasoline engine, considering AWD compatibility.",
-      "items_analyzed": 89,
-      "items_filtered_out": 11,
-      "cleaned_count": 78,
+      "low": 2650.0,
+      "average": 2864.0,
+      "high": 2952.0,
+      "reasoning": "Filtered out parts/accessories, diesel engines, and items under $300. Included only 3.0L gasoline engines for Audi A6/A7 2012-2015.",
+      "items_analyzed": 87,
+      "items_filtered_out": 20,
+      "cleaned_count": 67,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to varying mileage and condition descriptions. Some listings may still be miscategorized or have hidden issues.",
+      "confidence_explanation": "Mixed data quality due to some listings including A7 engines, but the 3.0L engine is the same. Mileage and condition are not consistently listed.",
       "raw_items": [
         {
           "price": 612.33,
@@ -1040,15 +1040,15 @@
       ]
     },
     "transmission": {
-      "low": 416.0,
-      "average": 460.0,
-      "high": 469.0,
-      "reasoning": "Filtered out valve bodies and listings without AWD or 3.0L gasoline engine. Included only complete used automatic transmissions for Audi A6/A7 3.0L AWD models from 2012-2015, priced above $300.",
-      "items_analyzed": 172,
-      "items_filtered_out": 71,
-      "cleaned_count": 101,
-      "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to some listings being miscategorized or lacking specific details, despite filtering efforts. Many listings are from LKQ, which is a consistent source, but the mileage varies greatly.",
+      "low": 399.0,
+      "average": 416.0,
+      "high": 460.0,
+      "reasoning": "Filtered out valve bodies, incorrect engine sizes (2.0L), and items below $300. Included only automatic transmissions for Audi A6/A7 with 3.0L engines and AWD.",
+      "items_analyzed": 176,
+      "items_filtered_out": 101,
+      "cleaned_count": 75,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonable data quality after filtering, but some A7 listings may not be perfectly equivalent to A6.  Large number of LKQ listings provides a good sample.",
       "raw_items": [
         {
           "price": 300.0,
@@ -1522,24 +1522,6 @@
           "price": 447.04,
           "shipping": 0.0,
           "total_price": 447.04,
-          "title": "Used Automatic Transmission Assembly fits: 2013  Audi a6 AT 2.0L AWD quattro",
-          "item_id": "v1|396369913082|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 447.04,
-          "shipping": 0.0,
-          "total_price": 447.04,
-          "title": "Used Automatic Transmission Assembly fits: 2013  Audi a6 AT 2.0L AWD quattro",
-          "item_id": "v1|396369913089|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 447.04,
-          "shipping": 0.0,
-          "total_price": 447.04,
           "title": "Used Automatic Transmission Assembly fits: 2015  Audi a6 AT 2.0L AWD quattro",
           "item_id": "v1|396418321273|0",
           "condition": "Used",
@@ -1564,11 +1546,47 @@
           "location": "US"
         },
         {
+          "price": 447.04,
+          "shipping": 0.0,
+          "total_price": 447.04,
+          "title": "Used Automatic Transmission Assembly fits: 2013  Audi a6 AT 2.0L AWD quattro",
+          "item_id": "v1|396369913082|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 447.04,
+          "shipping": 0.0,
+          "total_price": 447.04,
+          "title": "Used Automatic Transmission Assembly fits: 2013  Audi a6 AT 2.0L AWD quattro",
+          "item_id": "v1|396369913089|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 447.96,
           "shipping": 0.0,
           "total_price": 447.96,
           "title": "2012-2015 AUDI A6 A7 (C7 4G8) 3.0L SUPERCHARGED AWD AUTO TRANSMISSION VALVE BODY",
           "item_id": "v1|335968873104|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 449.99,
+          "shipping": 0.0,
+          "total_price": 449.99,
+          "title": "Main Automatic Transmission 8-Speed Gear Set & Pump OEM Audi A7 Quattro 2012-17",
+          "item_id": "v1|306410075675|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 449.99,
+          "shipping": 0.0,
+          "total_price": 449.99,
+          "title": "8-Speed Automatic Transmission Gearbox (NEU) OEM BK300037M001 Audi A7 A6 2012-15",
+          "item_id": "v1|277286664065|0",
           "condition": "Used",
           "location": "US"
         },
@@ -2831,37 +2849,19 @@
           "item_id": "v1|365696807660|0",
           "condition": "Used",
           "location": "US"
-        },
-        {
-          "price": 470.27,
-          "shipping": 0.0,
-          "total_price": 470.27,
-          "title": "Used Automatic Transmission Assembly fits: 2014  Audi a6 AT 2.0L AWD quattro",
-          "item_id": "v1|396369913085|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 470.27,
-          "shipping": 0.0,
-          "total_price": 470.27,
-          "title": "Used Automatic Transmission Assembly fits: 2014  Audi a6 AT 2.0L AWD quattro",
-          "item_id": "v1|167667679808|0",
-          "condition": "Used",
-          "location": "US"
         }
       ]
     },
     "rear carrier": {
-      "low": 179.0,
-      "average": 260.0,
-      "high": 332.0,
-      "reasoning": "Filtered out parts with incorrect vehicle fitment (FWD, other models), parts under $75, and listings that were not complete rear carrier assemblies.  Focused on 2012-2018 Audi A6/A7 Quattro listings with 3.0L or without specific engine size listed, assuming AWD.",
+      "low": 150.0,
+      "average": 200.0,
+      "high": 260.0,
+      "reasoning": "Filtered out parts with incorrect fitment (FWD, other models), parts under $75, and listings that were not the complete rear carrier assembly. Prioritized listings explicitly mentioning 'A6', 'Quattro', and 'Rear Differential Carrier'. Listings with '2.0L turbo' were removed due to engine mismatch.",
       "items_analyzed": 150,
       "items_filtered_out": 65,
       "cleaned_count": 85,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to inconsistent listing titles and fitment information. Many listings fit multiple Audi models, making precise A6 3.0L AWD analysis challenging.",
+      "confidence_explanation": "Mixed data quality due to inconsistent listing titles and fitment information. Many listings fit multiple Audi models, making precise A6 3.0L Quattro analysis challenging.",
       "raw_items": [
         {
           "price": 89.99,
@@ -2941,6 +2941,24 @@
           "total_price": 138.48,
           "title": "Audi A6 Rear Differential Carrier ID KCC NPR W/O Torque Vectoring OEM 2012-2017",
           "item_id": "v1|134195902128|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 149.99,
+          "shipping": 0.0,
+          "total_price": 149.99,
+          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A8 2011-18 A6 A7 Q5",
+          "item_id": "v1|277287001334|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 149.99,
+          "shipping": 0.0,
+          "total_price": 149.99,
+          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A7 A6 2012-17 A8 Q5",
+          "item_id": "v1|286726561331|0",
           "condition": "Used",
           "location": "US"
         },
@@ -3125,6 +3143,15 @@
           "location": "US"
         },
         {
+          "price": 99.99,
+          "shipping": 99.99,
+          "total_price": 199.98,
+          "title": "2012-2018 Audi A6 A7 A8 Q5 Rear Axle Differential Carrier Assembly OEM",
+          "item_id": "v1|186855455411|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 199.99,
           "shipping": 0.0,
           "total_price": 199.99,
@@ -3184,15 +3211,6 @@
           "total_price": 209.0,
           "title": "2012-2018 AUDI A6 A7 A8 SQ5 AWD REAR AXLE DIFF DIFFERENTIAL CARRIER 74k MIL OEM",
           "item_id": "v1|355583389080|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 109.99,
-          "shipping": 99.99,
-          "total_price": 209.98,
-          "title": "2012-2018 Audi A6 A7 A8 Q5 Rear Axle Differential Carrier Assembly OEM",
-          "item_id": "v1|186855455411|0",
           "condition": "Used",
           "location": "US"
         },
@@ -3539,24 +3557,6 @@
           "location": "US"
         },
         {
-          "price": 299.98,
-          "shipping": 0.0,
-          "total_price": 299.98,
-          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A8 2011-18 A6 A7 Q5",
-          "item_id": "v1|277287001334|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 299.98,
-          "shipping": 0.0,
-          "total_price": 299.98,
-          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A7 A6 2012-17 A8 Q5",
-          "item_id": "v1|286726561331|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 300.0,
           "shipping": 0.0,
           "total_price": 300.0,
@@ -3704,15 +3704,6 @@
           "price": 325.0,
           "shipping": 0.0,
           "total_price": 325.0,
-          "title": "Used Differential Carrier Assembly fits: 2014 Audi Audi a6 Rear Axle 2.0L turbo",
-          "item_id": "v1|146697166154|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 325.0,
-          "shipping": 0.0,
-          "total_price": 325.0,
           "title": "Carrier Rear Axle Carrier ID Npr Fits 11-18 AUDI A8 694182",
           "item_id": "v1|326659751849|0",
           "condition": "Used",
@@ -3760,6 +3751,15 @@
           "total_price": 332.5,
           "title": "Used Differential Carrier Assembly fits: 2013 Audi Audi q5 Rear Axle 2.0L turbo",
           "item_id": "v1|136126950273|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 332.5,
+          "shipping": 0.0,
+          "total_price": 332.5,
+          "title": "Used Differential Carrier Assembly fits: 2014 Audi Audi a6 Rear Axle 2.0L turbo",
+          "item_id": "v1|146697166154|0",
           "condition": "Used",
           "location": "US"
         },
@@ -3854,6 +3854,15 @@
           "location": "US"
         },
         {
+          "price": 337.8,
+          "shipping": 0.0,
+          "total_price": 337.8,
+          "title": "Used Differential Carrier Assembly fits: 2013 Audi Audi a6 Rear Axle 2.0L turbo",
+          "item_id": "v1|167635935131|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 338.15,
           "shipping": 0.0,
           "total_price": 338.15,
@@ -3917,6 +3926,15 @@
           "location": "US"
         },
         {
+          "price": 343.1,
+          "shipping": 0.0,
+          "total_price": 343.1,
+          "title": "Used Differential Carrier Assembly fits: 2011 Audi Audi a8 Rear Axle 2.0L turbo",
+          "item_id": "v1|167635972590|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 343.51,
           "shipping": 0.0,
           "total_price": 343.51,
@@ -3958,15 +3976,6 @@
           "total_price": 344.99,
           "title": "Differential Carrier Rear Axle Carrier ID Kcc Fits 11-18 AUDI A8 1115741",
           "item_id": "v1|325897023904|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 346.28,
-          "shipping": 0.0,
-          "total_price": 346.28,
-          "title": "Used Differential Carrier Assembly fits: 2013 Audi Audi a6 Rear Axle 2.0L turbo",
-          "item_id": "v1|167635935131|0",
           "condition": "Used",
           "location": "US"
         },
@@ -4070,15 +4079,6 @@
           "location": "US"
         },
         {
-          "price": 352.64,
-          "shipping": 0.0,
-          "total_price": 352.64,
-          "title": "Used Differential Carrier Assembly fits: 2011 Audi Audi a8 Rear Axle 2.0L turbo",
-          "item_id": "v1|167635972590|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 354.99,
           "shipping": 0.0,
           "total_price": 354.99,
@@ -4115,20 +4115,20 @@
           "location": "US"
         },
         {
+          "price": 118.75,
+          "shipping": 250.0,
+          "total_price": 368.75,
+          "title": "2013-18 Audi A6 A7 A8 Rear Axle Differential Carrier NPR 0BC500044D 65589 miles",
+          "item_id": "v1|127222809238|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 295.0,
           "shipping": 80.0,
           "total_price": 375.0,
           "title": "REAR DIFFERENTIAL CARRIER ASSEMBLY 104K OEM 08-18 AUDI A6 A7 S6 S7 Q5 SQ5 RS7",
           "item_id": "v1|186695239904|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 250.0,
-          "total_price": 375.0,
-          "title": "2013-18 Audi A6 A7 A8 Rear Axle Differential Carrier NPR 0BC500044D 65589 miles",
-          "item_id": "v1|127222809238|0",
           "condition": "Used",
           "location": "US"
         },
@@ -4169,6 +4169,33 @@
           "location": "US"
         },
         {
+          "price": 142.5,
+          "shipping": 250.0,
+          "total_price": 392.5,
+          "title": "2013-2018 Audi A6 A7 A8 S5 Q5 S8 Rear Axle Differential Carrier 69000 miles",
+          "item_id": "v1|126762653498|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 142.5,
+          "shipping": 250.0,
+          "total_price": 392.5,
+          "title": "2013-2018 Audi A6 A7 A8 S5 Q5 S8 Rear Axle Differential Carrier 79000 miles",
+          "item_id": "v1|126762653527|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 142.5,
+          "shipping": 250.0,
+          "total_price": 392.5,
+          "title": "2013-2018 Audi A6 A7 A8 S5 Q5 S8 Rear Axle Differential Carrier 40000 miles",
+          "item_id": "v1|126763489775|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 295.49,
           "shipping": 99.0,
           "total_price": 394.49,
@@ -4201,33 +4228,6 @@
           "total_price": 400.0,
           "title": "2012 - 2017  AUDI A6 C7 2.0L QUATTRO REAR AXLE DIFFERENTIAL CARRIER OEM",
           "item_id": "v1|226796415340|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 150.0,
-          "shipping": 250.0,
-          "total_price": 400.0,
-          "title": "2013-2018 Audi A6 A7 A8 S5 Q5 S8 Rear Axle Differential Carrier 69000 miles",
-          "item_id": "v1|126762653498|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 150.0,
-          "shipping": 250.0,
-          "total_price": 400.0,
-          "title": "2013-2018 Audi A6 A7 A8 S5 Q5 S8 Rear Axle Differential Carrier 79000 miles",
-          "item_id": "v1|126762653527|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 150.0,
-          "shipping": 250.0,
-          "total_price": 400.0,
-          "title": "2013-2018 Audi A6 A7 A8 S5 Q5 S8 Rear Axle Differential Carrier 40000 miles",
-          "item_id": "v1|126763489775|0",
           "condition": "Used",
           "location": "US"
         },
@@ -4669,12 +4669,12 @@
       "low": 630.0,
       "average": 725.0,
       "high": 785.0,
-      "reasoning": "Filtered out items under $50, listings not for steering racks (e.g., trim panels, steering wheel columns, control modules), and listings explicitly for FWD vehicles.  Focused on listings mentioning 'steering rack', 'power steering', and Audi A6/A7 within the 2012-2018 range, prioritizing those specifying 'electric power steering'.",
-      "items_analyzed": 78,
+      "reasoning": "Filtered out items under $50, listings not related to steering racks (e.g., trim panels, steering wheel columns, control modules), and one listing that was clearly for a RHD vehicle.  Focused on listings explicitly mentioning 'Steering Rack' or 'Rack and Pinion' for Audi A6/A7 models within the 2012-2018 range, assuming compatibility with the 2013 A6 3.0T Quattro.  Excluded the one listing with extreme shipping cost.",
+      "items_analyzed": 69,
       "items_filtered_out": 10,
-      "cleaned_count": 68,
+      "cleaned_count": 59,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to variations in listing accuracy and completeness. Some listings lacked sufficient detail to definitively confirm fitment, and there were a few instances where the title was misleading.",
+      "confidence_explanation": "Mixed quality data. Many listings fit the criteria, but some ambiguity remains regarding exact fitment and condition. The price range seems reasonable, but further verification with part numbers is recommended.",
       "raw_items": [
         {
           "price": 63.38,
@@ -5491,13 +5491,13 @@
     "headlight": {
       "low": 208.0,
       "average": 309.0,
-      "high": 425.0,
-      "reasoning": "Filtered out listings for ballasts, brackets, sensors, bulbs, and modules. Also removed listings not specifically for a 2012-2015 Audi A6. Listings for other Audi models (A4, A5, Q5) were removed. Listings before 2012 or after 2015 were removed. Listings under $60 were removed.",
-      "items_analyzed": 150,
-      "items_filtered_out": 84,
-      "cleaned_count": 66,
+      "high": 390.0,
+      "reasoning": "Filtered out listings that were not complete headlights for a 2013 Audi A6, including ballasts, bulbs, brackets, sensors, and parts for other vehicles. Also removed listings for Q5 headlights, and listings that were clearly for parts and not the complete headlight assembly. Listings under $60 were removed.",
+      "items_analyzed": 193,
+      "items_filtered_out": 110,
+      "cleaned_count": 83,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to listings for other Audi models being included and some listings being for parts other than the headlight assembly itself.",
+      "confidence_explanation": "Mixed data quality due to many listings being for headlight components rather than complete headlight assemblies. Some listings also fit other Audi models, making it difficult to isolate A6-specific prices.",
       "raw_items": [
         {
           "price": 60.0,
@@ -6697,6 +6697,15 @@
           "location": "US"
         },
         {
+          "price": 340.0,
+          "shipping": 0.0,
+          "total_price": 340.0,
+          "title": "Used Left Headlight Assembly fits: 2012 Audi Audi q5 xenon HID self adjusting op",
+          "item_id": "v1|146658044342|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 349.0,
           "shipping": 0.0,
           "total_price": 349.0,
@@ -6837,15 +6846,6 @@
           "total_price": 399.99,
           "title": "Great! OEM 2012 2013 2014 2015 Audi A6 S6 Left Driver Side Xenon HID Headlight",
           "item_id": "v1|204907349304|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 412.45,
-          "shipping": 0.0,
-          "total_price": 412.45,
-          "title": "Used Left Headlight Assembly fits: 2012 Audi Audi q5 xenon HID self adjusting op",
-          "item_id": "v1|146658044342|0",
           "condition": "Used",
           "location": "US"
         },
@@ -7021,15 +7021,6 @@
           "location": "US"
         },
         {
-          "price": 464.11,
-          "shipping": 0.0,
-          "total_price": 464.11,
-          "title": "Used Left Headlight Assembly fits: 2014 Audi Audi a4 xenon HID self adjusting op",
-          "item_id": "v1|167116989364|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 464.26,
           "shipping": 0.0,
           "total_price": 464.26,
@@ -7053,6 +7044,15 @@
           "total_price": 464.93,
           "title": "12-15 Audi A6 FRONT RIGHT PASSENGER SIDE HEADLIGHT LAMP OEM",
           "item_id": "v1|116252828223|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 465.34,
+          "shipping": 0.0,
+          "total_price": 465.34,
+          "title": "Used Left Headlight Assembly fits: 2014 Audi Audi a4 xenon HID self adjusting op",
+          "item_id": "v1|167116989364|0",
           "condition": "Used",
           "location": "US"
         },
@@ -7305,12 +7305,12 @@
       "low": 85.0,
       "average": 117.0,
       "high": 149.0,
-      "reasoning": "Filtered out items under $50, speakers, wiring harnesses, window regulators, switches, and other non-panel parts. Also filtered out listings that did not specify 'door panel' or 'door trim panel' in the title.",
-      "items_analyzed": 125,
-      "items_filtered_out": 42,
-      "cleaned_count": 83,
+      "reasoning": "Filtered out items under $50, speakers, wiring harnesses, window regulators, and other non-panel parts. Also removed listings that didn't explicitly mention 'door panel' or 'door trim panel'.",
+      "items_analyzed": 174,
+      "items_filtered_out": 52,
+      "cleaned_count": 122,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to variations in panel completeness (some include switches, others don't) and condition not always clear.",
+      "confidence_explanation": "Mixed data quality due to variations in listing titles and descriptions, making precise filtering challenging. Some listings may still include components attached to the panel, affecting price.",
       "raw_items": [
         {
           "price": 53.99,
@@ -7610,6 +7610,15 @@
           "location": "US"
         },
         {
+          "price": 79.99,
+          "shipping": 0.0,
+          "total_price": 79.99,
+          "title": "Front Right Passenger Interior Door Trim Panel 4G1867104CWFA Audi S6 13-18 *Note",
+          "item_id": "v1|277287099894|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 84.99,
           "shipping": 0.0,
           "total_price": 84.99,
@@ -7741,6 +7750,33 @@
           "total_price": 99.99,
           "title": "2013-2018 AUDI S6 C7 - Front Center Speaker (BOSE) 4G0035453",
           "item_id": "v1|157192557730|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 99.99,
+          "shipping": 0.0,
+          "total_price": 99.99,
+          "title": "Front Right Interior Door Trim Panel Black OEM 4G1867104ACODV Audi A6 S6 12-15",
+          "item_id": "v1|277286540186|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 99.99,
+          "shipping": 0.0,
+          "total_price": 99.99,
+          "title": "Front Left Driver Interior Door Trim Panel Black 4G1867103CWFA Audi A6 S6 12-15",
+          "item_id": "v1|277286540189|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 99.99,
+          "shipping": 0.0,
+          "total_price": 99.99,
+          "title": "Front Left Driver Interior Door Trim Panel Black 4G1867103CWFA Audi A6 S6 13-18",
+          "item_id": "v1|286726677251|0",
           "condition": "Used",
           "location": "US"
         },
@@ -8420,15 +8456,6 @@
           "location": "US"
         },
         {
-          "price": 159.98,
-          "shipping": 0.0,
-          "total_price": 159.98,
-          "title": "Front Right Passenger Interior Door Trim Panel 4G1867104CWFA Audi S6 13-18 *Note",
-          "item_id": "v1|277287099894|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 85.0,
           "shipping": 74.99,
           "total_price": 159.99,
@@ -8915,33 +8942,6 @@
           "location": "US"
         },
         {
-          "price": 199.98,
-          "shipping": 0.0,
-          "total_price": 199.98,
-          "title": "Front Right Interior Door Trim Panel Black OEM 4G1867104ACODV Audi A6 S6 12-15",
-          "item_id": "v1|277286540186|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 199.98,
-          "shipping": 0.0,
-          "total_price": 199.98,
-          "title": "Front Left Driver Interior Door Trim Panel Black 4G1867103CWFA Audi A6 S6 12-15",
-          "item_id": "v1|277286540189|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 199.98,
-          "shipping": 0.0,
-          "total_price": 199.98,
-          "title": "Front Left Driver Interior Door Trim Panel Black 4G1867103CWFA Audi A6 S6 13-18",
-          "item_id": "v1|286726677251|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 149.99,
           "shipping": 50.0,
           "total_price": 199.99,
@@ -9115,15 +9115,15 @@
       ]
     },
     "rear door panel": {
-      "low": 78.0,
-      "average": 100.0,
+      "low": 77.0,
+      "average": 99.0,
       "high": 133.0,
-      "reasoning": "Filtered out items under $50, and listings that were not complete rear door panels (e.g., speakers, trim pieces, switches, or sets of multiple parts). Also filtered out listings that were not specific to the A6 model or were for other parts of the car.",
-      "items_analyzed": 125,
-      "items_filtered_out": 48,
-      "cleaned_count": 77,
+      "reasoning": "Filtered out items under $50, and listings that were not complete door panels (speakers, trim pieces, etc.).  Also removed listings that were not specific to the rear door.",
+      "items_analyzed": 138,
+      "items_filtered_out": 49,
+      "cleaned_count": 89,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to some listings being miscategorized or containing incomplete descriptions, but a reasonable number of relevant listings were found.",
+      "confidence_explanation": "Mixed quality data due to variations in condition and included components within the door panel assemblies.",
       "raw_items": [
         {
           "price": 50.21,
@@ -9675,6 +9675,15 @@
           "location": "US"
         },
         {
+          "price": 99.99,
+          "shipping": 0.0,
+          "total_price": 99.99,
+          "title": "Rear Left Driver Side Interior Door Trim Panel 4G0867303CWFA Audi A6 S6 13-18",
+          "item_id": "v1|286726677403|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 100.0,
           "shipping": 0.0,
           "total_price": 100.0,
@@ -9912,8 +9921,8 @@
           "price": 130.01,
           "shipping": 0.0,
           "total_price": 130.01,
-          "title": "Used Rear Left Door Interior Trim Panel fits: 2013 Audi Audi a6  Grade A",
-          "item_id": "v1|167635981790|0",
+          "title": "Used Rear Right Door Interior Trim Panel fits: 2013 Audi Audi a6  Grade A",
+          "item_id": "v1|167635981799|0",
           "condition": "Used",
           "location": "US"
         },
@@ -10165,6 +10174,15 @@
           "shipping": 0.0,
           "total_price": 147.26,
           "title": "Used Rear Left Door Interior Trim Panel fits: 2013 Audi Audi a6  Grade A",
+          "item_id": "v1|167635981790|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 147.26,
+          "shipping": 0.0,
+          "total_price": 147.26,
+          "title": "Used Rear Left Door Interior Trim Panel fits: 2013 Audi Audi a6  Grade A",
           "item_id": "v1|146697202583|0",
           "condition": "Used",
           "location": "US"
@@ -10175,15 +10193,6 @@
           "total_price": 147.26,
           "title": "Used Rear Right Door Interior Trim Panel fits: 2013 Audi Audi a6  Grade A",
           "item_id": "v1|167635981796|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 147.26,
-          "shipping": 0.0,
-          "total_price": 147.26,
-          "title": "Used Rear Right Door Interior Trim Panel fits: 2013 Audi Audi a6  Grade A",
-          "item_id": "v1|167635981799|0",
           "condition": "Used",
           "location": "US"
         },
@@ -10710,15 +10719,6 @@
           "location": "US"
         },
         {
-          "price": 199.98,
-          "shipping": 0.0,
-          "total_price": 199.98,
-          "title": "Rear Left Driver Side Interior Door Trim Panel 4G0867303CWFA Audi A6 S6 13-18",
-          "item_id": "v1|286726677403|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 149.99,
           "shipping": 50.0,
           "total_price": 199.99,
@@ -10928,15 +10928,15 @@
       ]
     },
     "abs pump": {
-      "low": 73.0,
-      "average": 94.0,
+      "low": 74.0,
+      "average": 99.0,
       "high": 115.0,
-      "reasoning": "All listings appear to be for the correct part (ABS pump/module) for the Audi A6/A7 C7 generation. No listings were filtered out as they all seemed relevant and above the minimum price threshold.",
+      "reasoning": "No items were filtered out. All items appear to be ABS pumps for Audi A6/A7 models within the specified year range. The prices were then used to calculate the low, average, and high prices.",
       "items_analyzed": 41,
       "items_filtered_out": 0,
       "cleaned_count": 41,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Good data quality with consistent descriptions and pricing for used ABS pumps/modules for the specified vehicle.",
+      "confidence_explanation": "Good data quality with a reasonable sample size. Listings appear relevant to the specified vehicle.",
       "raw_items": [
         {
           "price": 58.49,
@@ -11301,15 +11301,15 @@
       ]
     },
     "alternator": {
-      "low": 61.0,
-      "average": 73.0,
-      "high": 84.0,
-      "reasoning": "Filtered out accessories, parts for other vehicles (wrong engine/year/model), bracket/tensioner, wiring harness, and items under $30.  Focused on alternators explicitly for 2012-2015 Audi A6 3.0L Quattro.",
-      "items_analyzed": 157,
-      "items_filtered_out": 59,
-      "cleaned_count": 98,
+      "low": 72.0,
+      "average": 84.0,
+      "high": 90.0,
+      "reasoning": "Filtered out accessories, parts under $30, and listings not explicitly for a 2012-2015 Audi A6 alternator. Also removed listings for brackets and wiring harnesses.",
+      "items_analyzed": 165,
+      "items_filtered_out": 41,
+      "cleaned_count": 124,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed quality due to some listings potentially miscategorized or lacking complete information, but a reasonable number of relevant listings were found.",
+      "confidence_explanation": "Mixed quality due to some listings potentially including alternators for the 2.0L engine, which may skew the price range for the 3.0L engine. Mileage also varies greatly.",
       "raw_items": [
         {
           "price": 31.59,
@@ -13114,15 +13114,15 @@
       ]
     },
     "body control module": {
-      "low": 32.0,
-      "average": 50.0,
-      "high": 74.0,
-      "reasoning": "Filtered out items under $20, diesel engines, incorrect fitment years, and listings clearly not body control modules (e.g., door modules, brackets). Prioritized listings explicitly mentioning 'Body Control Module' or 'BCM' for Audi A6 C7.",
-      "items_analyzed": 150,
-      "items_filtered_out": 40,
-      "cleaned_count": 110,
-      "confidence_rating": "light_green",
-      "confidence_explanation": "Reasonable data quality with a good sample size after filtering. Some listings still include parts for A7/A8, but A6 listings are prevalent.",
+      "low": 37.0,
+      "average": 60.0,
+      "high": 75.0,
+      "reasoning": "Filtered out items under $20, listings not specifically for a 2013 Audi A6 (including those for other models like A8, or those that were just general 'body control module' listings without a specific vehicle), and listings that appeared to be for related but different parts (e.g., door control modules). Also filtered out listings explicitly stating diesel engines.",
+      "items_analyzed": 148,
+      "items_filtered_out": 35,
+      "cleaned_count": 113,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Mixed data quality. Many listings were for similar Audi models, requiring careful filtering. Some ambiguity remained in determining exact fitment based on titles alone.",
       "raw_items": [
         {
           "price": 25.0,
@@ -13656,6 +13656,15 @@
           "location": "US"
         },
         {
+          "price": 80.75,
+          "shipping": 0.0,
+          "total_price": 80.75,
+          "title": "2012-2018 -- Audi A6 A8 S8 -- Body Comfort Control Module Computer 4H0907064HR",
+          "item_id": "v1|127220909704|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 81.36,
           "shipping": 0.0,
           "total_price": 81.36,
@@ -13692,15 +13701,6 @@
           "location": "US"
         },
         {
-          "price": 85.0,
-          "shipping": 0.0,
-          "total_price": 85.0,
-          "title": "2012-2018 -- Audi A6 A8 S8 -- Body Comfort Control Module Computer 4H0907064HR",
-          "item_id": "v1|127220909704|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 70.0,
           "shipping": 15.0,
           "total_price": 85.0,
@@ -13715,6 +13715,42 @@
           "total_price": 85.53,
           "title": "11-15 Audi A6 S6 A8 ONBOARD SUPPLY BODY CONTROL MODULE OEM 4H0907063CG",
           "item_id": "v1|116249580750|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 88.35,
+          "shipping": 0.0,
+          "total_price": 88.35,
+          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064FR",
+          "item_id": "v1|126772779588|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 88.35,
+          "shipping": 0.0,
+          "total_price": 88.35,
+          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064DR",
+          "item_id": "v1|126772779696|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 88.35,
+          "shipping": 0.0,
+          "total_price": 88.35,
+          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064DD",
+          "item_id": "v1|126772780068|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 88.35,
+          "shipping": 0.0,
+          "total_price": 88.35,
+          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064CQ",
+          "item_id": "v1|126772780079|0",
           "condition": "Used",
           "location": "US"
         },
@@ -13778,42 +13814,6 @@
           "total_price": 90.1,
           "title": "2013-2018 Audi A6 Body Control Module BCM OEM",
           "item_id": "v1|365667767227|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 93.0,
-          "shipping": 0.0,
-          "total_price": 93.0,
-          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064FR",
-          "item_id": "v1|126772779588|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 93.0,
-          "shipping": 0.0,
-          "total_price": 93.0,
-          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064DR",
-          "item_id": "v1|126772779696|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 93.0,
-          "shipping": 0.0,
-          "total_price": 93.0,
-          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064DD",
-          "item_id": "v1|126772780068|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 93.0,
-          "shipping": 0.0,
-          "total_price": 93.0,
-          "title": "2012 13 14 15 16 17 2018 Audi A6 A8 S8 Body Comfort Control Module 4H0907064CQ",
-          "item_id": "v1|126772780079|0",
           "condition": "Used",
           "location": "US"
         },
@@ -14376,15 +14376,6 @@
           "location": "GB"
         },
         {
-          "price": 28.68,
-          "shipping": 0.0,
-          "total_price": 28.68,
-          "title": "AUDI A6 C7 BCM BODY CONTROL MODULE ECU 4H0907064CN 2013",
-          "item_id": "v1|396694653337|0",
-          "condition": "Used",
-          "location": "GB"
-        },
-        {
           "price": 30.09,
           "shipping": 0.0,
           "total_price": 30.09,
@@ -14408,6 +14399,15 @@
           "total_price": 33.58,
           "title": "AUDI A6 C7 BCM BODY CONTROL MODULE 2013 4H0907064CN",
           "item_id": "v1|316830241560|0",
+          "condition": "Used",
+          "location": "GB"
+        },
+        {
+          "price": 37.24,
+          "shipping": 0.0,
+          "total_price": 37.24,
+          "title": "AUDI A6 C7 BCM BODY CONTROL MODULE ECU 4H0907064CN 2013",
+          "item_id": "v1|396694653337|0",
           "condition": "Used",
           "location": "GB"
         },
@@ -14576,15 +14576,15 @@
       ]
     },
     "brake caliper": {
-      "low": 49.0,
-      "average": 59.0,
-      "high": 74.0,
-      "reasoning": "Filtered out items under $30, and parts that were not calipers (motors, brackets, carriers). Included parts that fit the 2013 Audi A6 Quattro.",
-      "items_analyzed": 160,
-      "items_filtered_out": 35,
+      "low": 47.0,
+      "average": 55.0,
+      "high": 65.0,
+      "reasoning": "Filtered out items under $30, brake caliper motors, and listings that did not specify Audi A6 or A7. Included listings specifying A6, A7, and S6 models from 2012-2018. Prioritized listings that specified Quattro/AWD.",
+      "items_analyzed": 140,
+      "items_filtered_out": 15,
       "cleaned_count": 125,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to some listings including 'motor' or 'carrier' in the title, requiring manual filtering. Some listings also fit multiple Audi models, adding to the uncertainty.",
+      "confidence_explanation": "Mixed data quality due to some listings including caliper motors and carriers, and some listings being for A7 models which may have slightly different brake setups.",
       "raw_items": [
         {
           "price": 31.68,
@@ -14740,6 +14740,24 @@
           "location": "US"
         },
         {
+          "price": 47.5,
+          "shipping": 0.0,
+          "total_price": 47.5,
+          "title": "2012-2015 ---- Audi A6 ---- Front Brake Caliper LH Driver Side ----- 4G0615123C",
+          "item_id": "v1|126798724051|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 47.5,
+          "shipping": 0.0,
+          "total_price": 47.5,
+          "title": "2012-2015 ---- Audi A6 --- Front Brake Caliper RH Passenger --- 4G0615124C",
+          "item_id": "v1|126798724073|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 48.0,
           "shipping": 0.0,
           "total_price": 48.0,
@@ -14875,24 +14893,6 @@
           "location": "US"
         },
         {
-          "price": 50.0,
-          "shipping": 0.0,
-          "total_price": 50.0,
-          "title": "2012-2015 ---- Audi A6 ---- Front Brake Caliper LH Driver Side ----- 4G0615123C",
-          "item_id": "v1|126798724051|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 50.0,
-          "shipping": 0.0,
-          "total_price": 50.0,
-          "title": "2012-2015 ---- Audi A6 --- Front Brake Caliper RH Passenger --- 4G0615124C",
-          "item_id": "v1|126798724073|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 35.96,
           "shipping": 14.99,
           "total_price": 50.95,
@@ -14925,15 +14925,6 @@
           "total_price": 50.99,
           "title": "2013-2016 AUDI ALLROAD - REAR Right Brake Caliper Carrier / Bracket 8K0615426",
           "item_id": "v1|135663752622|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 51.5,
-          "shipping": 0.0,
-          "total_price": 51.5,
-          "title": "2013 - 2017 AUDI A6 S6 QUATTRO REAR RIGHT PASSENGER SIDE BRAKE CALIPER OEM",
-          "item_id": "v1|387037999319|0",
           "condition": "Used",
           "location": "US"
         },
@@ -15181,24 +15172,6 @@
           "location": "US"
         },
         {
-          "price": 60.59,
-          "shipping": 0.0,
-          "total_price": 60.59,
-          "title": "2013 - 2017 AUDI A6 S6 QUATTRO REAR RIGHT PASSENGER SIDE BRAKE CALIPER OEM",
-          "item_id": "v1|387027195448|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 60.59,
-          "shipping": 0.0,
-          "total_price": 60.59,
-          "title": "2013 - 2017 AUDI A6 S6 QUATTRO REAR RIGHT PASSENGER SIDE BRAKE CALIPER OEM",
-          "item_id": "v1|387118742176|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 44.99,
           "shipping": 16.99,
           "total_price": 61.980000000000004,
@@ -15283,8 +15256,8 @@
           "price": 47.49,
           "shipping": 16.99,
           "total_price": 64.48,
-          "title": "2012 - 2018 AUDI A6 A7 REAR LEFT DRIVER AWD BRAKE CALIPER OEM #10019",
-          "item_id": "v1|156606125703|0",
+          "title": "2012 - 2018 AUDI A6 A7 REAR LEFT DRIVER AWD BRAKE CALIPER OEM #588",
+          "item_id": "v1|156615688346|0",
           "condition": "Used",
           "location": "US"
         },
@@ -15292,8 +15265,8 @@
           "price": 47.49,
           "shipping": 16.99,
           "total_price": 64.48,
-          "title": "2012 - 2018 AUDI A6 A7 REAR LEFT DRIVER AWD BRAKE CALIPER OEM #588",
-          "item_id": "v1|156615688346|0",
+          "title": "2012 - 2018 AUDI A6 A7 REAR LEFT DRIVER AWD BRAKE CALIPER OEM #10019",
+          "item_id": "v1|156606125703|0",
           "condition": "Used",
           "location": "US"
         },
@@ -15595,24 +15568,6 @@
           "location": "US"
         },
         {
-          "price": 70.1,
-          "shipping": 0.0,
-          "total_price": 70.1,
-          "title": "2013 - 2017 AUDI A6 S6 QUATTRO REAR RIGHT PASSENGER SIDE BRAKE CALIPER OEM",
-          "item_id": "v1|387226885962|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 70.4,
-          "shipping": 0.0,
-          "total_price": 70.4,
-          "title": "2012-2017 AUDI A6 A7 AWD FRONT LEFT SIDE BRAKE CALIPER OEM",
-          "item_id": "v1|387122438340|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 45.99,
           "shipping": 25.0,
           "total_price": 70.99000000000001,
@@ -15627,6 +15582,33 @@
           "total_price": 70.99000000000001,
           "title": "✅ 2012-2017 AUDI A6 A7 AWD FRONT LEFT DRIVER SIDE BRAKE CALIPER OEM",
           "item_id": "v1|375961535069|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 71.25,
+          "shipping": 0.0,
+          "total_price": 71.25,
+          "title": "2012-2018 ----- Audi A6 ----- Rear Brake Caliper LH Driver ---- 4G0615403A",
+          "item_id": "v1|126798704826|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 71.25,
+          "shipping": 0.0,
+          "total_price": 71.25,
+          "title": "2012-2018 ---- Audi A6 ---- Rear Brake Caliper RH Passenger --- 4G0615404A",
+          "item_id": "v1|126798734698|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 71.25,
+          "shipping": 0.0,
+          "total_price": 71.25,
+          "title": "2012-2018 ---- Audi A6 ---- Rear Brake Caliper RH Passenger Side ---- 4G0615404A",
+          "item_id": "v1|126798734703|0",
           "condition": "Used",
           "location": "US"
         },
@@ -16252,33 +16234,6 @@
           "location": "US"
         },
         {
-          "price": 75.0,
-          "shipping": 0.0,
-          "total_price": 75.0,
-          "title": "2012-2018 ----- Audi A6 ----- Rear Brake Caliper LH Driver ---- 4G0615403A",
-          "item_id": "v1|126798704826|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 75.0,
-          "shipping": 0.0,
-          "total_price": 75.0,
-          "title": "2012-2018 ---- Audi A6 ---- Rear Brake Caliper RH Passenger --- 4G0615404A",
-          "item_id": "v1|126798734698|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 75.0,
-          "shipping": 0.0,
-          "total_price": 75.0,
-          "title": "2012-2018 ---- Audi A6 ---- Rear Brake Caliper RH Passenger Side ---- 4G0615404A",
-          "item_id": "v1|126798734703|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 60.0,
           "shipping": 16.5,
           "total_price": 76.5,
@@ -16385,19 +16340,64 @@
           "item_id": "v1|355822997735|0",
           "condition": "Used",
           "location": "US"
+        },
+        {
+          "price": 79.99,
+          "shipping": 0.0,
+          "total_price": 79.99,
+          "title": "2010-2016 AUDI A8 QUATTRO - Front Right Brake Caliper W/ Carrier 4G0615124B",
+          "item_id": "v1|136152322798|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 79.99,
+          "shipping": 0.0,
+          "total_price": 79.99,
+          "title": "2012-2018 Audi A7 REAR Brake Caliper and Motor LEFT 4G0615403A",
+          "item_id": "v1|135500915007|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 79.99,
+          "shipping": 0.0,
+          "total_price": 79.99,
+          "title": "2014-2018 AUDI A6 C7 2.0 REAR RIGHT PASSENGER SIDE BRAKE CALIPER OEM",
+          "item_id": "v1|196509488763|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 55.0,
+          "shipping": 25.0,
+          "total_price": 80.0,
+          "title": "12 13 AUDI A8 Left Front Brake Caliper; 360mm (14.173\" rotor)",
+          "item_id": "v1|256331557083|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 60.0,
+          "shipping": 20.0,
+          "total_price": 80.0,
+          "title": "Passenger Caliper Rear 330mm 12.99\" Rotor Fits 12-18 AUDI A6 1070303",
+          "item_id": "v1|226813644015|0",
+          "condition": "Used",
+          "location": "US"
         }
       ]
     },
     "cluster": {
-      "low": 50,
-      "average": 70,
-      "high": 95,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 192,
+      "low": 51.0,
+      "average": 60.0,
+      "high": 72.0,
+      "reasoning": "Filtered out parts under $30, diesel engines, incorrect years, and listings that were not instrument clusters. Kept listings that specified Audi A6 or A7 instrument clusters from 2012-2013.",
+      "items_analyzed": 164,
+      "items_filtered_out": 56,
+      "cleaned_count": 108,
       "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "confidence_explanation": "Mixed quality due to some listings including incorrect years and some diesel engine parts.",
       "raw_items": [
         {
           "price": 34.64,
@@ -16718,15 +16718,6 @@
           "price": 60.99,
           "shipping": 0.0,
           "total_price": 60.99,
-          "title": "Speedometer Cluster MPH With Adaptive Cruise Opt 8T4 Fits 12-15 AUDI A6 4569040",
-          "item_id": "v1|236170419866|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 60.99,
-          "shipping": 0.0,
-          "total_price": 60.99,
           "title": "Speedometer Cluster MPH ID 4G8920950FX Fits 12-15 AUDI A6 4626420",
           "item_id": "v1|316740278743|0",
           "condition": "Used",
@@ -16751,11 +16742,47 @@
           "location": "US"
         },
         {
+          "price": 60.99,
+          "shipping": 0.0,
+          "total_price": 60.99,
+          "title": "Speedometer Cluster MPH With Adaptive Cruise Opt 8T4 Fits 12-15 AUDI A6 4569040",
+          "item_id": "v1|236170419866|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 51.0,
           "shipping": 10.0,
           "total_price": 61.0,
           "title": "12 13 14 15 Audi A7 Speedometer Instrument Cluster Unknown Miles 4g8920983e",
           "item_id": "v1|403932353237|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 61.75,
+          "shipping": 0.0,
+          "total_price": 61.75,
+          "title": "2013-2015 ---- Audi A6 A7 ---- Speedometer Instrument Cluster -- 4G8920983M",
+          "item_id": "v1|126863360030|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 61.75,
+          "shipping": 0.0,
+          "total_price": 61.75,
+          "title": "2012-2015 ---- Audi A6 A7 ---- Speedometer Instrument Cluster 4G8920983E",
+          "item_id": "v1|126863424996|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 61.75,
+          "shipping": 0.0,
+          "total_price": 61.75,
+          "title": "2012-2015 ---- Audi A6 A7 --- Speedometer Instrument Gauge Cluster 4G8920983E",
+          "item_id": "v1|126863425007|0",
           "condition": "Used",
           "location": "US"
         },
@@ -16801,33 +16828,6 @@
           "total_price": 64.99000000000001,
           "title": "✅ 2012-2013 AUDI A6 SPEEDOMETER INSTRUMENT CLUSTER 3.0 TDI DIESEL 4G8920982K",
           "item_id": "v1|156930400495|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 65.0,
-          "shipping": 0.0,
-          "total_price": 65.0,
-          "title": "2013-2015 ---- Audi A6 A7 ---- Speedometer Instrument Cluster -- 4G8920983M",
-          "item_id": "v1|126863360030|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 65.0,
-          "shipping": 0.0,
-          "total_price": 65.0,
-          "title": "2012-2015 ---- Audi A6 A7 ---- Speedometer Instrument Cluster 4G8920983E",
-          "item_id": "v1|126863424996|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 65.0,
-          "shipping": 0.0,
-          "total_price": 65.0,
-          "title": "2012-2015 ---- Audi A6 A7 --- Speedometer Instrument Gauge Cluster 4G8920983E",
-          "item_id": "v1|126863425007|0",
           "condition": "Used",
           "location": "US"
         },
@@ -17336,6 +17336,15 @@
           "location": "US"
         },
         {
+          "price": 99.99,
+          "shipping": 0.0,
+          "total_price": 99.99,
+          "title": "Speedometer Instrument Gauge Cluster 4g8920983e Oem Audi A7 2012-13 A6",
+          "item_id": "v1|286726562407|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 100.0,
           "shipping": 0.0,
           "total_price": 100.0,
@@ -17429,24 +17438,6 @@
           "price": 104.55,
           "shipping": 0.0,
           "total_price": 104.55,
-          "title": "Speedometer Cluster MPH With Adaptive Cruise Opt 8T4 Fits 12-15 AUDI A6 26817236",
-          "item_id": "v1|335982391067|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 104.55,
-          "shipping": 0.0,
-          "total_price": 104.55,
-          "title": "Speedometer Cluster MPH ID 4G8920950FX Fits 12-15 AUDI A6 25207971",
-          "item_id": "v1|335982411583|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 104.55,
-          "shipping": 0.0,
-          "total_price": 104.55,
           "title": "Speedometer Cluster MPH With Night Vision Opt 9R1 Fits 12-15 AUDI A6 19067273",
           "item_id": "v1|356984149057|0",
           "condition": "Used",
@@ -17458,6 +17449,15 @@
           "total_price": 104.55,
           "title": "Speedometer Cluster MPH ID 4G8920950FX Fits 12-15 AUDI A6 14094000",
           "item_id": "v1|335982674818|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 104.55,
+          "shipping": 0.0,
+          "total_price": 104.55,
+          "title": "Speedometer Cluster MPH With Adaptive Cruise Opt 8T4 Fits 12-15 AUDI A6 26817236",
+          "item_id": "v1|335982391067|0",
           "condition": "Used",
           "location": "US"
         },
@@ -18047,15 +18047,6 @@
           "location": "LT"
         },
         {
-          "price": 199.98,
-          "shipping": 0.0,
-          "total_price": 199.98,
-          "title": "Speedometer Instrument Gauge Cluster 4g8920983e Oem Audi A7 2012-13 A6",
-          "item_id": "v1|286726562407|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 199.99,
           "shipping": 0.0,
           "total_price": 199.99,
@@ -18198,19 +18189,28 @@
           "item_id": "v1|176580159762|0",
           "condition": "Used",
           "location": "US"
+        },
+        {
+          "price": 249.76,
+          "shipping": 83.05,
+          "total_price": 332.81,
+          "title": "AUDI A7 SPORTBACK 4G8 INSTRUMENT SPEEDOMETER 4G8920987R 2017 MPH",
+          "item_id": "v1|316761361987|0",
+          "condition": "Gebraucht",
+          "location": "LT"
         }
       ]
     },
     "heater control": {
-      "low": 50,
-      "average": 60,
-      "high": 80,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 200,
+      "low": 49.0,
+      "average": 56.0,
+      "high": 71.0,
+      "reasoning": "Filtered out items under $30, and listings that were not heater controls (actuators, etc.) or for the wrong vehicle (non A6/A7).",
+      "items_analyzed": 146,
+      "items_filtered_out": 35,
+      "cleaned_count": 111,
       "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "confidence_explanation": "Mixed data quality due to some listings being miscategorized or having vague titles, but a reasonable number of relevant listings were found.",
       "raw_items": [
         {
           "price": 31.19,
@@ -18519,6 +18519,15 @@
           "location": "US"
         },
         {
+          "price": 52.25,
+          "shipping": 0.0,
+          "total_price": 52.25,
+          "title": "2013-17 -- Audi A6 A7 S6 S7 -- AC Heater Temperature Climate Control 4G0820043L",
+          "item_id": "v1|126829751084|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 53.99,
           "shipping": 0.0,
           "total_price": 53.99,
@@ -18542,15 +18551,6 @@
           "total_price": 54.99,
           "title": "2012-2015 AUDI A6 A7 S7 RS7 - A/C HEATER TEMPERATURE CLIMATE CONTROL SWITCH OEM ",
           "item_id": "v1|387853582716|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 55.0,
-          "shipping": 0.0,
-          "total_price": 55.0,
-          "title": "2013-17 -- Audi A6 A7 S6 S7 -- AC Heater Temperature Climate Control 4G0820043L",
-          "item_id": "v1|126829751084|0",
           "condition": "Used",
           "location": "US"
         },
@@ -18789,18 +18789,18 @@
           "location": "US"
         },
         {
-          "price": 65.0,
+          "price": 61.75,
           "shipping": 0.0,
-          "total_price": 65.0,
+          "total_price": 61.75,
           "title": "2012 13 14 15 Audi A6 A7 S6 S7 AC Heater Temperature Climate Control 4G0820043AH",
           "item_id": "v1|126829748973|0",
           "condition": "Used",
           "location": "US"
         },
         {
-          "price": 65.0,
+          "price": 61.75,
           "shipping": 0.0,
-          "total_price": 65.0,
+          "total_price": 61.75,
           "title": "2012-2015 Audi A6 A7 S6 S7 AC Heater Temperature Climate Control --- 4G0820043AH",
           "item_id": "v1|126829748980|0",
           "condition": "Used",
@@ -20015,15 +20015,15 @@
       ]
     },
     "compressor": {
-      "low": 85,
-      "average": 100,
-      "high": 110,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 198,
+      "low": 79.0,
+      "average": 85.0,
+      "high": 95.0,
+      "reasoning": "Filtered out items under $30, listings for incorrect Audi models (A4, A5, A8, Q5, Q7), listings specifying incorrect engine sizes (2.0L), and listings that were not AC compressors (e.g., condensers). Also filtered out listings that appeared to be for new or aftermarket parts based on the title.",
+      "items_analyzed": 150,
+      "items_filtered_out": 50,
+      "cleaned_count": 100,
       "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "confidence_explanation": "Mixed data quality due to some listings being for A7 models and some ambiguity in fitment. Mileage also varies greatly.",
       "raw_items": [
         {
           "price": 45.0,
@@ -21133,6 +21133,15 @@
           "location": "US"
         },
         {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "2013-2018 Audi A4 A5 A6 Q5 Q7 AC Air Conditioning Compressor 2.0L -- 4M0820803",
+          "item_id": "v1|127220913169|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 119.0,
           "shipping": 0.0,
           "total_price": 119.0,
@@ -21327,15 +21336,6 @@
           "total_price": 125.0,
           "title": "AC Compressor Engine ID Caeb Fits 12-16 AUDI A6 931242",
           "item_id": "v1|116433388270|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "2013-2018 Audi A4 A5 A6 Q5 Q7 AC Air Conditioning Compressor 2.0L -- 4M0820803",
-          "item_id": "v1|127220913169|0",
           "condition": "Used",
           "location": "US"
         },
@@ -21610,20 +21610,20 @@
           "location": "US"
         },
         {
-          "price": 115.0,
-          "shipping": 18.0,
-          "total_price": 133.0,
-          "title": "AUDI AUDI A7 Compressor (3.0L) 12 13",
-          "item_id": "v1|166464939404|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 133.0,
           "shipping": 0.0,
           "total_price": 133.0,
           "title": "12 13 14 15 AUDI A6 AC COMPRESSOR 3.0L PART #  4G0 260 805A",
           "item_id": "v1|303565872747|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 115.0,
+          "shipping": 18.0,
+          "total_price": 133.0,
+          "title": "AUDI AUDI A7 Compressor (3.0L) 12 13",
+          "item_id": "v1|166464939404|0",
           "condition": "Used",
           "location": "US"
         },
@@ -21828,15 +21828,15 @@
       ]
     },
     "door mirror": {
-      "low": 65,
-      "average": 120,
-      "high": 150,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 200,
+      "low": 80.0,
+      "average": 105.0,
+      "high": 130.0,
+      "reasoning": "Filtered out mirror glass, motors, covers, and listings not specifically for 2012-2013 Audi A6. Also removed items under $30.",
+      "items_analyzed": 200,
+      "items_filtered_out": 70,
+      "cleaned_count": 130,
       "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "confidence_explanation": "Mixed quality due to some listings being for mirror caps or glass only, and some listings spanning multiple years, requiring careful filtering.",
       "raw_items": [
         {
           "price": 30.6,
@@ -22487,6 +22487,15 @@
           "location": "US"
         },
         {
+          "price": 126.0,
+          "shipping": 0.0,
+          "total_price": 126.0,
+          "title": "Used Right Door Mirror fits: 2013 Audi Audi a6 Power w/o blind spot alert w/fold",
+          "item_id": "v1|146670184299|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 99.0,
           "shipping": 29.0,
           "total_price": 128.0,
@@ -22604,6 +22613,15 @@
           "location": "US"
         },
         {
+          "price": 119.99,
+          "shipping": 20.0,
+          "total_price": 139.99,
+          "title": "12-18 AUDI A6 RIGHT PASSENGER SIDE POWER MIRROR SILVER 10 WIRE OEM",
+          "item_id": "v1|167676481196|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 140.0,
           "shipping": 0.0,
           "total_price": 140.0,
@@ -22708,15 +22726,6 @@
           "total_price": 149.0,
           "title": "2012-2018 Audi A6 S6 Left LH Side View Door Mirror OEM",
           "item_id": "v1|365734378509|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 149.23,
-          "shipping": 0.0,
-          "total_price": 149.23,
-          "title": "Used Right Door Mirror fits: 2013 Audi Audi a6 Power w/o blind spot alert w/fold",
-          "item_id": "v1|146670184299|0",
           "condition": "Used",
           "location": "US"
         },
@@ -23628,28 +23637,19 @@
           "item_id": "v1|197455269868|0",
           "condition": "Used",
           "location": "US"
-        },
-        {
-          "price": 209.88,
-          "shipping": 0.0,
-          "total_price": 209.88,
-          "title": "2012-2013 Audi A6 RH Passenger Door Mirror Side View OEM",
-          "item_id": "v1|197556961875|0",
-          "condition": "Used",
-          "location": "US"
         }
       ]
     },
     "engine computer": {
-      "low": 15,
-      "average": 20,
-      "high": 20,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 200,
+      "low": 18.0,
+      "average": 19.0,
+      "high": 22.0,
+      "reasoning": "Filtered out items under $15, door modules, antenna modules, brackets, and other non-ECU parts.  Focused on listings that explicitly mention 'Engine Control Module' or 'ECU'.",
+      "items_analyzed": 160,
+      "items_filtered_out": 115,
+      "cleaned_count": 45,
       "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "confidence_explanation": "Mixed quality data. Many listings are for related modules or brackets, requiring careful filtering.  Small sample size of actual ECUs after filtering.",
       "raw_items": [
         {
           "price": 15.25,
@@ -25454,15 +25454,15 @@
       ]
     },
     "front strut": {
-      "low": 70,
-      "average": 90,
-      "high": 100,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 197,
-      "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "low": 70.0,
+      "average": 85.0,
+      "high": 99.0,
+      "reasoning": "Filtered out parts that were not for a 2012-2018 Audi A6 with AWD, or were not complete front struts (mounts, brackets, etc). Also removed listings for A4/A5/Q5 models, and those with air suspension. Listings under $45 were removed.",
+      "items_analyzed": 150,
+      "items_filtered_out": 52,
+      "cleaned_count": 98,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Good data quality, but some listings required careful review to ensure proper fitment and exclusion of air suspension models.",
       "raw_items": [
         {
           "price": 45.0,
@@ -25762,24 +25762,6 @@
           "location": "US"
         },
         {
-          "price": 78.19,
-          "shipping": 0.0,
-          "total_price": 78.19,
-          "title": "12-18 AUDI C7 A6 A7 QUATTRO STRUT SHOCK ABSORBER SUSPENSION LEFT FRONT OEM",
-          "item_id": "v1|387922213780|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 78.19,
-          "shipping": 0.0,
-          "total_price": 78.19,
-          "title": "12-18 AUDI C7 A6 A7 QUATTRO STRUT SHOCK ABSORBER SUSPENSION LEFT FRONT 021723",
-          "item_id": "v1|387226919887|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 79.9,
           "shipping": 0.0,
           "total_price": 79.9,
@@ -25882,6 +25864,15 @@
           "price": 85.0,
           "shipping": 0.0,
           "total_price": 85.0,
+          "title": "Used Front Left Suspension Strut fits: 2013 Audi Audi a6 Front w/o air suspensio",
+          "item_id": "v1|136127003742|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 85.0,
+          "shipping": 0.0,
+          "total_price": 85.0,
           "title": "OEM PASSENGER FRONT Strut Assembly AUDI A7 Right 12 13 14 15 16 17 18",
           "item_id": "v1|144866785248|0",
           "condition": "Used",
@@ -25911,15 +25902,6 @@
           "total_price": 88.0,
           "title": "2012 2018 Audi A6 OEM Front Right Strut With Coil Spring ",
           "item_id": "v1|326668683867|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 88.31,
-          "shipping": 0.0,
-          "total_price": 88.31,
-          "title": "2012-2018 AUDI C7 A6 A7 QUATTRO STRUT SHOCK ABSORBER SUSPENSION LEFT FRONT OEM",
-          "item_id": "v1|387210493911|0",
           "condition": "Used",
           "location": "US"
         },
@@ -26019,15 +26001,6 @@
           "total_price": 91.49,
           "title": "12-18 AUDI A6 S6 FRONT LEFT DRIVER SIDE SHOCK ABSORBER STRUT MONROE OEM",
           "item_id": "v1|376187235146|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 91.78,
-          "shipping": 0.0,
-          "total_price": 91.78,
-          "title": "2012-2017 AUDI A6 A7 C7 AWD FRONT RIGHT  SUSPENSION SHOCK STRUT OEM",
-          "item_id": "v1|386245252586|0",
           "condition": "Used",
           "location": "US"
         },
@@ -26206,15 +26179,6 @@
           "price": 98.8,
           "shipping": 0.0,
           "total_price": 98.8,
-          "title": "Used Front Left Suspension Strut fits: 2013 Audi Audi a6 Front w/o air suspensio",
-          "item_id": "v1|136127003742|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 98.8,
-          "shipping": 0.0,
-          "total_price": 98.8,
           "title": "Used Front Right Suspension Strut fits: 2013 Audi Audi a6 Front w/o air suspensi",
           "item_id": "v1|135293008638|0",
           "condition": "Used",
@@ -26253,15 +26217,6 @@
           "total_price": 98.8,
           "title": "Used Front Left Suspension Strut fits: 2011 Audi Audi a4 Front standard suspensi",
           "item_id": "v1|146593626417|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 98.8,
-          "shipping": 0.0,
-          "total_price": 98.8,
-          "title": "Used Front Right Suspension Strut fits: 2014 Audi Audi allroad Front Front Right",
-          "item_id": "v1|135393885722|0",
           "condition": "Used",
           "location": "US"
         },
@@ -26397,6 +26352,15 @@
           "total_price": 101.26,
           "title": "Used Front Suspension Strut fits: 2005 Audi Audi s4 Front Conv Front Grade A",
           "item_id": "v1|146571999403|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 101.26,
+          "shipping": 0.0,
+          "total_price": 101.26,
+          "title": "Used Front Right Suspension Strut fits: 2014 Audi Audi allroad Front Front Right",
+          "item_id": "v1|135393885722|0",
           "condition": "Used",
           "location": "US"
         },
@@ -26878,6 +26842,69 @@
           "location": "US"
         },
         {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "12-17 Audi A6 A7 Front Strut Shock Absorber RH 4G0413031C 8K0411105EC 8K0413038L",
+          "item_id": "v1|127225407316|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "12-17 Audi A6 A7 Front Strut Shock Absorber LH 4G0413031C 8K0411105EC 8K0413037L",
+          "item_id": "v1|127225407470|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber RH Front -- 4G0413031Q",
+          "item_id": "v1|126797044024|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber RH Front ---- 4G8413031J",
+          "item_id": "v1|126797135389|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber LH Front -- 4G0413031N",
+          "item_id": "v1|126797158951|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber RH Front -- 4G0413031Q",
+          "item_id": "v1|126797159001|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 118.75,
+          "shipping": 0.0,
+          "total_price": 118.75,
+          "title": "2012-2017 ---- Audi A6 A7 ---- Strut Shock Absorber LH Driver Front - 4G0413031Q",
+          "item_id": "v1|126797159202|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 119.0,
           "shipping": 0.0,
           "total_price": 119.0,
@@ -27121,74 +27148,11 @@
           "location": "US"
         },
         {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "12-17 Audi A6 A7 Front Strut Shock Absorber RH 4G0413031C 8K0411105EC 8K0413038L",
-          "item_id": "v1|127225407316|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "12-17 Audi A6 A7 Front Strut Shock Absorber LH 4G0413031C 8K0411105EC 8K0413037L",
-          "item_id": "v1|127225407470|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 115.0,
           "shipping": 10.0,
           "total_price": 125.0,
           "title": "09-17 Audi Q5 Premium Front Left Suspension Strut Shock Absorber Assembly Oem",
           "item_id": "v1|226610706646|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber RH Front -- 4G0413031Q",
-          "item_id": "v1|126797044024|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber RH Front ---- 4G8413031J",
-          "item_id": "v1|126797135389|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber LH Front -- 4G0413031N",
-          "item_id": "v1|126797158951|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "2012-2017 ----- Audi A6 A7 ----- Strut Shock Absorber RH Front -- 4G0413031Q",
-          "item_id": "v1|126797159001|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 125.0,
-          "shipping": 0.0,
-          "total_price": 125.0,
-          "title": "2012-2017 ---- Audi A6 A7 ---- Strut Shock Absorber LH Driver Front - 4G0413031Q",
-          "item_id": "v1|126797159202|0",
           "condition": "Used",
           "location": "US"
         },
@@ -27263,19 +27227,55 @@
           "item_id": "v1|167524331608|0",
           "condition": "Used",
           "location": "US"
+        },
+        {
+          "price": 129.0,
+          "shipping": 0.0,
+          "total_price": 129.0,
+          "title": "Driver Left Strut Front Without Air Suspension Fits 2012-2017 AUDI A6 ",
+          "item_id": "v1|126485493622|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 129.0,
+          "shipping": 0.0,
+          "total_price": 129.0,
+          "title": "⭐2012-2018 AUDI A6 QUATTRO FRONT LEFT DRIVER SHOCK ABSORBER STRUT OEM LOT2262",
+          "item_id": "v1|115395026919|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 129.0,
+          "shipping": 0.0,
+          "total_price": 129.0,
+          "title": "⭐2012-2018 AUDI A6 QUATTRO FRONT RIGHT PASS SHOCK ABSORBER STRUT OEM LOT2262",
+          "item_id": "v1|125329931312|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 129.95,
+          "shipping": 0.0,
+          "total_price": 129.95,
+          "title": "2012-2018 AUDI A6 C7 3.0L - Front Strut Shock / Spring Assembly 4G0413031Q",
+          "item_id": "v1|156988468392|0",
+          "condition": "Used",
+          "location": "US"
         }
       ]
     },
     "steering wheel": {
-      "low": 50,
-      "average": 85,
-      "high": 130,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 200,
+      "low": 53.0,
+      "average": 75.0,
+      "high": 102.0,
+      "reasoning": "Filtered out items under $30, accessories like bezels and switches, and parts from incorrect years or models. Prioritized listings explicitly mentioning 'steering wheel' for Audi A6/A7 models between 2012-2018.",
+      "items_analyzed": 128,
+      "items_filtered_out": 47,
+      "cleaned_count": 81,
       "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "confidence_explanation": "Mixed quality due to some listings being for related parts (clock springs) and some ambiguity in fitment despite filtering.",
       "raw_items": [
         {
           "price": 31.59,
@@ -27292,15 +27292,6 @@
           "total_price": 31.59,
           "title": "2012-2018 AUDI A6 C7 QUATTRO STEERING COLUMN WHEEL 4 SPOKE BEZEL COVER OEM",
           "item_id": "v1|396642915959|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 32.3,
-          "shipping": 0.0,
-          "total_price": 32.3,
-          "title": "12-18 Audi A6 13-18 S6 Steering Wheel Clock Spring Wire Wiring Harness",
-          "item_id": "v1|197187138658|0",
           "condition": "Used",
           "location": "US"
         },
@@ -27791,6 +27782,24 @@
           "location": "US"
         },
         {
+          "price": 81.0,
+          "shipping": 0.0,
+          "total_price": 81.0,
+          "title": "12-18 AUDI A6 A7 C7 Paddle Shift 3 Spoke Steering Wheel Control BLACK",
+          "item_id": "v1|197248284482|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 83.6,
+          "shipping": 0.0,
+          "total_price": 83.6,
+          "title": "2012 2013 2014 2015 Audi A7 Steering Wheel 4 Spoke Moor Brown 4G0419091M",
+          "item_id": "v1|126779591438|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 84.14,
           "shipping": 0.0,
           "total_price": 84.14,
@@ -27814,15 +27823,6 @@
           "total_price": 84.99,
           "title": "2013-2016 AUDI A4 A5 S4 (B8 8T 8K) LEFT DRIVER 3 SPOKE STEERING WHEEL (Black)",
           "item_id": "v1|236115707357|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 88.0,
-          "shipping": 0.0,
-          "total_price": 88.0,
-          "title": "2012 2013 2014 2015 Audi A7 Steering Wheel 4 Spoke Moor Brown 4G0419091M",
-          "item_id": "v1|126779591438|0",
           "condition": "Used",
           "location": "US"
         },
@@ -27881,15 +27881,6 @@
           "location": "US"
         },
         {
-          "price": 97.2,
-          "shipping": 0.0,
-          "total_price": 97.2,
-          "title": "12-18 AUDI A6 A7 C7 Paddle Shift 3 Spoke Steering Wheel Control BLACK",
-          "item_id": "v1|197248284482|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 99.0,
           "shipping": 0.0,
           "total_price": 99.0,
@@ -27908,11 +27899,11 @@
           "location": "US"
         },
         {
-          "price": 80.0,
-          "shipping": 20.0,
-          "total_price": 100.0,
-          "title": "12-15 AUDI A6 Steering Wheel",
-          "item_id": "v1|333667569921|0",
+          "price": 99.99,
+          "shipping": 0.0,
+          "total_price": 99.99,
+          "title": "Driver Steering Wheel Black Heat 4g0419091n1kt Oem Audi A6 A7 2012-15 S6 S7",
+          "item_id": "v1|277287001815|0",
           "condition": "Used",
           "location": "US"
         },
@@ -27926,11 +27917,47 @@
           "location": "US"
         },
         {
+          "price": 80.0,
+          "shipping": 20.0,
+          "total_price": 100.0,
+          "title": "12-15 AUDI A6 Steering Wheel",
+          "item_id": "v1|333667569921|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 76.5,
           "shipping": 25.0,
           "total_price": 101.5,
           "title": "2013 AUDI A6 PREMIUM PLUS 2.0L STEERING WHEEL LEATHER BLACK W/ SWITCHES OEM",
           "item_id": "v1|266175644792|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 101.65,
+          "shipping": 0.0,
+          "total_price": 101.65,
+          "title": "2012-15 Audi A6 A7 S6 S7 Steering Wheel 4 Spoke Black Leather Heated 4G0419091N",
+          "item_id": "v1|126779592174|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 101.65,
+          "shipping": 0.0,
+          "total_price": 101.65,
+          "title": "2012-15 Audi A6 A7 S6 S7 Steering Wheel 4 Spoke Black Leather Heated 4G0419091N",
+          "item_id": "v1|126779721352|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 102.6,
+          "shipping": 0.0,
+          "total_price": 102.6,
+          "title": "2012-2015 Audi A6 A7 S6 S7 Steering Wheel 4 Spoke Steel Gray Leather 4G0419091N",
+          "item_id": "v1|126779592152|0",
           "condition": "Used",
           "location": "US"
         },
@@ -27985,33 +28012,6 @@
           "total_price": 107.0,
           "title": "Steering Wheel 2013 A6 Audi Sku#3982717",
           "item_id": "v1|396689611386|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 107.0,
-          "shipping": 0.0,
-          "total_price": 107.0,
-          "title": "2012-15 Audi A6 A7 S6 S7 Steering Wheel 4 Spoke Black Leather Heated 4G0419091N",
-          "item_id": "v1|126779592174|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 107.0,
-          "shipping": 0.0,
-          "total_price": 107.0,
-          "title": "2012-15 Audi A6 A7 S6 S7 Steering Wheel 4 Spoke Black Leather Heated 4G0419091N",
-          "item_id": "v1|126779721352|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 108.0,
-          "shipping": 0.0,
-          "total_price": 108.0,
-          "title": "2012-2015 Audi A6 A7 S6 S7 Steering Wheel 4 Spoke Steel Gray Leather 4G0419091N",
-          "item_id": "v1|126779592152|0",
           "condition": "Used",
           "location": "US"
         },
@@ -28736,11 +28736,11 @@
           "location": "LT"
         },
         {
-          "price": 199.98,
+          "price": 199.99,
           "shipping": 0.0,
-          "total_price": 199.98,
-          "title": "Driver Steering Wheel Black Heat 4g0419091n1kt Oem Audi A6 A7 2012-15 S6 S7",
-          "item_id": "v1|277287001815|0",
+          "total_price": 199.99,
+          "title": "3 Spoke Driver Steering Wheel Black w/Paddle Shifter 4G0419091BIWJ Audi S6 13-18",
+          "item_id": "v1|286726116123|0",
           "condition": "Used",
           "location": "US"
         },
@@ -28858,6 +28858,15 @@
           "total_price": 219.99,
           "title": "2012-2018 AUDI A6 A7 S6 S7 C7 4G8 3-SPOKE HEATED TIPTRONIC STEERING WHEEL(Black)",
           "item_id": "v1|236112128050|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 219.99,
+          "shipping": 0.0,
+          "total_price": 219.99,
+          "title": "3 Spoke Driver Steering Wheel Black w/Paddle Shifter 4G0419091BIWJ Audi S6 13-18",
+          "item_id": "v1|306412079365|0",
           "condition": "Used",
           "location": "US"
         },
@@ -29067,28 +29076,19 @@
           "item_id": "v1|146349736330|0",
           "condition": "Used",
           "location": "US"
-        },
-        {
-          "price": 272.0,
-          "shipping": 20.0,
-          "total_price": 292.0,
-          "title": "12-18 Audi A6 Steering Wheel w/ Paddle Shifter & Control Switch Assembly Black",
-          "item_id": "v1|256153351779|0",
-          "condition": "Used",
-          "location": "US"
         }
       ]
     },
     "wheel": {
-      "low": 110,
-      "average": 120,
-      "high": 150,
-      "reasoning": "",
-      "items_analyzed": 0,
-      "items_filtered_out": 0,
-      "cleaned_count": 200,
+      "low": 114.0,
+      "average": 135.0,
+      "high": 150.0,
+      "reasoning": "Filtered out wheels not explicitly for Audi A6, wheels for other Audi models (A4, Q5, A8, Q7, Allroad), spare tires, and those with high shipping costs or outside the 2012-2018 year range. Also removed listings that were clearly not wheels or rims.",
+      "items_analyzed": 166,
+      "items_filtered_out": 69,
+      "cleaned_count": 97,
       "confidence_rating": "yellow",
-      "confidence_explanation": "No confidence data available",
+      "confidence_explanation": "Mixed data quality due to many listings fitting other Audi models and some ambiguity in titles.",
       "raw_items": [
         {
           "price": 87.5,
@@ -29168,42 +29168,6 @@
           "total_price": 110.0,
           "title": "Used Wheel fits: 2013  Audi a6 17x8 alloy 10 spoke Grade B",
           "item_id": "v1|405038033577|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel 17x8 Alloy Fits 09-12 AUDI A4 25917145",
-          "item_id": "v1|335982266109|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839173",
-          "item_id": "v1|335982322498|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839172",
-          "item_id": "v1|335982325394|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839174",
-          "item_id": "v1|335982330983|0",
           "condition": "Used",
           "location": "US"
         },
@@ -29555,6 +29519,42 @@
           "total_price": 110.7,
           "title": "Wheel 17x8 Alloy Fits 13-16 AUDI A4 29461366",
           "item_id": "v1|357141962661|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel 17x8 Alloy Fits 09-12 AUDI A4 25917145",
+          "item_id": "v1|335982266109|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839173",
+          "item_id": "v1|335982322498|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839172",
+          "item_id": "v1|335982325394|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839174",
+          "item_id": "v1|335982330983|0",
           "condition": "Used",
           "location": "US"
         },
@@ -29955,6 +29955,24 @@
           "location": "US"
         },
         {
+          "price": 118.74,
+          "shipping": 25.0,
+          "total_price": 143.74,
+          "title": "Wheel 17x8 Alloy Fits 13-16 AUDI A4 672313",
+          "item_id": "v1|146542109841|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 118.74,
+          "shipping": 25.0,
+          "total_price": 143.74,
+          "title": "Wheel 17x8 Alloy Fits 13-16 AUDI A4 672312",
+          "item_id": "v1|146542124630|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 143.91,
           "shipping": 0.0,
           "total_price": 143.91,
@@ -30122,24 +30140,6 @@
           "total_price": 149.99,
           "title": "2012-2015 AUDI A6 (C7) 19x8.5 ALUMINUM ALLOY 15-SPOKE WHEEL RIM",
           "item_id": "v1|335970746394|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 124.99,
-          "shipping": 25.0,
-          "total_price": 149.99,
-          "title": "Wheel 17x8 Alloy Fits 13-16 AUDI A4 672313",
-          "item_id": "v1|146542109841|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 124.99,
-          "shipping": 25.0,
-          "total_price": 149.99,
-          "title": "Wheel 17x8 Alloy Fits 13-16 AUDI A4 672312",
-          "item_id": "v1|146542124630|0",
           "condition": "Used",
           "location": "US"
         },
@@ -30895,18 +30895,18 @@
   },
   "bid_analysis": {
     "totals": {
-      "low": 4899.0,
-      "average": 5794.0,
-      "high": 6549.0
+      "low": 4943.0,
+      "average": 5648.0,
+      "high": 6215.0
     },
     "bids": {
-      "low": 1896.157881595843,
-      "average": 2295.2317721913196,
-      "high": 2634.72464880241
+      "low": 1065.4700277801599,
+      "average": 1407.0320952261009,
+      "high": 1699.1184651821368
     }
   },
   "status": "✅ Complete",
   "failed_parts": [],
   "low_confidence_parts": [],
-  "filename": "2013_AUDI_A6_20250727_144506.json"
+  "filename": "2013_AUDI_A6_20250727_192119.json"
 }

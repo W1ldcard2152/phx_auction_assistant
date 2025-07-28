@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-27T14:39:47.364139",
+  "timestamp": "2025-07-27T19:08:34.711574",
   "vin": "WA1DGAFPXFA044012",
   "vehicle_info": {
     "make": "AUDI",
@@ -14,15 +14,15 @@
   "vehicle_string": "2015 AUDI Q5 S Line Premium Plus",
   "parts_prices": {
     "engine": {
-      "low": 2893.0,
-      "average": 3172.0,
-      "high": 3334.0,
-      "reasoning": "Filtered out listings under $300.  Focused on complete engine assemblies for a 2015 Audi Q5, considering both 2.0L and 3.0L engine options.  Excluded listings for engine blocks only, or those clearly miscategorized.",
+      "low": 2530.0,
+      "average": 3051.0,
+      "high": 3235.0,
+      "reasoning": "Filtered out listings under $300. Kept listings containing 'Engine' and Audi Q5 or relevant engine codes. Included listings for similar Audi models (A4, A5, Allroad) when they explicitly stated Q5 compatibility. Prioritized 2015 Q5 engines, but included 2013-2017 Q5 engines as they are likely compatible.",
       "items_analyzed": 150,
       "items_filtered_out": 1,
       "cleaned_count": 149,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to listings including engines for other Audi models (A4, A5, A6, Allroad) which may or may not be compatible with the Q5 without further research.  The price range is also wide, indicating variability in condition and mileage.",
+      "confidence_explanation": "Mixed data quality due to varying engine conditions and mileages. Some listings may not be complete engines.",
       "raw_items": [
         {
           "price": 612.33,
@@ -210,6 +210,15 @@
           "total_price": 2845.75,
           "title": "Engine Model Fp 7th And 8th Digits 3.0L VIN 7 Fits 13-17 AUDI Q5 2343648",
           "item_id": "v1|187442091492|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 2850.0,
+          "shipping": 0.0,
+          "total_price": 2850.0,
+          "title": "13 14 15 16 17 AUDI Q5 Engine Assembly/motor 2.0L (turbo) engine ID CPM CPMB",
+          "item_id": "v1|388765173169|0",
           "condition": "Used",
           "location": "US"
         },
@@ -1243,8 +1252,8 @@
           "price": 3599.2,
           "shipping": 0.0,
           "total_price": 3599.2,
-          "title": "Used Engine Assembly fits: 2014  Audi q5 2.0L VIN F 5th digit turbo",
-          "item_id": "v1|167409047324|0",
+          "title": "Used Engine Assembly fits: 2017  Audi q5 2.0L VIN F 5th digit turbo",
+          "item_id": "v1|167456486734|0",
           "condition": "Used",
           "location": "US"
         },
@@ -1252,8 +1261,8 @@
           "price": 3599.2,
           "shipping": 0.0,
           "total_price": 3599.2,
-          "title": "Used Engine Assembly fits: 2017  Audi q5 2.0L VIN F 5th digit turbo",
-          "item_id": "v1|167456486734|0",
+          "title": "Used Engine Assembly fits: 2014  Audi q5 2.0L VIN F 5th digit turbo",
+          "item_id": "v1|167409047324|0",
           "condition": "Used",
           "location": "US"
         },
@@ -1814,15 +1823,6 @@
           "item_id": "v1|197545324342|0",
           "condition": "Used",
           "location": "CA"
-        },
-        {
-          "price": 3857.52,
-          "shipping": 0.0,
-          "total_price": 3857.52,
-          "title": "13 14 15 16 17 Audi Q5 3.0L 6 Cyl Engine Motor 135K Miles OEM",
-          "item_id": "v1|365637008226|0",
-          "condition": "Used",
-          "location": "CA"
         }
       ]
     },
@@ -1830,12 +1830,12 @@
       "low": 400.0,
       "average": 431.0,
       "high": 460.0,
-      "reasoning": "Filtered out valve bodies and items under $300.  Focused on complete automatic transmissions for Audi Q5 2015 (and closely related years).",
-      "items_analyzed": 180,
+      "reasoning": "Filtered out valve bodies and parts under $300. Included only automatic transmissions for Audi Q5 2015 and surrounding years.",
+      "items_analyzed": 150,
       "items_filtered_out": 30,
-      "cleaned_count": 150,
-      "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality. Many listings fit the criteria, but some may still be miscategorized or have inaccurate descriptions. Mileage is not factored in.",
+      "cleaned_count": 120,
+      "confidence_rating": "light_green",
+      "confidence_explanation": "Reasonably good data quality after filtering, with a decent sample size of full transmission assemblies.",
       "raw_items": [
         {
           "price": 307.0,
@@ -1986,6 +1986,15 @@
           "shipping": 0.0,
           "total_price": 394.24,
           "title": "Used Automatic Transmission Assembly fits: 2014  Audi q5 AT 2.0L w/o hybrid",
+          "item_id": "v1|396625317505|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 394.24,
+          "shipping": 0.0,
+          "total_price": 394.24,
+          "title": "Used Automatic Transmission Assembly fits: 2014  Audi q5 AT 2.0L w/o hybrid",
           "item_id": "v1|396369913237|0",
           "condition": "Used",
           "location": "US"
@@ -1996,15 +2005,6 @@
           "total_price": 394.24,
           "title": "Used Automatic Transmission Assembly fits: 2014  Audi q5 AT 2.0L w/o hybrid",
           "item_id": "v1|396369913243|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 394.24,
-          "shipping": 0.0,
-          "total_price": 394.24,
-          "title": "Used Automatic Transmission Assembly fits: 2014  Audi q5 AT 2.0L w/o hybrid",
-          "item_id": "v1|396625317505|0",
           "condition": "Used",
           "location": "US"
         },
@@ -2032,15 +2032,6 @@
           "total_price": 399.99,
           "title": "2013-2017 AUDI Q5 (B8 8R) AWD - 2.0L 8spd A/T TRANSMISSION VALVE BODY (NTB)",
           "item_id": "v1|236112121069|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 400.0,
-          "shipping": 0.0,
-          "total_price": 400.0,
-          "title": "Automatic Transmission VIN Model Fp 2.0L Turbo Fits 13-17 AUDI Q5 25825492",
-          "item_id": "v1|335982190549|0",
           "condition": "Used",
           "location": "US"
         },
@@ -2095,6 +2086,15 @@
           "total_price": 400.0,
           "title": "Automatic Transmission VIN Model Fp 2.0L Turbo Fits 15-17 AUDI Q5 740552",
           "item_id": "v1|197479229863|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 400.0,
+          "shipping": 0.0,
+          "total_price": 400.0,
+          "title": "Automatic Transmission VIN Model Fp 2.0L Turbo Fits 13-17 AUDI Q5 25825492",
+          "item_id": "v1|335982190549|0",
           "condition": "Used",
           "location": "US"
         },
@@ -2273,24 +2273,6 @@
           "price": 431.2,
           "shipping": 0.0,
           "total_price": 431.2,
-          "title": "Used Automatic Transmission Assembly fits: 2016  Audi q5 AT 2.0L w/o hybrid",
-          "item_id": "v1|167409048397|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 431.2,
-          "shipping": 0.0,
-          "total_price": 431.2,
-          "title": "Used Automatic Transmission Assembly fits: 2016  Audi q5 AT 2.0L w/o hybrid",
-          "item_id": "v1|396369917210|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 431.2,
-          "shipping": 0.0,
-          "total_price": 431.2,
           "title": "Used Automatic Transmission Assembly fits: 2013  Audi q5 AT 3.0L 8 speed gas",
           "item_id": "v1|396894576104|0",
           "condition": "Used",
@@ -2311,6 +2293,24 @@
           "total_price": 431.2,
           "title": "Used Automatic Transmission Assembly fits: 2015  Audi q5 AT 3.0L 8 speed gas",
           "item_id": "v1|396894576147|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 431.2,
+          "shipping": 0.0,
+          "total_price": 431.2,
+          "title": "Used Automatic Transmission Assembly fits: 2016  Audi q5 AT 2.0L w/o hybrid",
+          "item_id": "v1|167409048397|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 431.2,
+          "shipping": 0.0,
+          "total_price": 431.2,
+          "title": "Used Automatic Transmission Assembly fits: 2016  Audi q5 AT 2.0L w/o hybrid",
+          "item_id": "v1|396369917210|0",
           "condition": "Used",
           "location": "US"
         },
@@ -2471,6 +2471,15 @@
           "price": 452.32,
           "shipping": 0.0,
           "total_price": 452.32,
+          "title": "Used Automatic Transmission Assembly fits: 2015  Audi q5 AT 3.0L 8 speed gas",
+          "item_id": "v1|396625317618|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 452.32,
+          "shipping": 0.0,
+          "total_price": 452.32,
           "title": "Used Automatic Transmission Assembly fits: 2013  Audi q5 AT 2.0L w/o hybrid",
           "item_id": "v1|396369917160|0",
           "condition": "Used",
@@ -2500,15 +2509,6 @@
           "total_price": 452.32,
           "title": "Used Automatic Transmission Assembly fits: 2016  Audi q5 AT 2.0L w/o hybrid",
           "item_id": "v1|396369917201|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 452.32,
-          "shipping": 0.0,
-          "total_price": 452.32,
-          "title": "Used Automatic Transmission Assembly fits: 2015  Audi q5 AT 3.0L 8 speed gas",
-          "item_id": "v1|396625317618|0",
           "condition": "Used",
           "location": "US"
         },
@@ -2963,6 +2963,15 @@
           "location": "US"
         },
         {
+          "price": 460.75,
+          "shipping": 0.0,
+          "total_price": 460.75,
+          "title": "Automatic Transmission VIN Model Fp 2.0L Turbo Fits 13-17 AUDI Q5 701087",
+          "item_id": "v1|146599279076|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 462.79,
           "shipping": 0.0,
           "total_price": 462.79,
@@ -3166,15 +3175,6 @@
           "total_price": 483.36,
           "title": "Automatic Transmission VIN Model Fp 2.0L Turbo Fits 14-17 AUDI Q5 3592263",
           "item_id": "v1|376362277441|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 485.0,
-          "shipping": 0.0,
-          "total_price": 485.0,
-          "title": "Automatic Transmission VIN Model Fp 2.0L Turbo Fits 13-17 AUDI Q5 701087",
-          "item_id": "v1|146599279076|0",
           "condition": "Used",
           "location": "US"
         },
@@ -3640,15 +3640,15 @@
       ]
     },
     "rear carrier": {
-      "low": 129.0,
-      "average": 171.0,
-      "high": 210.0,
-      "reasoning": "Filtered out parts not explicitly fitting a 2015 Audi Q5, parts under $75, and parts for other Audi models (A4, A6, A7, A8) unless Q5 compatibility was clearly stated. Also removed listings that were not the complete carrier assembly.",
-      "items_analyzed": 150,
-      "items_filtered_out": 65,
-      "cleaned_count": 85,
+      "low": 142.0,
+      "average": 172.0,
+      "high": 211.0,
+      "reasoning": "Filtered out items under $75, and listings for other Audi models (A6, A7, A8, S5, etc.) or years outside the 2009-2017 Q5 range, and listings that were clearly miscategorized or contained parts other than the rear carrier assembly.",
+      "items_analyzed": 160,
+      "items_filtered_out": 66,
+      "cleaned_count": 94,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to listings often including multiple Audi models, requiring careful filtering. Some ambiguity remains in fitment despite filtering.",
+      "confidence_explanation": "Mixed data quality due to listings fitting multiple Audi models and some ambiguity in titles. However, a reasonable number of Q5-specific listings were found.",
       "raw_items": [
         {
           "price": 89.99,
@@ -3764,6 +3764,24 @@
           "total_price": 141.99,
           "title": "Carrier VIN Fp 7th And 8th Digit Rear Axle 2.0L Fits 09-17 AUDI Q5 1050600  ",
           "item_id": "v1|286708296239|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 149.99,
+          "shipping": 0.0,
+          "total_price": 149.99,
+          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A8 2011-18 A6 A7 Q5",
+          "item_id": "v1|277287001334|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 149.99,
+          "shipping": 0.0,
+          "total_price": 149.99,
+          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A7 A6 2012-17 A8 Q5",
+          "item_id": "v1|286726561331|0",
           "condition": "Used",
           "location": "US"
         },
@@ -4038,6 +4056,15 @@
           "location": "US"
         },
         {
+          "price": 99.99,
+          "shipping": 99.99,
+          "total_price": 199.98,
+          "title": "2012-2018 Audi A6 A7 A8 Q5 Rear Axle Differential Carrier Assembly OEM",
+          "item_id": "v1|186855455411|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 199.99,
           "shipping": 0.0,
           "total_price": 199.99,
@@ -4079,15 +4106,6 @@
           "total_price": 209.0,
           "title": "2012-2018 AUDI A6 A7 A8 SQ5 AWD REAR AXLE DIFF DIFFERENTIAL CARRIER 74k MIL OEM",
           "item_id": "v1|355583389080|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 109.99,
-          "shipping": 99.99,
-          "total_price": 209.98,
-          "title": "2012-2018 Audi A6 A7 A8 Q5 Rear Axle Differential Carrier Assembly OEM",
-          "item_id": "v1|186855455411|0",
           "condition": "Used",
           "location": "US"
         },
@@ -4497,24 +4515,6 @@
           "location": "US"
         },
         {
-          "price": 299.98,
-          "shipping": 0.0,
-          "total_price": 299.98,
-          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A8 2011-18 A6 A7 Q5",
-          "item_id": "v1|277287001334|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 299.98,
-          "shipping": 0.0,
-          "total_price": 299.98,
-          "title": "Rear Axle Differential Carrier 0bc500044d Oem Audi A7 A6 2012-17 A8 Q5",
-          "item_id": "v1|286726561331|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 303.51,
           "shipping": 0.0,
           "total_price": 303.51,
@@ -4761,15 +4761,6 @@
           "price": 325.0,
           "shipping": 0.0,
           "total_price": 325.0,
-          "title": "Used Differential Carrier Assembly fits: 2014 Audi Audi a6 Rear Axle 2.0L turbo",
-          "item_id": "v1|146697166154|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 325.0,
-          "shipping": 0.0,
-          "total_price": 325.0,
           "title": "Carrier Rear Axle Carrier ID Npr Fits 11-18 AUDI A8 694182",
           "item_id": "v1|326659751849|0",
           "condition": "Used",
@@ -4826,6 +4817,15 @@
           "total_price": 332.5,
           "title": "Used Differential Carrier Assembly fits: 2013 Audi Audi q5 Rear Axle 2.0L turbo",
           "item_id": "v1|136126950273|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 332.5,
+          "shipping": 0.0,
+          "total_price": 332.5,
+          "title": "Used Differential Carrier Assembly fits: 2014 Audi Audi a6 Rear Axle 2.0L turbo",
+          "item_id": "v1|146697166154|0",
           "condition": "Used",
           "location": "US"
         },
@@ -4956,6 +4956,15 @@
           "location": "US"
         },
         {
+          "price": 337.8,
+          "shipping": 0.0,
+          "total_price": 337.8,
+          "title": "Used Differential Carrier Assembly fits: 2013 Audi Audi a6 Rear Axle 2.0L turbo",
+          "item_id": "v1|167635935131|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 338.15,
           "shipping": 0.0,
           "total_price": 338.15,
@@ -5046,6 +5055,15 @@
           "location": "US"
         },
         {
+          "price": 343.1,
+          "shipping": 0.0,
+          "total_price": 343.1,
+          "title": "Used Differential Carrier Assembly fits: 2011 Audi Audi a8 Rear Axle 2.0L turbo",
+          "item_id": "v1|167635972590|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 343.51,
           "shipping": 0.0,
           "total_price": 343.51,
@@ -5087,15 +5105,6 @@
           "total_price": 344.99,
           "title": "Differential Carrier Rear Axle Carrier ID Kcc Fits 11-18 AUDI A8 1115741",
           "item_id": "v1|325897023904|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 346.28,
-          "shipping": 0.0,
-          "total_price": 346.28,
-          "title": "Used Differential Carrier Assembly fits: 2013 Audi Audi a6 Rear Axle 2.0L turbo",
-          "item_id": "v1|167635935131|0",
           "condition": "Used",
           "location": "US"
         },
@@ -5186,15 +5195,6 @@
           "total_price": 351.09000000000003,
           "title": "2013-2017 AUDI Q5 REAR AXLE CARRIER DIFF DIFFERENTIAL ASSEMBLY OEM",
           "item_id": "v1|326532873058|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 352.64,
-          "shipping": 0.0,
-          "total_price": 352.64,
-          "title": "Used Differential Carrier Assembly fits: 2011 Audi Audi a8 Rear Axle 2.0L turbo",
-          "item_id": "v1|167635972590|0",
           "condition": "Used",
           "location": "US"
         },
@@ -5456,12 +5456,12 @@
       "low": 390.0,
       "average": 470.0,
       "high": 515.0,
-      "reasoning": "Filtered out items under $50, and listings that were for modules, wiring, or other parts that were not complete steering racks.  Kept listings explicitly stating 'Steering Gear/Rack' or 'Rack and Pinion' for Audi Q5 2013-2017.",
-      "items_analyzed": 79,
-      "items_filtered_out": 6,
-      "cleaned_count": 73,
-      "confidence_rating": "light_green",
-      "confidence_explanation": "Good data quality, with clear titles and descriptions. Some listings may have dynamic steering, which is not specified, but the majority appear to be correct.",
+      "reasoning": "Filtered out listings below $50, and those that were not complete steering racks (wiring harness, control modules).  Also removed one listing with extremely high shipping cost.",
+      "items_analyzed": 62,
+      "items_filtered_out": 10,
+      "cleaned_count": 52,
+      "confidence_rating": "yellow",
+      "confidence_explanation": "Good data quality with a reasonable sample size of relevant listings for Audi Q5 steering racks.",
       "raw_items": [
         {
           "price": 59.94,
@@ -5730,15 +5730,6 @@
           "total_price": 509.22,
           "title": "Steering Gear/Rack VIN Fp 7th And 8th Digit Fits 13-17 AUDI Q5 29112545",
           "item_id": "v1|236168611376|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 400.0,
-          "shipping": 110.0,
-          "total_price": 510.0,
-          "title": "13-17 AUDI Q5 POWER STEERING GEAR RACK & PINION 8R0909144B",
-          "item_id": "v1|236149511700|0",
           "condition": "Used",
           "location": "US"
         },
@@ -6180,12 +6171,12 @@
       "low": 159.0,
       "average": 179.0,
       "high": 189.0,
-      "reasoning": "Filtered out listings that were not complete headlights for a 2015 Audi Q5, including ballasts, bulbs, brackets, modules, and irrelevant parts. Also removed listings that didn't explicitly mention 'headlight' or 'headlamp' and those outside the 2013-2017 year range. Some listings were removed due to being for non-headlight parts (e.g., subwoofer, wheel rim, roof rack).",
-      "items_analyzed": 149,
-      "items_filtered_out": 78,
-      "cleaned_count": 71,
+      "reasoning": "Filtered out items under $60, ballasts, bulbs, brackets, modules, and irrelevant parts. Focused on complete headlight assemblies for a 2015 Audi Q5.",
+      "items_analyzed": 144,
+      "items_filtered_out": 74,
+      "cleaned_count": 70,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to inconsistent titles and descriptions. Some listings required careful interpretation to determine if they were complete headlights. The remaining sample size is reasonable, but the price range could be wider due to the variability in condition and included components (e.g., with or without modules).",
+      "confidence_explanation": "Mixed quality due to some listings being bare housings or including modules, requiring careful interpretation.",
       "raw_items": [
         {
           "price": 60.0,
@@ -7990,15 +7981,15 @@
       ]
     },
     "front door panel": {
-      "low": 125.0,
+      "low": 117.0,
       "average": 147.0,
       "high": 159.0,
-      "reasoning": "Filtered out items under $50, and listings that were not front door panels (speakers, switches, modules, etc.). Also filtered out listings that were not specific to the 2013-2017 Audi Q5.",
+      "reasoning": "Filtered out items under $50, and listings that were not complete door panels (speakers, switches, modules, etc.).  Focused on listings explicitly mentioning 'door panel' or 'door trim panel'.",
       "items_analyzed": 100,
-      "items_filtered_out": 42,
-      "cleaned_count": 58,
+      "items_filtered_out": 40,
+      "cleaned_count": 60,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed quality data due to variations in condition and included components (e.g., with or without switches, speakers). Some listings were difficult to definitively confirm fitment.",
+      "confidence_explanation": "Mixed quality due to variations in condition and completeness of the door panels. Some listings may include additional components, affecting the price.",
       "raw_items": [
         {
           "price": 51.34,
@@ -8226,20 +8217,20 @@
           "location": "US"
         },
         {
-          "price": 105.0,
-          "shipping": 0.0,
-          "total_price": 105.0,
-          "title": "Used Front Right Door Interior Trim Panel fits: 2015 Audi Audi q5  Grade A",
-          "item_id": "v1|135823390229|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 109.99,
           "shipping": 0.0,
           "total_price": 109.99,
           "title": "2015 AUDI Q5 PREMIUM+ (B8 8R) FRONT LEFT DRIVER DASH HEAT AIR AC VENT (BLACK)",
           "item_id": "v1|236112123455|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 116.5,
+          "shipping": 0.0,
+          "total_price": 116.5,
+          "title": "Used Front Right Door Interior Trim Panel fits: 2015 Audi Audi q5  Grade A",
+          "item_id": "v1|135823390229|0",
           "condition": "Used",
           "location": "US"
         },
@@ -9083,15 +9074,15 @@
       ]
     },
     "rear door panel": {
-      "low": 125.0,
+      "low": 123.0,
       "average": 147.0,
-      "high": 175.0,
-      "reasoning": "Filtered out items under $50, and listings that were not complete door panels (e.g., handles, trim pieces, speakers, or window frames).  Also removed listings for tailgate/liftgate parts, and listings that were clearly for the glass only.",
-      "items_analyzed": 87,
-      "items_filtered_out": 38,
-      "cleaned_count": 49,
+      "high": 170.0,
+      "reasoning": "Filtered out items under $50, and listings that were not complete door panels (e.g., handles, trim pieces, speakers, modules, seatbelts, or tailgate parts).  Focused on listings explicitly mentioning 'door panel' or 'door trim panel' and appearing to be complete interior panels for the rear doors of a 2015 Audi Q5.",
+      "items_analyzed": 100,
+      "items_filtered_out": 30,
+      "cleaned_count": 70,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed quality data. Many listings required careful examination to determine if they were for the complete door panel or just a component. Some listings were vague, making it difficult to assess the condition and completeness of the panel.",
+      "confidence_explanation": "Mixed quality due to variations in condition and included components (e.g., switches, wood trim) within the door panels. Some listings also had vague descriptions.",
       "raw_items": [
         {
           "price": 51.34,
@@ -10203,15 +10194,15 @@
       ]
     },
     "abs pump": {
-      "low": 74.0,
+      "low": 73.0,
       "average": 110.0,
       "high": 130.0,
-      "reasoning": "No items were filtered out as all listings appear to be for the correct part (ABS pump) for the specified vehicle (2015 Audi Q5) and are above the minimum price threshold.",
+      "reasoning": "All listings appear to be for the correct part (ABS pump) for the Audi Q5 within the specified year range. No listings were filtered out.",
       "items_analyzed": 18,
       "items_filtered_out": 0,
       "cleaned_count": 18,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Good data quality with consistent listings for the correct part and vehicle.",
+      "confidence_explanation": "Good data quality with consistent listings for the correct part.",
       "raw_items": [
         {
           "price": 69.94,
@@ -10378,15 +10369,15 @@
       ]
     },
     "alternator": {
-      "low": 54.0,
-      "average": 60.0,
-      "high": 65.0,
-      "reasoning": "Filtered out alternator brackets, belt tensioners, and listings for A4/A5 models unless Q5 was also mentioned.  Also removed listings that mentioned 'turbo' as these are often accessories or miscategorized.  Listings under $30 were removed.  Listings that did not specify an Audi Q5 or were for other Audi models were removed.",
-      "items_analyzed": 198,
-      "items_filtered_out": 103,
-      "cleaned_count": 95,
+      "low": 60.0,
+      "average": 64.0,
+      "high": 68.0,
+      "reasoning": "Filtered out listings that were not alternators, were for incorrect models (A4, A5), or were for bracket/tensioner parts. Also filtered out items under $30.",
+      "items_analyzed": 200,
+      "items_filtered_out": 102,
+      "cleaned_count": 98,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to many listings being for other Audi models or alternator brackets.  The remaining data provides a reasonable estimate for a used 2015 Audi Q5 alternator.",
+      "confidence_explanation": "Mixed data quality due to many listings being for incorrect Audi models (A4, A5) despite searching for Q5 alternators. Some listings also included brackets or tensioners, requiring careful filtering.",
       "raw_items": [
         {
           "price": 39.49,
@@ -10824,15 +10815,6 @@
           "price": 60.99,
           "shipping": 0.0,
           "total_price": 60.99,
-          "title": "Alternator Turbo Valeo Manufacturer Fits 13-17 AUDI A5 4537241",
-          "item_id": "v1|317035836739|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 60.99,
-          "shipping": 0.0,
-          "total_price": 60.99,
           "title": "Alternator Turbo Valeo Manufacturer Fits 13-17 AUDI A5 4362092",
           "item_id": "v1|236100157325|0",
           "condition": "Used",
@@ -10853,6 +10835,15 @@
           "total_price": 60.99,
           "title": "Alternator Turbo Valeo Manufacturer Fits 13-17 AUDI A5 4605137",
           "item_id": "v1|316675805926|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 60.99,
+          "shipping": 0.0,
+          "total_price": 60.99,
+          "title": "Alternator Turbo Valeo Manufacturer Fits 13-17 AUDI A5 4537241",
+          "item_id": "v1|317035836739|0",
           "condition": "Used",
           "location": "US"
         },
@@ -12194,12 +12185,12 @@
       "low": 59.0,
       "average": 74.0,
       "high": 85.0,
-      "reasoning": "Filtered out accessories, items under $20, and listings not specific to the body control module itself (brackets, etc.). Also filtered listings mentioning A4/A5 without Q5.",
+      "reasoning": "Filtered out items under $20 and listings that were not body control modules or were for incorrect vehicles (A4 instead of Q5 when specified). Also removed listings that appeared to be brackets or mounting hardware rather than the BCM itself.",
       "items_analyzed": 160,
-      "items_filtered_out": 24,
-      "cleaned_count": 136,
+      "items_filtered_out": 20,
+      "cleaned_count": 140,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed data quality due to listings fitting multiple Audi models (A4, A5, Q5) and some ambiguity in titles. Some listings may be miscategorized.",
+      "confidence_explanation": "Mixed data quality due to listings including multiple car models (A4, A5, Q5) which may or may not be compatible. Some listings also included parts numbers which would increase confidence if cross-referenced.",
       "raw_items": [
         {
           "price": 22.9,
@@ -13637,7 +13628,7 @@
           "shipping": 14.99,
           "total_price": 113.99,
           "title": "2011 Audi Q5 BCM Body Control Module Unit 8K0907064HP OEM A16 158",
-          "item_id": "v1|167653575584|0",
+          "item_id": "v1|167676367728|0",
           "condition": "Used",
           "location": "US"
         },
@@ -14004,15 +13995,15 @@
       ]
     },
     "brake caliper": {
-      "low": 47.0,
-      "average": 55.0,
-      "high": 69.0,
-      "reasoning": "Filtered out items under $30, listings not specific to brake calipers (e.g., motors, brackets, door stops), and listings primarily for A4/A5 unless Q5 was explicitly mentioned. Prioritized listings explicitly mentioning 'caliper' and 'Q5'.",
-      "items_analyzed": 180,
-      "items_filtered_out": 70,
-      "cleaned_count": 110,
+      "low": 54.0,
+      "average": 60.0,
+      "high": 75.0,
+      "reasoning": "Filtered out items under $30, and listings that were not brake calipers (motors, brackets, actuators, door stops).  Also filtered out listings that were clearly for A4/A5 only and did not include Q5.",
+      "items_analyzed": 176,
+      "items_filtered_out": 76,
+      "cleaned_count": 100,
       "confidence_rating": "yellow",
-      "confidence_explanation": "Mixed quality due to many listings fitting multiple Audi models, requiring careful title analysis. Some listings may still be miscategorized or not perfectly suited for a 2015 Q5.",
+      "confidence_explanation": "Mixed quality data. Many listings fit multiple Audi models, making Q5-specific pricing difficult to isolate. Some listings may still be miscategorized.",
       "raw_items": [
         {
           "price": 32.89,
@@ -15404,6 +15395,15 @@
           "price": 85.0,
           "shipping": 0.0,
           "total_price": 85.0,
+          "title": "Used Rear Left Disc Brake Caliper fits: 2013 Audi Audi q5 VIN FP 7th and 8th dig",
+          "item_id": "v1|167442687541|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 85.0,
+          "shipping": 0.0,
+          "total_price": 85.0,
           "title": "Passenger Right Caliper Rear Fits 08-17 AUDI A5 76955",
           "item_id": "v1|325495097363|0",
           "condition": "Used",
@@ -15804,15 +15804,6 @@
           "item_id": "v1|225333247549|0",
           "condition": "Used",
           "location": "US"
-        },
-        {
-          "price": 68.95,
-          "shipping": 20.0,
-          "total_price": 88.95,
-          "title": "08-17 AUDI 8T A4 A5 Q5 QUATTRO REAR BRAKE CALIPER MOTOR LEFT DRIVER OEM 031225B",
-          "item_id": "v1|226752329675|0",
-          "condition": "Used",
-          "location": "US"
         }
       ]
     },
@@ -15885,33 +15876,6 @@
           "price": 60.99,
           "shipping": 0.0,
           "total_price": 60.99,
-          "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4537271",
-          "item_id": "v1|317035848910|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 60.99,
-          "shipping": 0.0,
-          "total_price": 60.99,
-          "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4546172",
-          "item_id": "v1|317035860289|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 60.99,
-          "shipping": 0.0,
-          "total_price": 60.99,
-          "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4549897",
-          "item_id": "v1|236170426468|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 60.99,
-          "shipping": 0.0,
-          "total_price": 60.99,
           "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4362124",
           "item_id": "v1|316800828297|0",
           "condition": "Used",
@@ -15950,6 +15914,33 @@
           "total_price": 60.99,
           "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4659663",
           "item_id": "v1|236117502520|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 60.99,
+          "shipping": 0.0,
+          "total_price": 60.99,
+          "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4537271",
+          "item_id": "v1|317035848910|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 60.99,
+          "shipping": 0.0,
+          "total_price": 60.99,
+          "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4546172",
+          "item_id": "v1|317035860289|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 60.99,
+          "shipping": 0.0,
+          "total_price": 60.99,
+          "title": "Speedometer VIN Fp 7th And 8th Digit Cluster MPH Fits 13-17 AUDI Q5 4549897",
+          "item_id": "v1|236170426468|0",
           "condition": "Used",
           "location": "US"
         },
@@ -17146,6 +17137,15 @@
           "location": "US"
         },
         {
+          "price": 33.25,
+          "shipping": 0.0,
+          "total_price": 33.25,
+          "title": "2013-2017 Audi A4 A5 SQ5 S5 RS5 AC Heater Temperature Climate Control 8K1820043T",
+          "item_id": "v1|126830721560|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 34.04,
           "shipping": 0.0,
           "total_price": 34.04,
@@ -17160,15 +17160,6 @@
           "total_price": 35.0,
           "title": "2013-2017 Audi A4 A5 Allroad Q5 SQ5 S5 RS5 AC Heater Temperature Climate Control",
           "item_id": "v1|126830720654|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 35.0,
-          "shipping": 0.0,
-          "total_price": 35.0,
-          "title": "2013-2017 Audi A4 A5 SQ5 S5 RS5 AC Heater Temperature Climate Control 8K1820043T",
-          "item_id": "v1|126830721560|0",
           "condition": "Used",
           "location": "US"
         },
@@ -17209,6 +17200,15 @@
           "location": "US"
         },
         {
+          "price": 42.75,
+          "shipping": 0.0,
+          "total_price": 42.75,
+          "title": "13-17 Audi A4 A5 Allroad Q5 SQ5 AC Heater Temperature Climate Control 8K1820043R",
+          "item_id": "v1|126830716412|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 43.74,
           "shipping": 0.0,
           "total_price": 43.74,
@@ -17232,15 +17232,6 @@
           "total_price": 43.74,
           "title": "13 14 15 16 Audi A4 Automatic Climate AC Heater Temperature Control OEM LKQ",
           "item_id": "v1|317061996002|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 45.0,
-          "shipping": 0.0,
-          "total_price": 45.0,
-          "title": "13-17 Audi A4 A5 Allroad Q5 SQ5 AC Heater Temperature Climate Control 8K1820043R",
-          "item_id": "v1|126830716412|0",
           "condition": "Used",
           "location": "US"
         },
@@ -19715,15 +19706,6 @@
           "location": "US"
         },
         {
-          "price": 98.0,
-          "shipping": 0.0,
-          "total_price": 98.0,
-          "title": "Used A/C Compressor fits: 2013 Audi Audi q5 3.0 Grade A",
-          "item_id": "v1|146350080549|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 99.0,
           "shipping": 0.0,
           "total_price": 99.0,
@@ -19783,15 +19765,6 @@
           "total_price": 100.0,
           "title": "AC Compressor VIN Fp 7th And 8th Digit Turbo Fits 13-17 AUDI Q5 182572",
           "item_id": "v1|395343801043|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 100.0,
-          "shipping": 0.0,
-          "total_price": 100.0,
-          "title": "Used A/C Compressor fits: 2015  Audi a4  Grade A",
-          "item_id": "v1|376258976656|0",
           "condition": "Used",
           "location": "US"
         },
@@ -20129,6 +20102,15 @@
           "location": "US"
         },
         {
+          "price": 106.0,
+          "shipping": 0.0,
+          "total_price": 106.0,
+          "title": "Used A/C Compressor fits: 2013 Audi Audi q5 3.0 Grade A",
+          "item_id": "v1|135726337648|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 107.0,
           "shipping": 0.0,
           "total_price": 107.0,
@@ -20449,6 +20431,15 @@
           "total_price": 112.49,
           "title": "Used A/C Compressor fits: 2013 Audi Audi q5 3.0 Grade A",
           "item_id": "v1|146593939387|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 112.49,
+          "shipping": 0.0,
+          "total_price": 112.49,
+          "title": "Used A/C Compressor fits: 2013 Audi Audi q5 3.0 Grade A",
+          "item_id": "v1|146350080549|0",
           "condition": "Used",
           "location": "US"
         },
@@ -21123,6 +21114,15 @@
           "location": "US"
         },
         {
+          "price": 97.5,
+          "shipping": 0.0,
+          "total_price": 97.5,
+          "title": "09-15 Audi Q5 SQ5 Driver Left LH Side Door Mirror White 8R1857409L01C",
+          "item_id": "v1|197251079205|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 79.99,
           "shipping": 18.0,
           "total_price": 97.99,
@@ -21234,15 +21234,6 @@
           "price": 103.72,
           "shipping": 0.0,
           "total_price": 103.72,
-          "title": "Used Right Door Mirror fits: 2009 Audi Audi q5 Power w/lighting package opt QQ1",
-          "item_id": "v1|166940283456|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 103.72,
-          "shipping": 0.0,
-          "total_price": 103.72,
           "title": "Used Right Door Mirror fits: 2014 Audi Audi q5 Power w/lighting package opt QQ1",
           "item_id": "v1|146322056808|0",
           "condition": "Used",
@@ -21263,6 +21254,15 @@
           "total_price": 103.72,
           "title": "Used Right Door Mirror fits: 2012 Audi Audi q5 Power w/lighting package opt QQ1",
           "item_id": "v1|167194236891|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 103.72,
+          "shipping": 0.0,
+          "total_price": 103.72,
+          "title": "Used Right Door Mirror fits: 2009 Audi Audi q5 Power w/lighting package opt QQ1",
+          "item_id": "v1|166940283456|0",
           "condition": "Used",
           "location": "US"
         },
@@ -21294,20 +21294,20 @@
           "location": "US"
         },
         {
+          "price": 105.0,
+          "shipping": 0.0,
+          "total_price": 105.0,
+          "title": "09-15 Audi Q5 SQ5 Driver Left LH Side Door Mirror Black 8R1857409L01C",
+          "item_id": "v1|197257606166|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 90.0,
           "shipping": 15.0,
           "total_price": 105.0,
           "title": "2007-2017 AUDI Q5 Q7 Right Passenger Side RH Auto DIM Heated Mirror Glass OEM",
           "item_id": "v1|236169771356|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 99.99,
-          "shipping": 8.0,
-          "total_price": 107.99,
-          "title": "Right Passenger Side Black Door Mirror Power Fits 2008-2010 AUDI A8 OEM #29483",
-          "item_id": "v1|256584913046|0",
           "condition": "Used",
           "location": "US"
         },
@@ -21407,15 +21407,6 @@
           "total_price": 113.91,
           "title": "Door Mirror Left PWR MIRR BLIND SPT ALERT PWR FLDING MEMORY OEM 4DR AUDI Q5 2017",
           "item_id": "v1|176401534419|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 117.0,
-          "shipping": 0.0,
-          "total_price": 117.0,
-          "title": "09-15 Audi Q5 SQ5 Driver Left LH Side Door Mirror White 8R1857409L01C",
-          "item_id": "v1|197251079205|0",
           "condition": "Used",
           "location": "US"
         },
@@ -21555,15 +21546,6 @@
           "location": "US"
         },
         {
-          "price": 126.0,
-          "shipping": 0.0,
-          "total_price": 126.0,
-          "title": "09-15 Audi Q5 SQ5 Driver Left LH Side Door Mirror Black 8R1857409L01C",
-          "item_id": "v1|197257606166|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 99.0,
           "shipping": 29.0,
           "total_price": 128.0,
@@ -21677,6 +21659,15 @@
           "total_price": 134.99,
           "title": "Used Right Door Mirror fits: 2016  Audi q5 Power w/o blind spot alert manual",
           "item_id": "v1|317106881380|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 135.0,
+          "shipping": 0.0,
+          "total_price": 135.0,
+          "title": "Used Right Door Mirror fits: 2012 Audi Audi q5 Power w/lighting package opt QQ1",
+          "item_id": "v1|167594432711|0",
           "condition": "Used",
           "location": "US"
         },
@@ -22019,15 +22010,6 @@
           "total_price": 160.3,
           "title": "Used Left Door Mirror fits: 2012 Audi Audi q5 Power w/lighting package opt QQ1 w",
           "item_id": "v1|167624242891|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 160.3,
-          "shipping": 0.0,
-          "total_price": 160.3,
-          "title": "Used Right Door Mirror fits: 2012 Audi Audi q5 Power w/lighting package opt QQ1",
-          "item_id": "v1|167594432711|0",
           "condition": "Used",
           "location": "US"
         },
@@ -22532,6 +22514,15 @@
           "total_price": 196.11,
           "title": "Used Left Door Mirror fits: 2015  Audi q7 Power lighting package opt QQ1 w/b",
           "item_id": "v1|136096414859|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 198.0,
+          "shipping": 0.0,
+          "total_price": 198.0,
+          "title": "09-17 AUDI Q5 8R RIGHT RH PASSENGER SIDE DOOR REARVIEW REAR VIEW MIRROR OEM",
+          "item_id": "v1|226769006709|0",
           "condition": "Used",
           "location": "US"
         }
@@ -24740,15 +24731,6 @@
           "location": "US"
         },
         {
-          "price": 87.97,
-          "shipping": 0.0,
-          "total_price": 87.97,
-          "title": "13-17 AUDI 8R Q5 SQ5 SUSPENSION SHOCK ABSORBER STRUT RIGHT FRONT OEM",
-          "item_id": "v1|387883356400|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 89.0,
           "shipping": 0.0,
           "total_price": 89.0,
@@ -26160,6 +26142,15 @@
           "item_id": "v1|157043260894|0",
           "condition": "Used",
           "location": "US"
+        },
+        {
+          "price": 128.55,
+          "shipping": 0.0,
+          "total_price": 128.55,
+          "title": "Used Front Left Suspension Strut fits: 2010  Audi a4 Front standard suspensi",
+          "item_id": "v1|167524331608|0",
+          "condition": "Used",
+          "location": "US"
         }
       ]
     },
@@ -26490,15 +26481,6 @@
           "location": "US"
         },
         {
-          "price": 75.0,
-          "shipping": 0.0,
-          "total_price": 75.0,
-          "title": "Used Steering Wheel fits: 2015 Audi Audi q5  Grade A",
-          "item_id": "v1|136139265071|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
           "price": 76.46,
           "shipping": 0.0,
           "total_price": 76.46,
@@ -26576,6 +26558,15 @@
           "total_price": 85.45,
           "title": "2013 - 2017 AUDI Q5 STEERING WHEEL 4L0419091AC OEM",
           "item_id": "v1|325737091863|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 86.5,
+          "shipping": 0.0,
+          "total_price": 86.5,
+          "title": "Used Steering Wheel fits: 2015 Audi Audi q5  Grade A",
+          "item_id": "v1|136139265071|0",
           "condition": "Used",
           "location": "US"
         },
@@ -26679,6 +26670,15 @@
           "location": "US"
         },
         {
+          "price": 101.65,
+          "shipping": 0.0,
+          "total_price": 101.65,
+          "title": "2013-2017 Audi A4 S4 Q5 Q7 Steering Wheel 4 Spoke Black Leather 4L0419091AC",
+          "item_id": "v1|126779009456|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 70.0,
           "shipping": 34.99,
           "total_price": 104.99000000000001,
@@ -26693,15 +26693,6 @@
           "total_price": 106.73,
           "title": "2012-2015 AUDI Q7  2013-2016 A4 Q5 ALLROAD  4-SPOKE STEERING WHEEL BLACK OEM",
           "item_id": "v1|266154230891|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 107.0,
-          "shipping": 0.0,
-          "total_price": 107.0,
-          "title": "2013-2017 Audi A4 S4 Q5 Q7 Steering Wheel 4 Spoke Black Leather 4L0419091AC",
-          "item_id": "v1|126779009456|0",
           "condition": "Used",
           "location": "US"
         },
@@ -28450,69 +28441,6 @@
           "price": 110.7,
           "shipping": 0.0,
           "total_price": 110.7,
-          "title": "Wheel 17x8 Alloy Fits 09-12 AUDI A4 25917145",
-          "item_id": "v1|335982266109|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 19x8 5 Spoke Fits 09-17 AUDI Q5 28089677",
-          "item_id": "v1|236124191351|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 19x8 5 Spoke Fits 09-17 AUDI Q5 28089675",
-          "item_id": "v1|236124193378|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 19x8 5 Spoke Fits 09-17 AUDI Q5 28089676",
-          "item_id": "v1|236124196132|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839173",
-          "item_id": "v1|335982322498|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839172",
-          "item_id": "v1|335982325394|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
-          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839174",
-          "item_id": "v1|335982330983|0",
-          "condition": "Used",
-          "location": "US"
-        },
-        {
-          "price": 110.7,
-          "shipping": 0.0,
-          "total_price": 110.7,
           "title": "Wheel VIN Fp 7th And 8th Digit 18x6 Steel Spare Fits 09-17 AUDI Q5 28089674",
           "item_id": "v1|236124314691|0",
           "condition": "Used",
@@ -29149,6 +29077,69 @@
           "location": "US"
         },
         {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel 17x8 Alloy Fits 09-12 AUDI A4 25917145",
+          "item_id": "v1|335982266109|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 19x8 5 Spoke Fits 09-17 AUDI Q5 28089677",
+          "item_id": "v1|236124191351|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 19x8 5 Spoke Fits 09-17 AUDI Q5 28089675",
+          "item_id": "v1|236124193378|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 19x8 5 Spoke Fits 09-17 AUDI Q5 28089676",
+          "item_id": "v1|236124196132|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839173",
+          "item_id": "v1|335982322498|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839172",
+          "item_id": "v1|335982325394|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
+          "price": 110.7,
+          "shipping": 0.0,
+          "total_price": 110.7,
+          "title": "Wheel VIN Fp 7th And 8th Digit 18x8 10 Spoke Fits 09-17 AUDI Q5 28839174",
+          "item_id": "v1|335982330983|0",
+          "condition": "Used",
+          "location": "US"
+        },
+        {
           "price": 111.0,
           "shipping": 0.0,
           "total_price": 111.0,
@@ -29315,18 +29306,18 @@
   },
   "bid_analysis": {
     "totals": {
-      "low": 4935.0,
-      "average": 5646.0,
-      "high": 6136.0
+      "low": 4587.0,
+      "average": 5535.0,
+      "high": 6042.0
     },
     "bids": {
-      "low": 1912.1285027119234,
-      "average": 2228.967172624273,
-      "high": 2448.726231784359
+      "low": 903.2308369607214,
+      "average": 1350.6014411633957,
+      "high": 1608.4654498889506
     }
   },
   "status": "✅ Complete",
   "failed_parts": [],
   "low_confidence_parts": [],
-  "filename": "2015_AUDI_Q5_20250727_143947.json"
+  "filename": "2015_AUDI_Q5_20250727_190834.json"
 }
